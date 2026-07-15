@@ -1,0 +1,1 @@
+﻿<?php // Local database credentials (update values below) define('DB_HOST', '127.0.0.1'); define('DB_PORT', '3306'); define('DB_NAME', 'broadsafe'); define('DB_USER', 'broadsafe'); define('DB_PASS', 'allah4922858'); 

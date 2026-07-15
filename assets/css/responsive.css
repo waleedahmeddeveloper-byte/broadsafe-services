@@ -1,0 +1,1532 @@
+/* Frontend re-engineering layer (layout-only; content-safe overrides) */
+:root {
+  --container-max: 1320px;
+  --container-pad-inline: clamp(16px, 3vw, 36px);
+  --section-pad-block: clamp(40px, 7vw, 80px);
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --touch-target-min: 44px;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: clip;
+  line-height: 1.6;
+}
+
+main,
+header,
+footer,
+section {
+  width: 100%;
+}
+
+/* Constrain content on all screens, including 4k/8k */
+.hero-content,
+.about-hero-content,
+.home-highlights-shell,
+.home-insights-grid,
+.home-sectors-inner,
+.home-response-shell,
+.home-response-trust,
+.about-container,
+.stats,
+.home-accreditations-grid,
+.contact-container,
+.footer-container,
+.country-acknowledgement-inner,
+.internal-links-wrap,
+.section-title,
+.services-grid,
+.contact-form,
+.contact-info {
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+/* Preserve section backgrounds edge-to-edge while centering content */
+.home-highlights,
+.home-insights,
+.home-sectors,
+.home-response-model,
+.about,
+.home-accreditations,
+.contact-home,
+.country-acknowledgement,
+footer,
+.internal-links-section,
+.services,
+.about-section,
+.stats-section,
+.why-choose-us,
+.cta-section {
+  padding-inline: var(--container-pad-inline);
+  padding-block: var(--section-pad-block);
+}
+
+.country-acknowledgement {
+  padding-block: clamp(16px, 1.8vw, 20px);
+}
+
+/* Keep hero vertical rhythm from existing design */
+.hero,
+.about-hero,
+.service-hero,
+.contact-hero,
+.blog-hero {
+  padding-inline: var(--container-pad-inline);
+}
+
+/* Unified hero text layout pattern (reusable across all hero variants) */
+.hero-content-standard,
+:is(
+  .hero-content,
+  .about-hero-content,
+  .service-hero-content,
+  .contact-hero-content,
+  .page-hero-content,
+  .job-hero-content,
+  .blog-hero-content
+) {
+  inline-size: min(100%, 680px);
+  margin-inline: 0 auto;
+  margin-inline-start: 0;
+  text-align: left !important;
+  align-self: center;
+  justify-self: start;
+}
+
+:is(
+  .hero,
+  .about-hero,
+  .service-hero,
+  .contact-hero,
+  .page-hero,
+  .job-hero,
+  .blog-hero
+) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+:is(
+    .hero,
+    .about-hero,
+    .service-hero,
+    .contact-hero,
+    .page-hero,
+    .job-hero,
+    .blog-hero
+  )
+  :is(.breadcrumb, .hero-buttons) {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+:is(
+    .hero,
+    .about-hero,
+    .service-hero,
+    .contact-hero,
+    .page-hero,
+    .job-hero,
+    .blog-hero
+  )
+  .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* Media integrity + CLS stability */
+img,
+video,
+svg,
+canvas,
+iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero img,
+.about-image img,
+.history-image img,
+.about-hero img,
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-accreditation-item img,
+.home-accreditations-grid img,
+.accreditation-logo,
+.certification-logo {
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+  margin-inline: auto;
+}
+
+/* Typography keeps hierarchy while remaining fluid */
+h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+}
+p,
+li,
+label,
+input,
+select,
+textarea,
+button,
+a {
+  line-height: 1.55;
+}
+
+/* Interactive consistency */
+a,
+button,
+input,
+select,
+textarea,
+.cta-button,
+.secondary-button,
+.header-call-btn,
+.submit-btn {
+  min-height: var(--touch-target-min);
+}
+
+input,
+select,
+textarea,
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Core section layout corrections */
+.home-highlights-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.home-insights-grid,
+.home-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: var(--space-3);
+}
+
+.home-insight-card,
+.service-card,
+.home-step,
+.internal-link-card,
+.home-accreditation-item {
+  height: 100%;
+}
+
+.home-sector-tags {
+  gap: var(--space-1);
+}
+
+.home-response-steps {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.about-image,
+.history-image {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.home-accreditations-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-2);
+  align-items: stretch;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.internal-links-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 2.2vw, 2.75rem);
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: clamp(1.3rem, 0.55vw + 1.05rem, 1.72rem);
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-contact p,
+.footer-about p {
+  font-size: clamp(1rem, 0.36vw + 0.9rem, 1.08rem);
+}
+
+.footer-contact a,
+.footer-links a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+  text-overflow: clip;
+  overflow: visible;
+}
+
+.footer-contact ul li {
+  align-items: center;
+}
+
+.footer-contact ul li > div {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.footer-contact a {
+  display: inline;
+  min-height: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1360px) {
+  .footer-container {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: clamp(1.35rem, 2vw, 2.25rem);
+  }
+}
+
+/* About page component hardening */
+.about-hero {
+  padding-inline: var(--container-pad-inline);
+}
+
+.about-hero-content,
+.about-section > .section-title,
+.about-section > .history-container,
+.about-section > .values-container,
+.stats-section > .section-title,
+.stats-section > .stats-grid,
+.why-choose-us > .section-title,
+.why-choose-us > .features-grid,
+.cta-content {
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.about-section,
+.stats-section,
+.why-choose-us,
+.cta-section {
+  padding-inline: var(--container-pad-inline);
+  padding-block: var(--section-pad-block);
+}
+
+.history-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.history-content,
+.history-image,
+.value-card,
+.stat-item,
+.feature-box {
+  min-width: 0;
+}
+
+.history-image {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.history-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+.value-card {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  padding: var(--space-4);
+}
+
+.stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.stat-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.feature-box {
+  padding: var(--space-4);
+}
+
+.cta-content {
+  width: 100%;
+}
+
+.cta-buttons {
+  gap: var(--space-2);
+}
+
+.mobile-nav-call {
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* Unified service page template layer (content-preserving) */
+.service-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: clamp(420px, 64vh, 760px);
+  aspect-ratio: 16 / 7;
+}
+
+.service-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(
+      var(--service-hero-overlay-start, rgba(0, 0, 0, 0.68)),
+      var(--service-hero-overlay-end, rgba(0, 0, 0, 0.68))
+    ),
+    var(--service-hero-image, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.service-cta.service-cta-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(
+      var(--service-cta-overlay-start, rgba(0, 0, 0, 0.7)),
+      var(--service-cta-overlay-end, rgba(0, 0, 0, 0.7))
+    ),
+    var(--service-cta-image, none);
+  background-size: cover;
+  background-position: var(--service-cta-position, center);
+  background-repeat: no-repeat;
+}
+
+.service-details,
+.service-features,
+.security-measures,
+.service-process,
+.service-types,
+.security-challenges,
+.site-types,
+.equipment-protection,
+.executive-protection,
+.risk-assessment,
+.industries-served,
+.event-types,
+.security-levels,
+.event-gallery,
+.challenges-section,
+.security-layers,
+.facility-types,
+.manufacturing-stats,
+.service-highlights,
+.facility-extra-services,
+.faq-section,
+.service-cta,
+.internal-links-section,
+.contact {
+  padding-inline: var(--container-pad-inline);
+  padding-block: var(--section-pad-block);
+}
+
+.service-details > .section-title,
+.service-details > .details-container,
+.service-features > .section-title,
+.service-features > .features-grid,
+.security-measures > .section-title,
+.security-measures > .security-container,
+.service-process > .section-title,
+.service-process > .process-steps,
+.service-types > .section-title,
+.service-types > .types-grid,
+.security-challenges > .section-title,
+.security-challenges > .challenges-grid,
+.site-types > .section-title,
+.site-types > .site-types-grid,
+.equipment-protection > .section-title,
+.equipment-protection > .equipment-grid,
+.executive-protection > .section-title,
+.executive-protection > .protection-grid,
+.risk-assessment > .section-title,
+.risk-assessment > .risk-grid,
+.industries-served > .section-title,
+.industries-served > .industries-grid,
+.event-types > .section-title,
+.event-types > .event-types-grid,
+.security-levels > .section-title,
+.security-levels > .levels-grid,
+.event-gallery > .section-title,
+.event-gallery > .gallery-grid,
+.challenges-section > .section-title,
+.challenges-section > .challenges-grid,
+.security-layers > .section-title,
+.security-layers > .layers-grid,
+.facility-types > .section-title,
+.facility-types > .facility-grid,
+.manufacturing-stats > .section-title,
+.manufacturing-stats > .stats-grid,
+.service-highlights > .section-title,
+.service-highlights > .highlights-grid,
+.facility-extra-services > .section-title,
+.facility-extra-services > .extra-services-grid,
+.faq-section > .section-title,
+.faq-section > .faq-container,
+.service-cta > .cta-buttons,
+.contact > .section-title,
+.contact > .contact-container,
+.internal-links-section > .internal-links-wrap {
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.details-container,
+.security-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.features-grid,
+.types-grid,
+.challenges-grid,
+.site-types-grid,
+.equipment-grid,
+.protection-grid,
+.risk-grid,
+.industries-grid,
+.event-types-grid,
+.levels-grid,
+.gallery-grid,
+.layers-grid,
+.facility-grid,
+.highlights-grid,
+.extra-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.process-steps {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-template-columns: none;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.service-image,
+.security-image {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.service-image img,
+.security-image img,
+.gallery-grid img,
+.event-gallery img,
+.facility-grid img,
+.highlights-grid img,
+.extra-services-grid img,
+.types-grid img,
+.challenges-grid img,
+.layers-grid img,
+.site-types-grid img,
+.equipment-grid img,
+.protection-grid img,
+.risk-grid img,
+.industries-grid img,
+.event-types-grid img,
+.levels-grid img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1024px) {
+  .features-grid,
+  .types-grid,
+  .challenges-grid,
+  .site-types-grid,
+  .equipment-grid,
+  .protection-grid,
+  .risk-grid,
+  .industries-grid,
+  .event-types-grid,
+  .levels-grid,
+  .gallery-grid,
+  .layers-grid,
+  .facility-grid,
+  .highlights-grid,
+  .extra-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact page component hardening */
+.contact-hero {
+  padding-inline: var(--container-pad-inline);
+}
+
+.contact-hero-content,
+.contact > .section-title,
+.contact > .contact-container,
+.map-section > .section-title,
+.map-section > .map-container,
+.cta-section .cta-content {
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.contact,
+.map-section,
+.cta-section {
+  padding-inline: var(--container-pad-inline);
+  padding-block: var(--section-pad-block);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.contact-info,
+.contact-form,
+.map-container,
+.map-overlay,
+.contact-item,
+.contact-details,
+.contact-details a,
+.contact-details p {
+  min-width: 0;
+}
+
+.contact-info {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.contact-item {
+  align-items: flex-start;
+}
+
+.contact-details a,
+.contact-details p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-form form {
+  width: 100%;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.cta-section .cta-content {
+  width: 100%;
+  max-width: 800px;
+}
+
+.cta-section .cta-buttons {
+  gap: var(--space-2);
+}
+
+/* Force consistent hero content anchoring after page-specific container rules */
+:is(
+  .hero-content,
+  .about-hero-content,
+  .service-hero-content,
+  .contact-hero-content,
+  .page-hero-content,
+  .job-hero-content,
+  .blog-hero-content
+) {
+  margin-inline-start: 0 !important;
+  margin-inline-end: auto !important;
+}
+
+.country-acknowledgement-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* Accessibility focus visibility */
+:focus-visible {
+  outline: 3px solid rgba(56, 113, 193, 0.72);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-insights-grid,
+  .home-services-grid,
+  .home-response-steps,
+  .home-accreditations-grid,
+  .footer-container {
+    grid-template-columns: repeat(2, minmax(230px, 1fr));
+  }
+
+  .footer-container {
+    gap: clamp(1.25rem, 2.3vw, 2rem);
+  }
+
+  .home-sectors-inner,
+  .home-response-shell,
+  .contact-container,
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .home-response-overview {
+    position: static;
+    top: auto;
+  }
+
+  .history-container,
+  .values-container,
+  .stats-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-hero {
+    background-attachment: scroll;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .details-container,
+  .security-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    padding-inline: var(--container-pad-inline);
+    gap: 8px;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
+  .header-call-btn {
+    margin-left: auto;
+    margin-right: 2px;
+    padding: 0 10px;
+    min-width: auto;
+    min-height: 32px;
+    height: 32px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: 0 4px 10px rgba(241, 70, 36, 0.25);
+  }
+
+  .header-call-btn i {
+    margin-right: 0;
+    font-size: 0.72rem;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100dvh;
+    overflow-y: auto;
+    transform: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+  .mobile-nav.is-open,
+  .mobile-nav.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  .hero,
+  .about-hero,
+  .service-hero,
+  .contact-hero,
+  .page-hero,
+  .job-hero,
+  .blog-hero {
+    margin-top: 96px;
+    min-height: auto;
+    height: auto;
+    padding-top: clamp(96px, 14vw, 128px);
+    padding-bottom: clamp(56px, 10vw, 88px);
+    background-attachment: scroll;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  :is(
+    .hero-content,
+    .about-hero-content,
+    .service-hero-content,
+    .contact-hero-content,
+    .page-hero-content,
+    .job-hero-content,
+    .blog-hero-content
+  ) {
+    inline-size: min(100%, 94vw);
+    text-align: left !important;
+  }
+
+  :is(
+      .hero,
+      .about-hero,
+      .service-hero,
+      .contact-hero,
+      .page-hero,
+      .job-hero,
+      .blog-hero
+    )
+    :is(.breadcrumb, .hero-buttons) {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  :is(
+      .hero,
+      .about-hero,
+      .service-hero,
+      .contact-hero,
+      .page-hero,
+      .job-hero,
+      .blog-hero
+    )
+    .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .home-highlights-grid,
+  .home-insights-grid,
+  .home-services-grid,
+  .home-response-steps,
+  .home-accreditations-grid,
+  .internal-links-grid,
+  .stats,
+  .footer-container,
+  .details-container,
+  .security-container,
+  .history-container,
+  .values-container,
+  .stats-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links h3,
+  .footer-contact h3 {
+    font-size: clamp(1.2rem, 1.7vw + 0.95rem, 1.42rem);
+  }
+
+  .footer-links a,
+  .footer-contact a,
+  .footer-contact p,
+  .footer-about p {
+    font-size: clamp(0.97rem, 0.8vw + 0.82rem, 1.02rem);
+  }
+
+  .service-hero {
+    aspect-ratio: auto;
+    min-height: clamp(360px, 58vh, 560px);
+  }
+
+  .country-acknowledgement-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .form-group {
+    min-width: 0;
+  }
+
+  .contact-form,
+  .map-container,
+  .cta-section .cta-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-call-btn {
+    width: auto;
+    min-width: auto;
+    height: 32px;
+    min-height: 32px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    margin-right: 0;
+    gap: 4px;
+  }
+
+  .header-call-btn i {
+    font-size: 0.74rem;
+  }
+}
+
+/* Safe-area padding for notched devices */
+@supports (padding: max(0px)) {
+  header {
+    padding-left: max(var(--container-pad-inline), env(safe-area-inset-left));
+    padding-right: max(var(--container-pad-inline), env(safe-area-inset-right));
+  }
+
+  .mobile-nav {
+    padding-left: max(var(--container-pad-inline), env(safe-area-inset-left));
+    padding-right: max(var(--container-pad-inline), env(safe-area-inset-right));
+    padding-bottom: max(32px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Hero image framing consistency across pages with inline background rules */
+.hero,
+.about-hero,
+.service-hero,
+.contact-hero,
+.page-hero,
+.job-hero,
+.blog-hero {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.service-cta.service-cta-media::before {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Avoid text clipping from long words/URLs in narrow columns */
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a,
+button,
+.cta-button,
+.secondary-button,
+.submit-btn,
+.header-call-btn {
+  overflow-wrap: anywhere;
+}
+
+/* Tier: 176px-240px (watch stress-test) */
+@media (max-width: 240px) {
+  :root {
+    --container-pad-inline: 8px;
+    --section-pad-block: 28px;
+  }
+
+  html {
+    font-size: 13px;
+  }
+
+  header {
+    min-height: 64px;
+    padding-inline: 8px;
+    gap: 4px;
+  }
+
+  .logo {
+    height: 36px;
+    min-width: 0;
+  }
+
+  .logo img {
+    max-height: 52px;
+  }
+
+  .mobile-menu-btn,
+  .header-call-btn,
+  .cta-button,
+  .secondary-button,
+  .submit-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .header-call-btn {
+    padding-inline: 8px;
+    font-size: 0.64rem;
+    line-height: 1;
+  }
+
+  .hero,
+  .about-hero,
+  .service-hero,
+  .contact-hero,
+  .page-hero,
+  .job-hero,
+  .blog-hero {
+    padding-top: 86px;
+    padding-bottom: 30px;
+  }
+
+  .hero-buttons,
+  .cta-buttons,
+  .home-insights-actions,
+  .home-response-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons > *,
+  .cta-buttons > *,
+  .home-insights-actions > *,
+  .home-response-actions > * {
+    width: 100%;
+  }
+}
+
+/* Tier: 241px-390px (small mobile) */
+@media (min-width: 241px) and (max-width: 390px) {
+  html {
+    font-size: 14px;
+  }
+
+  .hero,
+  .about-hero,
+  .service-hero,
+  .contact-hero,
+  .page-hero,
+  .job-hero,
+  .blog-hero {
+    padding-top: clamp(92px, 14vw, 118px);
+    padding-bottom: clamp(40px, 9vw, 64px);
+  }
+}
+
+/* Tier: 391px-480px (large mobile) */
+@media (min-width: 391px) and (max-width: 480px) {
+  .header-call-btn {
+    font-size: 0.72rem;
+  }
+
+  .mobile-nav ul {
+    max-width: 100%;
+  }
+}
+
+/* Tier: 481px-768px (folded/open foldables, small tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-accreditations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Tier: 769px-1024px (tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding-inline: clamp(12px, 2.6vw, 24px);
+  }
+
+  .desktop-nav {
+    gap: clamp(10px, 1.8vw, 16px);
+  }
+
+  .desktop-nav a {
+    font-size: 0.92rem;
+  }
+
+  .header-call-btn {
+    min-width: 88px;
+    padding-inline: 12px;
+    font-size: 0.82rem;
+  }
+}
+
+/* Tier: 1025px-1366px (small laptops) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .desktop-nav {
+    gap: clamp(12px, 1.6vw, 20px);
+  }
+
+  .desktop-nav a {
+    font-size: clamp(0.9rem, 0.75vw, 0.98rem);
+  }
+
+  .header-call-btn {
+    padding-inline: clamp(10px, 1.2vw, 16px);
+  }
+}
+
+/* Tier: 1367px-1680px (desktop) */
+@media (min-width: 1367px) and (max-width: 1680px) {
+  :root {
+    --container-max: 1360px;
+  }
+}
+
+/* Tier: 1681px-1920px (large desktop) */
+@media (min-width: 1681px) and (max-width: 1920px) {
+  :root {
+    --container-max: 1480px;
+  }
+}
+
+/* Tier: 1921px-2560px (QHD/2K) */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  :root {
+    --container-max: 1600px;
+  }
+}
+
+/* Tier: 2561px-3440px (ultrawide) */
+@media (min-width: 2561px) and (max-width: 3440px) {
+  :root {
+    --container-max: 1760px;
+  }
+}
+
+/* Tier: 3441px+ (4K/5K/6K/8K) */
+@media (min-width: 3441px) {
+  :root {
+    --container-max: 2040px;
+  }
+
+  body {
+    font-size: clamp(1rem, 0.22vw + 0.86rem, 1.24rem);
+  }
+}
+
+/* Foldable posture support */
+@media (horizontal-viewport-segments: 2) {
+  .mobile-nav {
+    max-width: 100%;
+  }
+
+  .hero,
+  .about-hero,
+  .service-hero,
+  .contact-hero,
+  .page-hero,
+  .job-hero,
+  .blog-hero {
+    padding-inline: max(var(--container-pad-inline), env(safe-area-inset-left));
+  }
+}
+
+/* Landscape phones/tablets: keep overlays readable without clipping */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero,
+  .about-hero,
+  .service-hero,
+  .contact-hero,
+  .page-hero,
+  .job-hero,
+  .blog-hero {
+    min-height: 360px;
+    padding-top: 88px;
+    padding-bottom: 28px;
+  }
+
+  .map-container {
+    min-height: 280px;
+  }
+}
+
+/* Disable fixed attachment on touch and tablet where it causes jump/crop */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  .about-hero,
+  .contact-hero,
+  .service-hero,
+  .job-hero,
+  .service-cta.service-cta-media::before {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Prevent oversized rendering on extra-large screens */
+@media (min-width: 1920px) {
+  .hero-content,
+  .about-hero-content,
+  .section-title,
+  .home-insight-card,
+  .home-step,
+  .contact-form,
+  .internal-link-card {
+    transform: none;
+  }
+
+  .home-highlights,
+  .home-insights,
+  .home-sectors,
+  .home-response-model,
+  .about,
+  .home-accreditations,
+  .contact-home,
+  .internal-links-section,
+  .country-acknowledgement,
+  footer {
+    padding-inline: max(
+      var(--container-pad-inline),
+      calc((100vw - var(--container-max)) / 2)
+    );
+  }
+}
+
+/* Fail-safe overflow guard */
+body,
+main,
+section,
+header,
+footer,
+.home-insight-card,
+.home-step,
+.contact-form,
+.internal-link-card,
+.footer-container,
+.home-sectors-block {
+  min-width: 0;
+}
+
+/* Final guard: keep every hero text block left-anchored across page-level inline CSS */
+:is(
+    .hero,
+    .about-hero,
+    .service-hero,
+    .contact-hero,
+    .page-hero,
+    .job-hero,
+    .blog-hero
+  )
+  :is(
+    .hero-content,
+    .about-hero-content,
+    .service-hero-content,
+    .contact-hero-content,
+    .page-hero-content,
+    .job-hero-content,
+    .blog-hero-content
+  ) {
+  text-align: left !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: auto !important;
+  justify-self: start !important;
+  align-self: center !important;
+}
+
+:is(
+    .hero,
+    .about-hero,
+    .service-hero,
+    .contact-hero,
+    .page-hero,
+    .job-hero,
+    .blog-hero
+  )
+  :is(
+    .hero-content,
+    .about-hero-content,
+    .service-hero-content,
+    .contact-hero-content,
+    .page-hero-content,
+    .job-hero-content,
+    .blog-hero-content
+  )
+  :is(h1, h2, h3, h4, p, li, span, strong, small, a) {
+  text-align: left !important;
+}
+
+:is(
+    .hero,
+    .about-hero,
+    .service-hero,
+    .contact-hero,
+    .page-hero,
+    .job-hero,
+    .blog-hero
+  )
+  .hero-buttons {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  align-items: center !important;
+}
+
+:is(
+    .hero,
+    .about-hero,
+    .service-hero,
+    .contact-hero,
+    .page-hero,
+    .job-hero,
+    .blog-hero
+  )
+  .breadcrumb {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+body main .hero .hero-content,
+body main .about-hero .about-hero-content,
+body main .service-hero .service-hero-content,
+body main .contact-hero .contact-hero-content,
+body main .page-hero .page-hero-content,
+body main .job-hero .job-hero-content,
+body main .blog-hero .blog-hero-content {
+  text-align: left !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: auto !important;
+}
+
+body main .hero .hero-content h1,
+body main .hero .hero-content h2,
+body main .hero .hero-content h3,
+body main .hero .hero-content p,
+body main .about-hero .about-hero-content h1,
+body main .about-hero .about-hero-content h2,
+body main .about-hero .about-hero-content h3,
+body main .about-hero .about-hero-content p,
+body main .service-hero .service-hero-content h1,
+body main .service-hero .service-hero-content h2,
+body main .service-hero .service-hero-content h3,
+body main .service-hero .service-hero-content p,
+body main .contact-hero .contact-hero-content h1,
+body main .contact-hero .contact-hero-content h2,
+body main .contact-hero .contact-hero-content h3,
+body main .contact-hero .contact-hero-content p,
+body main .page-hero .page-hero-content h1,
+body main .page-hero .page-hero-content h2,
+body main .page-hero .page-hero-content h3,
+body main .page-hero .page-hero-content p,
+body main .job-hero .job-hero-content h1,
+body main .job-hero .job-hero-content h2,
+body main .job-hero .job-hero-content h3,
+body main .job-hero .job-hero-content p,
+body main .blog-hero .blog-hero-content h1,
+body main .blog-hero .blog-hero-content h2,
+body main .blog-hero .blog-hero-content h3,
+body main .blog-hero .blog-hero-content p {
+  text-align: left !important;
+}
+
+body main .hero .hero-buttons,
+body main .about-hero .hero-buttons,
+body main .service-hero .hero-buttons,
+body main .contact-hero .hero-buttons,
+body main .page-hero .hero-buttons,
+body main .job-hero .hero-buttons,
+body main .blog-hero .hero-buttons {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+body
+  main
+  :is(
+    .hero,
+    .about-hero,
+    .service-hero,
+    .contact-hero,
+    .page-hero,
+    .job-hero,
+    .blog-hero
+  )
+  [class*="hero-content"] {
+  text-align: left !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: auto !important;
+}
+
+body
+  main
+  :is(
+    .hero,
+    .about-hero,
+    .service-hero,
+    .contact-hero,
+    .page-hero,
+    .job-hero,
+    .blog-hero
+  )
+  [class*="hero-content"]
+  :is(h1, h2, h3, h4, p, li, span, strong, small, a) {
+  text-align: left !important;
+}

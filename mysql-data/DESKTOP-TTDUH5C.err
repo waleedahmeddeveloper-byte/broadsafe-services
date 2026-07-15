@@ -1,0 +1,7 @@
+2026-02-06T08:58:02.339964Z 0 [System] [MY-015017] [Server] MySQL Server Initialization - start.
+2026-02-06T08:58:02.346173Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2026-02-06T08:58:02.346705Z 0 [System] [MY-013169] [Server] C:\Program Files\MySQL\MySQL Server 8.4\bin\mysqld.exe (mysqld 8.4.8) initializing of server in progress as process 24692
+2026-02-06T08:58:02.382434Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-02-06T08:58:03.211280Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-02-06T08:58:06.813615Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2026-02-06T08:58:09.027061Z 0 [System] [MY-015018] [Server] MySQL Server Initialization - end.

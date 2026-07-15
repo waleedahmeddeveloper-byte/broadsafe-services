@@ -1,0 +1,149 @@
+﻿about.html:51:<meta name="keywords" content="security services, about broadsafe, professional security, australia">
+about.html:99:"addressRegion": "Australia"
+about.html:117:"name": "Australia"
+about.html:874:<p>Our reputation is built on core values that guide everything we do integrity, professionalism and reliability. As client needs continue to evolve, Broadsafe remains committed to innovation and excellence, ensuring we remain the preferred security partner for organisations throughout Australia.</p>
+about.html:955:<p>Round-the-clock service with rapid response teams ready to deploy anywhere in Australia.</p>
+apply-online.html:51:<meta name="keywords" content="apply online, security jobs, broadsafe services, security careers, australia">
+apply-online.html:99:"addressRegion": "Australia"
+apply-online.html:117:"name": "Australia"
+apply-online.html:201:<p>Discover the benefits of working with Australia's leading security services provider</p>
+apply-online.html:317:<option value="WA">Western Australia</option>
+apply-online.html:318:<option value="SA">South Australia</option>
+apply-online.html:486:<label for="working_rights" class="required">Working Rights in Australia</label>
+blog-setup.php:273:'featured_image' => '/images/corporate-security-services-australia.jpg',
+blog.php:127:"description": "Professional security insights, industry news and safety tips from Australia's leading security services provider.",
+blog.php:162:<meta name="description" content="Stay informed with the latest security industry news, safety tips and professional insights from Australia's trusted security services provider.">
+blog.php:163:<meta name="keywords" content="security blog, safety tips, security industry news, commercial security, residential security, alarm systems, security trends Australia">
+blog.php:168:<meta property="og:description" content="Stay informed with the latest security industry news, safety tips and professional insights from Australia's trusted security services provider.">
+blog.php:174:<meta name="twitter:description" content="Stay informed with the latest security industry news, safety tips and professional insights from Australia's trusted security services provider.">
+BROADSAFE WEBSITE AUDIT REPORT.md:106:2. Removed "Serving all of Australia" from the footer and page-level instances.
+BROADSAFE_FIX_CHECKLIST.md:5:- [x] Remove Serving all of Australia from footer/page-level instances
+contact.html:50:<meta name="description" content="Contact Broadsafe Services for professional security enquiries and quotes. Reach our 24/7 team on 03 7064 8292 or submit an enquiry online. We serve businesses across all of Australia.">
+contact.html:51:<meta name="keywords" content="contact broadsafe services, security enquiries, security quotes, australia">
+contact.html:59:<meta property="og:description" content="Contact Broadsafe Services for professional security enquiries and quotes. Reach our 24/7 team on 03 7064 8292 or submit an enquiry online. We serve businesses across all of Australia.">
+contact.html:67:<meta name="twitter:description" content="Contact Broadsafe Services for professional security enquiries and quotes. Reach our 24/7 team on 03 7064 8292 or submit an enquiry online. We serve businesses across all of Australia.">
+contact.html:99:"addressRegion": "Australia"
+contact.html:117:"name": "Australia"
+contact.html:415:<p>Connect with Australia's trusted security experts for 24/7 protection and customised security solutions.</p>
+index.html:51:<meta name="keywords" content="security services, broadsafe services, static guarding, mobile patrols, alarm response, australia">
+index.html:99:"addressRegion": "Australia"
+index.html:117:"name": "Australia"
+index.html:567:<img src="images/construction-site-security-australia.jpg" alt="Broadsafe Security Team">
+index.html:571:<p>Built on a foundation of reliability, professionalism and exceptional client service, Broadsafe has grown into a respected security partner for businesses throughout Australia. We provide comprehensive security services, including Security Guards, Mobile Patrols, Alarm Response and integrated security solutions designed to meet the unique requirements of each site and organisation.</p>
+site-config.json:30:"title": "Home - Professional Security Services in Australia",
+site-config.json:70:"title": "Security Services - Broadsafe Australia",
+assets\css\site.css:5159:background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/images/professional-security-services-australia.jpg');
+assets\css\site.css:5166:background: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)), url('/images/professional-security-services-australia.jpg');
+components\meta.html:37:<meta name="keywords" content="security services, broadsafe services, australia">
+components\meta.html:84:"addressRegion": "Australia"
+components\meta.html:102:"name": "Australia"
+components\schema.html:20:"addressRegion": "Australia"
+components\schema.html:52:"name": "Australia"
+pages\about-content.html:36:<p>Our reputation is built on core values that guide everything we do integrity, professionalism and reliability. As client needs continue to evolve, Broadsafe remains committed to innovation and excellence, ensuring we remain the preferred security partner for organisations throughout Australia.</p>
+pages\about-content.html:121:<p>Round-the-clock service with rapid response teams ready to deploy anywhere in Australia.</p>
+pages\apply-online-content.html:46:<p>Discover the benefits of working with Australia's leading security services provider</p>
+pages\apply-online-content.html:162:<option value="WA">Western Australia</option>
+pages\apply-online-content.html:163:<option value="SA">South Australia</option>
+pages\apply-online-content.html:331:<label for="working_rights" class="required">Working Rights in Australia</label>
+pages\blog-content.php:5:<p>Expert analysis, safety tips and the latest security trends from Australia's leading security services provider.</p>
+pages\contact-content.html:43:<p>Connect with Australia's trusted security experts for 24/7 protection and customised security solutions.</p>
+pages\index-content.html:257:<p>Our reputation is built on core values that guide everything we doÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âintegrity, professionalism and reliability. As client needs continue to evolve, Broadsafe remains committed to innovation and excellence, ensuring we remain the preferred security partner for organisations throughout Australia.</p>
+pages\services\alarmresponses-content.html:75:<img src="/images/alarm-response-monitoring-services-australia.jpg" alt="Alarm Response Services">
+pages\services\cashintransit-content.html:41:<li><a href="#" class="active">Cash In Transit Services Australia</a></li>
+pages\services\cashintransit-content.html:43:<h1>Cash in Transit Services Australia</h1>
+pages\services\cashintransit-content.html:61:<img src="/images/cash-in-transit-security-solutions-australia.jpg" alt="Secure Cash Transport Vehicle for Cash in Transit Services Australia">
+pages\services\cashintransit-content.html:139:<img src="/images/security-protocols-measures.jpeg" alt="Security Protocols and Monitoring for Cash in Transit Services Australia">
+pages\services\cashintransit-content.html:154:<img src="/images/bank-cash-transport-security-services-australia.jpg" alt="Bank Cash Transport for Cash in Transit Services Australia">
+pages\services\cashintransit-content.html:164:<img src="/images/retail-cash-collection-security-services-australia.jpg" alt="Retail Cash Collection for Secure Cash Transportation">
+pages\services\commercialsitesecurity-content.html:61:<img src="/images/commercial-site-security-services-australia.jpg" alt="Commercial Site Security Services">
+pages\services\constructionsitesecurity-content.html:165:<img src="/images/construction-site-security-australia.jpg" alt="Construction Site Security Challenges">
+pages\services\corporatesecurity-content.html:55:<h2>Corporate Security Services Australia</h2>
+pages\services\corporatesecurity-content.html:61:<img src="/images/corporate-security-services-australia.jpg" alt="Corporate Security Professionals">
+pages\services\corporatesecurity-content.html:510:'/images/corporate-security-services-australia.jpg',
+pages\services\eventsecurity-content.html:61:<img src="/images/event-security-solutions-services-australia.jpg" alt="Professional Event Security Guards Managing Crowd Control at Australian Event">
+pages\services\eventsecurity-content.html:65:<p>Event security services involve specialised protection for people, property and assets during events of all sizes. As a leading security company in Australia, we provide comprehensive solutions including crowd control, access management, emergency response planning and VIP protection services tailored to your specific requirements.</p>
+pages\services\eventsecurity-content.html:153:<img src="/images/event-security-solutions-services-australia.jpg" alt="Concert Security Services Australia - Crowd Control at Music Events">
+pages\services\eventsecurity-content.html:164:<img src="/images/corporate-event-security-services.jpg" alt="Corporate Event Security Services Australia">
+pages\services\eventsecurity-content.html:197:<img src="/images/community-event-security-services.jpg" alt="Community Event Security Services Australia">
+pages\services\mobilepatrols-content.html:143:<img src="/images/lockup-openup-security-service-australia.jpg" alt="Lockup/Openup Services">
+pages\services\staticguarding-content.html:61:<img src="/images/static-guarding-security-services-australia.jpg" alt="Professional Static Guarding Services">
+services\alarmresponses.html:53:<meta name="description" content="Professional Alarm Response Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\alarmresponses.html:56:<meta property="og:description" content="Professional Alarm Response Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\alarmresponses.html:62:<meta name="twitter:description" content="Professional Alarm Response Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\alarmresponses.html:93:"addressRegion": "Australia"
+services\alarmresponses.html:111:"name": "Australia"
+services\alarmresponses.html:330:<img src="/images/alarm-response-monitoring-services-australia.jpg" alt="Alarm Response Services">
+services\cashintransit.html:50:<title>Cash in Transit Services Australia | Broadsafe Security Services</title>
+services\cashintransit.html:51:<meta name="description" content="Professional Cash in Transit Services Australia in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\cashintransit.html:53:<meta property="og:title" content="Cash in Transit Services Australia | Broadsafe Security Services">
+services\cashintransit.html:54:<meta property="og:description" content="Professional Cash in Transit Services Australia in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\cashintransit.html:59:<meta name="twitter:title" content="Cash in Transit Services Australia | Broadsafe Security Services">
+services\cashintransit.html:60:<meta name="twitter:description" content="Professional Cash in Transit Services Australia in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\cashintransit.html:97:"addressRegion": "Australia"
+services\cashintransit.html:115:"name": "Australia"
+services\cashintransit.html:385:<span>Cash In Transit Services Australia</span>
+services\cashintransit.html:387:<h1>Cash in Transit Services Australia</h1>
+services\cashintransit.html:405:<img src="/images/cash-in-transit-security-solutions-australia.jpg" alt="Secure Cash Transport Vehicle for Cash in Transit Services Australia">
+services\cashintransit.html:483:<img src="/images/security-protocols-measures.jpeg" alt="Security Protocols and Monitoring for Cash in Transit Services Australia">
+services\cashintransit.html:498:<img src="../images/bank-cash-transport-security-services-australia.jpg" alt="Bank Cash Transport for Cash in Transit Services Australia">
+services\cashintransit.html:508:<img src="../images/retail-cash-collection-security-services-australia.jpg" alt="Retail Cash Collection for Secure Cash Transportation">
+services\cashintransit.html:577:<div class="faq-answer">Our services include real-time GPS tracking, dedicated vehicles, 24/7 monitoring, randomized routes and comprehensive insurance coverage to ensure maximum security for cash transportation in Australia.</div>
+services\cashintransit.html:585:<div class="faq-answer">Costs vary based on frequency, value range, distance and specific requirements. Contact us for a customised quote for your cash transportation needs in Australia.</div>
+services\commercialsitesecurity.html:51:<meta name="description" content="Professional Commercial Site Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\commercialsitesecurity.html:54:<meta property="og:description" content="Professional Commercial Site Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\commercialsitesecurity.html:60:<meta name="twitter:description" content="Professional Commercial Site Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\commercialsitesecurity.html:97:"addressRegion": "Australia"
+services\commercialsitesecurity.html:115:"name": "Australia"
+services\commercialsitesecurity.html:438:<img src="../images/commercial-site-security-services-australia.jpg" alt="Commercial Site Security Services">
+services\constructionsitesecurity.html:50:<meta name="description" content="Professional Construction Site Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\constructionsitesecurity.html:53:<meta property="og:description" content="Professional Construction Site Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\constructionsitesecurity.html:59:<meta name="twitter:description" content="Professional Construction Site Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\constructionsitesecurity.html:85:"addressRegion": "Australia"
+services\constructionsitesecurity.html:103:"name": "Australia"
+services\constructionsitesecurity.html:695:<img src="../images/construction-site-security-australia.jpg" alt="Construction Site Security Challenges">
+services\constructionsitesecurity.html:829:<p>Costs vary based on site size, location, duration and security requirements. Contact us for a customised quote for your construction site security needs in Australia.</p>
+services\corporatesecurity.html:50:<meta name="description" content="Professional Corporate Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\corporatesecurity.html:53:<meta property="og:description" content="Professional Corporate Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\corporatesecurity.html:59:<meta name="twitter:description" content="Professional Corporate Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\corporatesecurity.html:90:"addressRegion": "Australia"
+services\corporatesecurity.html:108:"name": "Australia"
+services\corporatesecurity.html:624:<h2>Corporate Security Services Australia</h2>
+services\eventsecurity.html:51:<meta name="description" content="Professional Event Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\eventsecurity.html:54:<meta property="og:description" content="Professional Event Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\eventsecurity.html:60:<meta name="twitter:description" content="Professional Event Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\eventsecurity.html:97:"addressRegion": "Australia"
+services\eventsecurity.html:115:"name": "Australia"
+services\eventsecurity.html:604:<img src="../images/event-security-solutions-services-australia.jpg" alt="Professional Event Security Guards Managing Crowd Control at Australian Event">
+services\eventsecurity.html:608:<p>Event security services involve specialised protection for people, property and assets during events of all sizes. As a leading security company in Australia, we provide comprehensive solutions including crowd control, access management, emergency response planning and VIP protection services tailored to your specific requirements.</p>
+services\eventsecurity.html:696:<img src="../images/event-security-solutions-services-australia.jpg" alt="Concert Security Services Australia - Crowd Control at Music Events">
+services\eventsecurity.html:707:<img src="../images/corporate-event-security-services.jpg" alt="Corporate Event Security Services Australia">
+services\eventsecurity.html:740:<img src="../images/community-event-security-services.jpg" alt="Community Event Security Services Australia">
+services\facilitymanagementservices.html:24:<meta name="description" content="Professional Facilities Management Services in Australia. Integrated support for site operations, compliance, maintenance coordination and safety.">
+services\facilitymanagementservices.html:410:<img src="../images/Facility%20Management%20Support.png" alt="Facilities Management Services in Australia" loading="lazy" decoding="async">
+services\index.html:50:<meta name="keywords" content="security services australia, broadsafe services, professional security, security guards, 24/7 security">
+services\index.html:98:"addressRegion": "Australia"
+services\index.html:116:"name": "Australia"
+services\index.html:315:<img src="/images/cash-in-transit-security-solutions-australia.jpg" alt="Cash In Transit Security Service" loading="lazy" decoding="async">
+services\index.html:330:<img src="/images/alarm-response-monitoring-services-australia.jpg" alt="Alarm Response Security Service" loading="lazy" decoding="async">
+services\index.html:345:<img src="/images/event-security-solutions-services-australia.jpg" alt="Event Security Service" loading="lazy" decoding="async">
+services\index.html:360:<img src="/images/construction-site-security-australia.jpg" alt="Construction Site Security Service" loading="lazy" decoding="async">
+services\index.html:375:<img src="/images/commercial-site-security-services-australia.jpg" alt="Commercial Site Security Service" loading="lazy" decoding="async">
+services\maintenanceservices.html:24:<meta name="description" content="Professional Maintenance Services in Australia with preventive and corrective maintenance coordination, fast response support and clear service reporting.">
+services\manufacturingwarehousingsecurity.html:51:<meta name="description" content="Professional Manufacturing & Warehousing Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\manufacturingwarehousingsecurity.html:54:<meta property="og:description" content="Professional Manufacturing & Warehousing Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\manufacturingwarehousingsecurity.html:60:<meta name="twitter:description" content="Professional Manufacturing & Warehousing Security Solutions in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\manufacturingwarehousingsecurity.html:97:"addressRegion": "Australia"
+services\manufacturingwarehousingsecurity.html:115:"name": "Australia"
+services\mobilepatrols.html:51:<meta name="description" content="Professional Mobile Patrol Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\mobilepatrols.html:54:<meta property="og:description" content="Professional Mobile Patrol Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\mobilepatrols.html:60:<meta name="twitter:description" content="Professional Mobile Patrol Security Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\mobilepatrols.html:63:<meta name="keywords" content="security services, broadsafe, mobile patrol, mobile patrol security, mobile patrol services, mobile security patrol, mobile patrol security services, Australia">
+services\mobilepatrols.html:97:"addressRegion": "Australia"
+services\mobilepatrols.html:115:"name": "Australia"
+services\mobilepatrols.html:562:<img src="/images/lockup-openup-security-service-australia.jpg" alt="Lockup/Openup Services">
+services\staticguarding.html:51:<meta name="description" content="Professional Static Guarding Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\staticguarding.html:54:<meta property="og:description" content="Professional Static Guarding Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\staticguarding.html:60:<meta name="twitter:description" content="Professional Static Guarding Services in Australia with 24/7 coverage, licensed officers and rapid response from Broadsafe Security Services.">
+services\staticguarding.html:97:"addressRegion": "Australia"
+services\staticguarding.html:115:"name": "Australia"
+services\staticguarding.html:469:<img src="/images/static-guarding-security-services-australia.jpg" alt="Professional Static Guarding Services in Australia">

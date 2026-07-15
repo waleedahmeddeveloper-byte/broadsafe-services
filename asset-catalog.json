@@ -1,0 +1,68 @@
+{
+  "globalStyles": [
+    {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+      "type": "external",
+      "description": "Font Awesome icons"
+    },
+    {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css",
+      "type": "external",
+      "description": "Slick carousel base styles"
+    },
+    {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css",
+      "type": "external",
+      "description": "Slick carousel theme"
+    }
+  ],
+  "globalScripts": [],
+  "pageSpecificStyles": {
+    "about.html": {
+      "inline": true,
+      "description": "Responsive standards, base styles, about page hero, content sections, animations, mobile menu"
+    }
+  },
+  "pageSpecificScripts": {
+    "all": {
+      "inline": true,
+      "component": "shared-scripts.html",
+      "description": "Cookie functions, theme toggle, mobile menu, header scroll, smooth scrolling, touch detection"
+    }
+  },
+  "inlineStyles": {
+    "responsiveStandard": "Inline responsive CSS with CSS variables for container-max, gutter, section-padding, radius",
+    "baseStyles": "CSS reset, typography, buttons, header/nav, footer, animations",
+    "aboutPageStyles": "About hero, content sections, values cards, stats, CTA, responsive breakpoints"
+  },
+  "inlineScripts": {
+    "sharedFunctionality": "Cookie management, theme toggle, mobile menu, header effects, smooth scroll, touch detection"
+  },
+  "externalDependencies": [
+    {
+      "name": "Google Tag Manager",
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-KNQRM38F",
+      "type": "tracking"
+    },
+    {
+      "name": "Google Analytics",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-6V0WJ4TDNZ",
+      "type": "analytics"
+    },
+    {
+      "name": "CookieYes",
+      "url": "https://cdn-cookieyes.com/client_data/5cfe4f28d3b2e213a2c75d46/script.js",
+      "type": "consent"
+    },
+    {
+      "name": "Font Awesome",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+      "type": "icons"
+    },
+    {
+      "name": "Slick Carousel",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css",
+      "type": "carousel"
+    }
+  ]
+}

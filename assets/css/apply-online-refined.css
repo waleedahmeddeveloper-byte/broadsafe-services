@@ -1,0 +1,377 @@
+/* Apply Online UX/UI refinement layer (content-safe, logic-safe) */
+:root {
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-accent: var(--secondary);
+    --color-bg: var(--gray);
+    --color-text: #555555;
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-5: 3rem;
+    --space-6: 4rem;
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.25rem;
+
+    --shadow-soft: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
+    --shadow-lift: 0 1rem 2.5rem rgba(0, 0, 0, 0.12);
+
+    --motion-fast: 200ms ease;
+    --motion-base: 260ms ease;
+    --motion-slow: 320ms ease;
+
+    --container-max-apply: 90rem;
+    --container-pad-apply: clamp(1rem, 2.5vw, 2rem);
+}
+
+.apply-online-page {
+    color: var(--color-text);
+}
+
+.apply-online-page main {
+    overflow-x: clip;
+}
+
+.apply-online-page .job-hero,
+.apply-online-page .why-join-us,
+.apply-online-page .application-section {
+    padding-inline: var(--container-pad-apply);
+}
+
+.apply-online-page .job-hero-content,
+.apply-online-page .application-section .section-title,
+.apply-online-page .benefits-grid,
+.apply-online-page .application-form,
+.apply-online-page #success-message {
+    max-width: var(--container-max-apply);
+    margin-inline: auto;
+}
+
+.apply-online-page .job-hero {
+    min-height: clamp(28rem, 70vh, 46rem);
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.apply-online-page .job-hero-content {
+    max-width: min(100%, 48rem);
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+}
+
+.apply-online-page .job-hero h1 {
+    font-size: clamp(2rem, 4.2vw, 3.6rem);
+    letter-spacing: 0.01em;
+    margin-bottom: var(--space-2);
+}
+
+.apply-online-page .job-hero p {
+    font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+    line-height: 1.62;
+    max-width: 65ch;
+}
+
+.apply-online-page .why-join-us,
+.apply-online-page .application-section {
+    padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.apply-online-page .section-title h2 {
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+}
+
+.apply-online-page .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+}
+
+.apply-online-page .benefit-card {
+    border-radius: var(--radius-lg);
+    border: 1px solid #e5ebf4;
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--motion-base), box-shadow var(--motion-base), border-color var(--motion-fast);
+    height: 100%;
+}
+
+.apply-online-page .benefit-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-card);
+    border-color: #d5deea;
+}
+
+.apply-online-page .benefit-icon {
+    border-radius: var(--radius-md);
+}
+
+.apply-online-page .application-form {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lift);
+    padding: clamp(1.25rem, 3vw, 3rem);
+}
+
+.apply-online-page .form-section {
+    border-bottom-width: 1px;
+    border-bottom-color: #dde5f0;
+    margin-bottom: clamp(1.75rem, 2.5vw, 2.5rem);
+    padding-bottom: clamp(1.25rem, 2vw, 2rem);
+}
+
+.apply-online-page .form-section-title {
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.apply-online-page .application-form .form-row {
+    gap: clamp(0.9rem, 1.8vw, 1.5rem);
+}
+
+.apply-online-page .application-form .form-group label {
+    line-height: 1.4;
+}
+
+.apply-online-page .application-form .form-group input,
+.apply-online-page .application-form .form-group textarea,
+.apply-online-page .application-form .form-group select {
+    border: 1px solid #cfd8e6;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    line-height: 1.35;
+    transition: border-color var(--motion-fast), box-shadow var(--motion-fast), background-color var(--motion-fast);
+}
+
+.apply-online-page .application-form .form-group textarea {
+    min-height: 8.5rem;
+}
+
+.apply-online-page .application-form .form-group input:hover,
+.apply-online-page .application-form .form-group textarea:hover,
+.apply-online-page .application-form .form-group select:hover {
+    border-color: #b7c5d9;
+}
+
+.apply-online-page .application-form .form-group input:focus,
+.apply-online-page .application-form .form-group textarea:focus,
+.apply-online-page .application-form .form-group select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(56, 113, 193, 0.18);
+}
+
+.apply-online-page .radio-group {
+    gap: var(--space-2);
+}
+
+.apply-online-page .radio-option {
+    min-height: 2rem;
+}
+
+.apply-online-page .availability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+}
+
+.apply-online-page .availability-item {
+    border-radius: var(--radius-md);
+    border-color: #d6dfec;
+    background: #f9fbff;
+    min-height: 4.25rem;
+}
+
+.apply-online-page .availability-options {
+    gap: var(--space-2);
+}
+
+.apply-online-page .submit-btn {
+    border-radius: 999px;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    transition: transform var(--motion-base), box-shadow var(--motion-base), background-color var(--motion-base);
+}
+
+.apply-online-page .submit-btn:hover {
+    transform: translateY(-0.15rem);
+}
+
+.apply-online-page .submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.72;
+    transform: none;
+}
+
+.apply-online-page .error-message {
+    font-weight: 600;
+}
+
+.apply-online-page .cta-button,
+.apply-online-page .header-call-btn,
+.apply-online-page .submit-btn,
+.apply-online-page .theme-button,
+.apply-online-page button,
+.apply-online-page input,
+.apply-online-page select,
+.apply-online-page textarea,
+.apply-online-page a {
+    transition-duration: var(--motion-base);
+}
+
+.apply-online-page .cta-button:focus-visible,
+.apply-online-page .header-call-btn:focus-visible,
+.apply-online-page .submit-btn:focus-visible,
+.apply-online-page .mobile-menu-btn:focus-visible,
+.apply-online-page .mobile-nav-close:focus-visible,
+.apply-online-page .application-form .form-group input:focus-visible,
+.apply-online-page .application-form .form-group textarea:focus-visible,
+.apply-online-page .application-form .form-group select:focus-visible,
+.apply-online-page .application-form .radio-option input:focus-visible,
+.apply-online-page .desktop-nav a:focus-visible,
+.apply-online-page .mobile-nav a:focus-visible,
+.apply-online-page footer a:focus-visible {
+    outline: 3px solid rgba(230, 63, 35, 0.48);
+    outline-offset: 2px;
+}
+
+.apply-online-page main > section {
+    animation: applySectionIn 480ms ease both;
+}
+
+.apply-online-page main > section:nth-of-type(2) {
+    animation-delay: 60ms;
+}
+
+.apply-online-page main > section:nth-of-type(3) {
+    animation-delay: 120ms;
+}
+
+@keyframes applySectionIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.apply-online-page .country-acknowledgement-inner img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .apply-online-page .benefits-grid,
+    .apply-online-page .availability-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .apply-online-page .application-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .apply-online-page .job-hero {
+        min-height: auto;
+        padding-top: clamp(6.5rem, 12vw, 8rem);
+        padding-bottom: clamp(3rem, 8vw, 4.75rem);
+    }
+
+    .apply-online-page .job-hero-content {
+        max-width: 100%;
+    }
+
+    .apply-online-page .benefits-grid,
+    .apply-online-page .availability-grid,
+    .apply-online-page .application-form .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .apply-online-page .availability-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+
+    .apply-online-page .submit-btn-wrapper {
+        margin-top: var(--space-4);
+        padding-top: var(--space-3);
+    }
+}
+
+@media (max-width: 480px) {
+    .apply-online-page .application-form {
+        border-radius: var(--radius-lg);
+        padding: 1rem;
+    }
+
+    .apply-online-page .section-title h2 {
+        line-height: 1.2;
+    }
+
+    .apply-online-page .job-hero h1 {
+        line-height: 1.12;
+    }
+}
+
+@media (min-width: 1921px) {
+    .apply-online-page .job-hero,
+    .apply-online-page .why-join-us,
+.apply-online-page .application-section {
+        padding-inline: max(var(--container-pad-apply), calc((100vw - var(--container-max-apply)) / 2));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .apply-online-page main > section {
+        animation: none;
+    }
+
+    .apply-online-page *,
+    .apply-online-page *::before,
+    .apply-online-page *::after {
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body.dark-theme.apply-online-page {
+    --color-bg: var(--dark-bg);
+    --color-text: var(--dark-text);
+}
+
+body.dark-theme.apply-online-page .benefit-card,
+body.dark-theme.apply-online-page .application-form,
+body.dark-theme.apply-online-page .availability-item {
+    border-color: #2f3a4b;
+    box-shadow: 0 0.8rem 2.2rem rgba(0, 0, 0, 0.35);
+}
+
+body.dark-theme.apply-online-page .form-section {
+    border-bottom-color: #344052;
+}
+
+body.dark-theme.apply-online-page .availability-item {
+    background: #202735;
+}
+
+body.dark-theme.apply-online-page .application-form .form-group input,
+body.dark-theme.apply-online-page .application-form .form-group textarea,
+body.dark-theme.apply-online-page .application-form .form-group select {
+    border-color: #3b4a60;
+    background-color: #182233;
+    color: var(--dark-text);
+}
+
+body.dark-theme.apply-online-page .application-form .form-group input:hover,
+body.dark-theme.apply-online-page .application-form .form-group textarea:hover,
+body.dark-theme.apply-online-page .application-form .form-group select:hover {
+    border-color: #4a5f7b;
+}

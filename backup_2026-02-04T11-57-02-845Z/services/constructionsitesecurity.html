@@ -1,0 +1,2674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KNQRM38F');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- CookieYes Consent Script -->
+    <script>
+    const injectScript = require("injectScript");
+    const queryPermission = require("queryPermission");
+    const setDefaultConsentState = require("setDefaultConsentState");
+    const encodeUri = require("encodeUri");
+    const gtagSet = require("gtagSet");
+    const getCookieValues = require("getCookieValues");
+    const updateConsentState = require("updateConsentState");
+    
+    let setDefaultSetting = true;
+    const regionSettings = data.regionSettings || [];
+    const waitForTime = data.waitForTime;
+    
+    function getConsentStateForCategory(categoryConsent) {
+      return categoryConsent === "yes" ? "granted" : "denied";
+    }
+    
+    function setConsentInitStates(consentData) {
+      if (waitForTime > 0) consentData.wait_for_update = waitForTime;
+      setDefaultConsentState(consentData);
+    }
+    
+    gtagSet({
+      ads_data_redaction: !!data.adsRedaction,
+      url_passthrough: !!data.urlPassThrough,
+      "developer_id.dY2Q2ZW": true,
+    });
+    
+    for (let index = 0; index < regionSettings.length; index++) {
+      const regionSetting = regionSettings[index];
+      const consentRegionData = {
+        ad_storage: regionSetting.advertisement,
+        analytics_storage: regionSetting.analytics,
+        functionality_storage: regionSetting.functional,
+        personalization_storage: regionSetting.functional,
+        security_storage: regionSetting.security,
+        ad_user_data: regionSetting.adUserData,
+        ad_personalization: regionSetting.adPersonal
+      };
+      const regionsToSetFor = regionSetting.regions
+        .split(",")
+        .map((region) => region.trim())
+        .filter((region) => region);
+      if (regionsToSetFor.length > 0 && regionsToSetFor[0].toLowerCase() !== "all")
+        consentRegionData.region = regionsToSetFor;
+      else setDefaultSetting = false;
+      setConsentInitStates(consentRegionData);
+    }
+    
+    if (setDefaultSetting) {
+      setConsentInitStates({
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
+    }
+    
+    const consentString = getCookieValues("cookieyes-consent", false)[0];
+    if (consentString && typeof consentString === "string") {
+      const cookieObj = consentString.split(",").reduce(function (acc, curr) {
+        const cookieValue = curr.trim().split(":");
+        acc[cookieValue[0]] = getConsentStateForCategory(cookieValue[1]);
+        return acc;
+      }, {});
+    
+      updateConsentState({
+        ad_storage: cookieObj.advertisement,
+        analytics_storage: cookieObj.analytics,
+        functionality_storage: cookieObj.functional,
+        personalization_storage: cookieObj.functional,
+        security_storage: cookieObj.necessary,
+        ad_user_data: cookieObj.advertisement,
+        ad_personalization: cookieObj.advertisement,
+      });
+    }
+    
+    let scriptURL =
+      "https://cdn-cookieyes.com/client_data/" +
+      encodeURIComponent("5cfe4f28d3b2e213a2c75d46") + "/script.js";
+    
+    if (!queryPermission("inject_script", scriptURL)) return data.gtmOnFailure();
+    
+    injectScript(scriptURL, data.gtmOnSuccess, data.gtmOnFailure);
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V0WJ4TDNZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6V0WJ4TDNZ');
+    </script>
+    
+    <!-- CookieYes Consent Banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/5cfe4f28d3b2e213a2c75d46/script.js"></script>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="wk4JdqHFf7Q8c4nmlfscBK_X4NG250WqphMqfhvZp2o" />
+    
+    <!-- Schema Markup for Construction Site Security Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Construction Site Security",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Broadsafe Services",
+        "url": "https://broadsafeservices.com.au/",
+        "telephone": "+61 3 7064 8292",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "AU",
+          "addressRegion": "Australia"
+        }
+      },
+      "description": "Specialized security solutions for construction sites to prevent theft, vandalism, and ensure safety compliance across Australia.",
+      "areaServed": "AU",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Construction Site Security Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "24/7 Site Security Personnel"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Access Control for Workers and Vehicles"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Theft and Vandalism Prevention"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Safety Compliance Monitoring"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is construction site security?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Construction site security involves specialized security measures to protect construction sites from theft, vandalism, unauthorized access, and safety violations across Australia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does construction site security cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Costs vary based on site size, location, duration, and security requirements. Contact us for a customized quote for your construction site security needs in Australia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide 24/7 construction site security?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer 24/7 construction site security with on-site personnel, mobile patrols, and surveillance systems to protect your site around the clock."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of construction sites do you secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We secure residential, commercial, industrial, and infrastructure construction sites across Australia, from small renovations to large-scale projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you prevent theft on construction sites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use multiple layers of security including 24/7 guarding, access control, equipment tracking, and perimeter security to prevent theft."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Construction Site Security | Theft Prevention & Safety Compliance | Broadsafe Services</title>
+    <meta name="description" content="Specialized security solutions for construction sites to prevent theft, vandalism, and ensure safety compliance across Australia.">
+    <link rel="canonical" href="https://broadsafeservices.com.au/services/construction-site-security" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Construction Site Security Services | Broadsafe Security">
+    <meta property="og:description" content="Specialized security solutions for construction sites across Australia">
+    <meta property="og:url" content="https://broadsafeservices.com.au/services/construction-site-security">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="/assets/css/site.css?v=20260709">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+    /* ====== RESPONSIVE STANDARD (INLINE) ====== */
+    :root { --container-max: 1200px; --gutter: clamp(1rem, 3vw, 2rem); --section-padding: clamp(2.5rem, 6vw, 6rem); --radius: 16px; }
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    body { font-size: clamp(1rem, 0.96rem + 0.3vw, 1.125rem); line-height: 1.6; overflow-x: hidden; }
+    img, video, svg, iframe, embed, object { max-width: 100%; height: auto; }
+    video, iframe { width: 100%; }
+    figure { margin: 0; }
+    table { width: 100%; max-width: 100%; display: block; overflow-x: auto; }
+    a, button, input, select, textarea { touch-action: manipulation; }
+    button, .cta-button, .secondary-button, .header-call-btn { min-height: 44px; min-width: 44px; }
+    input, select, textarea { width: 100%; max-width: 100%; }
+    section, .section { padding-inline: var(--gutter); }
+    .container, .content-wrapper, .section-container, .inner-container { width: min(var(--container-max), calc(100% - (var(--gutter) * 2))); margin-inline: auto; }
+    h1 { font-size: clamp(1.8rem, 4vw, 3rem); } h2 { font-size: clamp(1.5rem, 3vw, 2.5rem); } h3 { font-size: clamp(1.25rem, 2.4vw, 2rem); }
+    p, li { font-size: clamp(1rem, 1.1vw, 1.125rem); }
+    .responsive-media { position: relative; width: 100%; padding-top: 56.25%; border-radius: var(--radius); overflow: hidden; }
+    .responsive-media > iframe, .responsive-media > video, .responsive-media > embed, .responsive-media > object { position: absolute; inset: 0; width: 100%; height: 100%; }
+    @media (max-width: 1024px) { nav ul { flex-wrap: wrap; gap: 1rem; } }
+    @media (max-width: 767px) {
+        header { padding: 12px var(--gutter); }
+        nav { position: static; transform: none; }
+        nav ul { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+        .mobile-menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+        .desktop-nav { display: none !important; }
+        .mobile-nav { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100vw; max-width: 100vw; height: 100dvh; transform: translateX(100%); transition: transform 0.3s ease; }
+        .mobile-nav.is-open { transform: translateX(0); }
+        body.nav-open { overflow: hidden; }
+        body.nav-open .theme-button { display: none; }
+    }
+    </style>
+    <style>
+        /* ====== CSS RESET & BASE STYLES ====== */
+        :root {
+            --primary: #3871C1;
+            --secondary: #E63F23;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray: #f5f7fa;
+            --dark-bg: #121212;
+            --dark-card: #1e1e1e;
+            --dark-text: #e0e0e0;
+            --dark-gray: #2d2d2d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        body.dark-theme {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        
+        /* ====== TYPOGRAPHY ====== */
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* ====== BUTTON STYLES ====== */
+        .cta-button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-height: 48px;
+            min-width: 140px;
+            touch-action: manipulation;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(241, 70, 36, 0.3);
+        }
+        
+        .secondary-button {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-height: 48px;
+            min-width: 140px;
+            touch-action: manipulation;
+        }
+        
+        .secondary-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+        
+        .theme-button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            font-size: 0.9rem;
+            min-height: 44px;
+        }
+        
+        /* ====== HEADER & NAVIGATION ====== */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            transition: all 0.3s ease;
+            min-height: 80px;
+            backdrop-filter: blur(10px);
+        }
+        
+        body.dark-theme header {
+            background-color: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            z-index: 1001;
+        }
+        
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-height: 100px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+        }
+        
+        body.dark-theme .mobile-menu-btn {
+            color: var(--dark-text);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav ul li {
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 0;
+            transition: color 0.3s;
+            position: relative;
+            white-space: nowrap;
+        }
+        
+        body.dark-theme nav ul li a {
+            color: var(--dark-text);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--primary);
+        }
+        
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        /* Header Call Button */
+        .header-call-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-height: 40px;
+            min-width: 100px;
+            touch-action: manipulation;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+        
+        .header-call-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(241, 70, 36, 0.3);
+        }
+        
+        /* ====== SERVICE HERO SECTION ====== */
+        .service-hero {
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 0 5%;
+            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(0 0 0 / 50%) 0%, rgba(0 0 0 / 50%) 100%), url('/images/construction-site-security-solutions.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .service-hero-content {
+            max-width: 600px;
+            z-index: 3;
+            position: relative;
+            color: white;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .service-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 20px;
+            color: var(--light);
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .service-hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 20px;
+            color: #f0f0f0;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            opacity: 0.95;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            list-style: none;
+            padding: 10px 0;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb li {
+            margin: 0 10px 10px 0;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb li a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .breadcrumb li a:hover {
+            color: white;
+        }
+        
+        .breadcrumb li:after {
+            content: '>';
+            margin-left: 15px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .breadcrumb li:last-child:after {
+            content: '';
+            margin: 0;
+        }
+        
+        .breadcrumb li:last-child a {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        /* ====== SERVICE DETAILS SECTION ====== */
+        .service-details {
+            padding: 80px 5%;
+            background: var(--gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body.dark-theme .service-details {
+            background: var(--dark-bg);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+        }
+        
+        body.dark-theme .section-title p {
+            color: #aaa;
+        }
+        
+        .details-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .details-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+                align-items: start;
+            }
+        }
+        
+        .service-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .details-content h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        body.dark-theme .details-content h3 {
+            color: var(--dark-text);
+        }
+        
+        .details-content p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        body.dark-theme .details-content p {
+            color: #aaa;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .benefits-list li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.5;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+        
+        body.dark-theme .benefits-list li {
+            color: #ccc;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+        }
+        
+        .benefits-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--secondary);
+            font-size: 1rem;
+            background: rgba(241, 70, 36, 0.1);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* ====== SERVICE FEATURES SECTION ====== */
+        .service-features {
+            padding: 80px 5%;
+            background: white;
+        }
+        
+        body.dark-theme .service-features {
+            background: var(--dark-bg);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        .feature-card {
+            background: var(--gray);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+            width: 100%;
+            height: 100%;
+        }
+        
+        body.dark-theme .feature-card {
+            background: var(--dark-card);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), #2a5ca0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        body.dark-theme .feature-card h3 {
+            color: var(--dark-text);
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .feature-card p {
+            color: #aaa;
+        }
+        
+        /* ====== SECURITY CHALLENGES SECTION ====== */
+        .security-challenges {
+            padding: 80px 5%;
+            background: var(--gray);
+        }
+        
+        body.dark-theme .security-challenges {
+            background: var(--dark-bg);
+        }
+        
+        .challenges-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .challenges-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+                align-items: center;
+            }
+        }
+        
+        .challenges-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .challenges-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .challenges-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .challenges-list li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.5;
+            border-bottom: 1px solid #eee;
+        }
+        
+        body.dark-theme .challenges-list li {
+            color: #ccc;
+            border-bottom: 1px solid #444;
+        }
+        
+        .challenges-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .challenges-list li:before {
+            content: '\f06a';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+        
+        /* ====== SITE TYPES SECTION ====== */
+        .site-types {
+            padding: 80px 5%;
+            background: white;
+        }
+        
+        body.dark-theme .site-types {
+            background: var(--dark-bg);
+        }
+        
+        .types-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .types-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        .type-card {
+            background: var(--gray);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            width: 100%;
+            height: 100%;
+        }
+        
+        body.dark-theme .type-card {
+            background: var(--dark-card);
+        }
+        
+        .type-content {
+            padding: 30px 25px;
+            text-align: center;
+        }
+        
+        .type-content .feature-icon {
+            margin-bottom: 20px;
+        }
+        
+        .type-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        body.dark-theme .type-content h3 {
+            color: var(--dark-text);
+        }
+        
+        .type-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .type-content p {
+            color: #aaa;
+        }
+        
+        /* ====== EQUIPMENT PROTECTION SECTION ====== */
+        .equipment-protection {
+            padding: 80px 5%;
+            background: var(--gray);
+        }
+        
+        body.dark-theme .equipment-protection {
+            background: var(--dark-bg);
+        }
+        
+        .protection-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .protection-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+                align-items: center;
+            }
+        }
+        
+        .protection-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .protection-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .protection-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .protection-list li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.5;
+            border-bottom: 1px solid #eee;
+        }
+        
+        body.dark-theme .protection-list li {
+            color: #ccc;
+            border-bottom: 1px solid #444;
+        }
+        
+        .protection-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .protection-list li:before {
+            content: '\f085';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+        
+        /* ====== PROCESS SECTION ====== */
+        .service-process {
+            padding: 80px 5%;
+            background: white;
+        }
+        
+        body.dark-theme .service-process {
+            background: var(--dark-bg);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        @media (min-width: 768px) {
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .process-steps {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0 auto 25px;
+            box-shadow: 0 5px 15px rgba(56, 113, 193, 0.3);
+        }
+        
+        .process-step h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        body.dark-theme .process-step h3 {
+            color: var(--dark-text);
+        }
+        
+        .process-step p {
+            color: #666;
+            padding: 0 10px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .process-step p {
+            color: #aaa;
+        }
+        
+        /* ====== FAQ SECTION ====== */
+        .faq-section {
+            padding: 80px 5%;
+            background: var(--gray);
+        }
+        
+        body.dark-theme .faq-section {
+            background: var(--dark-bg);
+        }
+        
+        .faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        body.dark-theme .faq-item {
+            border-color: #444;
+        }
+        
+        .faq-question {
+            padding: 25px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+        }
+        
+        body.dark-theme .faq-question {
+            background: var(--dark-card);
+        }
+        
+        .faq-question h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0;
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+        }
+        
+        body.dark-theme .faq-question h3 {
+            color: var(--dark-text);
+        }
+        
+        .faq-question i {
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 0 25px 25px;
+            max-height: 1000px;
+            background: white;
+        }
+        
+        body.dark-theme .faq-answer.active {
+            background: var(--dark-card);
+        }
+        
+        .faq-answer p {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .faq-answer p {
+            color: #aaa;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* ====== SERVICE CTA SECTION - UPDATED ====== */
+        .service-cta {
+            padding: 100px 5%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/construction-site-security-solutions.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-cta h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .service-cta p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-cta .cta-button {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            min-height: 48px;
+            min-width: 140px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            touch-action: manipulation;
+        }
+
+        .service-cta .secondary-button {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            min-height: 48px;
+            min-width: 140px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            touch-action: manipulation;
+        }
+
+        /* Button hover effects - keeping existing behavior */
+        .service-cta .cta-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(56, 113, 193, 0.3);
+        }
+
+        .service-cta .secondary-button:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        /* ====== CONTACT SECTION ====== */
+        .contact {
+            padding: 80px 5%;
+            background: var(--gray);
+            position: relative;
+        }
+        
+        body.dark-theme .contact {
+            background: var(--dark-bg);
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .contact-details a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+            display: block;
+            word-break: break-word;
+        }
+        
+        body.dark-theme .contact-details a {
+            color: var(--dark-text);
+        }
+        
+        .contact-details a:hover,
+        .contact-details a:active {
+            color: var(--secondary);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        
+        body.dark-theme .contact-form {
+            background: var(--dark-card);
+        }
+        
+        .contact-form h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #444;
+            font-size: 1rem;
+        }
+        
+        body.dark-theme .form-group label {
+            color: var(--dark-text);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: white;
+            color: var(--dark);
+            min-height: 52px;
+        }
+        
+        body.dark-theme .form-group input,
+        body.dark-theme .form-group textarea,
+        body.dark-theme .form-group select {
+            background: var(--dark-gray);
+            border-color: #444;
+            color: var(--dark-text);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(56, 113, 193, 0.2);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn-wrapper {
+            margin-top: 30px;
+        }
+        
+        /* ====== FOOTER ====== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 5% 30px;
+        }
+        
+        body.dark-theme footer {
+            background: #0a0a0a;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-about p {
+            color: #bbb;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 150px;
+            width: auto;
+            max-width: 100%;
+            margin-bottom: 10px;
+            object-fit: contain;
+        }
+        
+        .tagline {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 5px 0 15px 0;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover,
+        .social-links a:active {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-size: 0.95rem;
+            padding: 5px 0;
+        }
+        
+        .footer-links ul li a:hover,
+        .footer-links ul li a:active {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact ul {
+            list-style: none;
+        }
+        
+        .footer-contact ul li {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: #bbb;
+            align-items: flex-start;
+        }
+        
+        .footer-contact ul li i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .footer-contact a {
+            color: #ffffff;
+            text-decoration: none;
+            word-break: break-word;
+        }
+        
+        .footer-contact a:hover {
+            color: #ff5733;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* ====== ANIMATIONS ====== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ====== MOBILE MENU STYLES ====== */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100dvh;
+            background: var(--light);
+            z-index: 1002;
+            padding: 100px 5% 50px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        body.dark-theme .mobile-nav {
+            background: var(--dark-bg);
+        }
+        
+        .mobile-nav.is-open {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 320px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .mobile-nav ul li a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            padding: 15px 0;
+            display: block;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        body.dark-theme .mobile-nav ul li a {
+            color: var(--dark-text);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .mobile-nav .cta-button {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        body.nav-open .theme-button {
+            display: none;
+        }
+        
+        .mobile-nav-close {
+            position: absolute;
+            top: 25px;
+            right: 5%;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        body.dark-theme .mobile-nav-close {
+            color: var(--dark-text);
+        }
+        
+        /* ====== RESPONSIVE DESIGN ====== */
+        @media (max-width: 992px) {
+            .service-hero {
+                height: 60vh;
+                min-height: 400px;
+                background-attachment: scroll;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 15px;
+            }
+            
+            .logo {
+                height: 50px;
+            }
+            
+            .logo img {
+                max-height: 80px;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                order: 3;
+            }
+            
+            nav.desktop-nav {
+                display: none;
+            }
+            
+            .header-call-btn {
+                order: 2;
+                padding: 8px 16px;
+                font-size: 0.8rem;
+                min-height: 36px;
+                min-width: 90px;
+                margin-left: auto;
+            }
+            
+            .service-hero {
+                margin-top: 70px;
+                padding: 0 20px;
+                min-height: 350px;
+                height: 50vh;
+                text-align: center;
+                background-position: 70% center;
+            }
+            
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .service-hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .breadcrumb {
+                justify-content: center;
+            }
+            
+            .breadcrumb li {
+                font-size: 0.9rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .contact-info {
+                order: 2;
+            }
+            
+            .contact-form {
+                order: 1;
+                padding: 25px;
+            }
+            
+            .contact-item {
+                padding: 20px;
+            }
+            
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            /* CTA Section Mobile Responsive */
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .service-cta .cta-button,
+            .service-cta .secondary-button {
+                width: 100%;
+            }
+            
+            .footer-logo img {
+                height: 100px;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .mobile-nav {
+                display: block;
+            }
+            
+            /* Reset navigation positioning for mobile */
+            nav {
+                position: static;
+                transform: none;
+                left: auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 8px 10px;
+            }
+            
+            .logo {
+                height: 45px;
+            }
+            
+            .logo img {
+                max-height: 70px;
+            }
+            
+            .header-call-btn {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+                min-height: 34px;
+                min-width: 80px;
+                margin-right: 5px;
+            }
+            
+            .mobile-menu-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+                margin-left: 5px;
+            }
+            
+            .service-hero {
+                margin-top: 65px;
+                min-height: 300px;
+                height: 40vh;
+            }
+            
+            .service-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .service-hero p {
+                font-size: 1rem;
+            }
+            
+            .breadcrumb {
+                justify-content: flex-start;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 5px;
+            }
+            
+            .breadcrumb li {
+                margin: 0 5px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons .cta-button,
+            .hero-buttons .secondary-button {
+                width: 100%;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .contact-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            
+            .theme-button {
+                bottom: 10px;
+                right: 10px;
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+            
+            .footer-container {
+                gap: 30px;
+            }
+            
+            .footer-logo img {
+                height: 80px;
+            }
+        }
+        
+        /* Large screens */
+        @media (min-width: 1400px) {
+            .service-hero-content {
+                max-width: 700px;
+            }
+            
+            .service-hero h1 {
+                font-size: 4rem;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .theme-button,
+            .mobile-menu-btn,
+            .header-call-btn {
+                display: none !important;
+            }
+            
+            .service-hero {
+                background: #f5f5f5 !important;
+                color: #000 !important;
+                height: auto;
+                margin-top: 0;
+            }
+            
+            .service-hero h1 {
+                color: #000 !important;
+            }
+            
+            .service-cta {
+                background: #f5f5f5 !important;
+                color: #000 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNQRM38F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/White__1_-removebg-preview.png" alt="BroadSafe services">
+            </a>
+        </div>
+        
+        <button class="mobile-menu-btn" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services" class="active">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a href="tel:0370648292" class="header-call-btn">Call Now</a>
+    </header>
+
+    <!-- Mobile Navigation -->
+<div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close mobile menu">
+        <i class="fas fa-times"></i>
+    </button>
+    
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services/index.html">Services</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../apply-online.html">Apply Online</a></li>
+    </ul>
+    
+    <a href="tel:0370648292" class="cta-button" style="margin-top: 30px; width: 100%;">
+        <i class="fas fa-phone"></i> Call: 037 064 8292
+    </a>
+</div>
+
+
+    <!-- Service Hero Section -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/services/constructionsitesecurity" class="active">Construction Site Security</a></li>
+            </ul>
+            <h1>Construction Site Security Solutions</h1>
+            <p>Specialized security services for construction sites to prevent theft, vandalism, and ensure safety compliance across Australia.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">Request Site Security Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="service-details">
+        <div class="section-title">
+            <h2>Construction Site Security</h2>
+            <p>Comprehensive security solutions tailored for construction sites and building projects</p>
+        </div>
+        
+        <div class="details-container">
+            <div class="service-image">
+                <img src="/images/construction-site-security-services.jpg" alt="Construction Site Security">
+            </div>
+            <div class="details-content">
+                <h3>What is Construction Site Security?</h3>
+                <p>Construction site security involves specialized security measures designed to protect construction sites from theft, vandalism, unauthorized access, and safety violations. Construction sites are particularly vulnerable due to their open nature, valuable equipment, and materials.</p>
+                <p>At Broadsafe Services, we provide comprehensive construction site security solutions that address the unique challenges of building projects. Our services include 24/7 site security personnel, access control systems, perimeter security, and safety compliance monitoring.</p>
+                
+                <h3>Key Benefits</h3>
+                <ul class="benefits-list">
+                    <li>24/7 on-site security personnel for continuous protection</li>
+                    <li>Access control for workers, visitors, and delivery vehicles</li>
+                    <li>Theft prevention for tools, equipment, and materials</li>
+                    <li>Vandalism and trespassing deterrence</li>
+                    <li>Safety compliance monitoring and reporting</li>
+                    <li>Perimeter security with fencing and lighting</li>
+                    <li>Equipment tracking and inventory management</li>
+                    <li>Reduced insurance premiums with professional security</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Features Section -->
+    <section class="service-features">
+        <div class="section-title">
+            <h2>Our Construction Site Security Features</h2>
+            <p>Specialized security solutions for building and construction projects</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <h3>24/7 Site Security</h3>
+                <p>Round-the-clock security personnel stationed on-site with construction safety training and experience.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Equipment Protection</h3>
+                <p>Specialized security for construction equipment, tools, and machinery to prevent theft and damage.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Material Security</h3>
+                <p>Protection for building materials, supplies, and inventories stored on construction sites.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-door-closed"></i>
+                </div>
+                <h3>Access Control</h3>
+                <p>Strict entry and exit controls for workers, contractors, and delivery vehicles with logbook systems.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3>Site Surveillance</h3>
+                <p>Comprehensive monitoring and mobile patrols for complete site coverage.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h3>Safety Compliance</h3>
+                <p>Monitoring of safety protocols and compliance with construction site regulations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Challenges Section -->
+    <section class="security-challenges">
+        <div class="section-title">
+            <h2>Construction Site Security Challenges</h2>
+            <p>Addressing the unique security risks of construction environments</p>
+        </div>
+        
+        <div class="challenges-container">
+            <div class="challenges-content">
+                <h3>Common Construction Site Security Risks</h3>
+                <p>Construction sites face numerous security challenges due to their temporary nature, valuable assets, and often remote locations. Understanding these risks is essential for implementing effective security measures.</p>
+                
+                <ul class="challenges-list">
+                    <li>Theft of tools, equipment, and building materials</li>
+                    <li>Vandalism and property damage</li>
+                    <li>Unauthorized access and trespassing</li>
+                    <li>Copper and metal theft from wiring and piping</li>
+                    <li>Fuel theft from generators and machinery</li>
+                    <li>Safety violations and non-compliance</li>
+                    <li>Arson and fire risks</li>
+                    <li>Worker safety and liability concerns</li>
+                </ul>
+            </div>
+            
+            <div class="challenges-image">
+                <img src="/images/construction-site-security-australia.jpg" alt="Construction Site Security Challenges">
+            </div>
+        </div>
+    </section>
+
+    <!-- Site Types Section -->
+    <section class="site-types">
+        <div class="section-title">
+            <h2>Types of Construction Sites We Secure</h2>
+            <p>Security solutions for different construction environments</p>
+        </div>
+        
+        <div class="types-grid">
+            <div class="type-card">
+                <div class="type-content">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Construction</h3>
+                    <p>Security for housing developments, apartment buildings, and residential renovation projects in urban and suburban areas.</p>
+                </div>
+            </div>
+            
+            <div class="type-card">
+                <div class="type-content">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Construction</h3>
+                    <p>Security for office buildings, retail centers, hotels, and commercial developments with high-value assets.</p>
+                </div>
+            </div>
+            
+            <div class="type-card">
+                <div class="type-content">
+                    <div class="feature-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Infrastructure Projects</h3>
+                    <p>Security for road construction, bridges, utilities, and public infrastructure projects often in remote locations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Protection Section -->
+    <section class="equipment-protection">
+        <div class="section-title">
+            <h2>Equipment & Material Protection</h2>
+            <p>Specialized security for valuable construction assets</p>
+        </div>
+        
+        <div class="protection-container">
+            <div class="protection-content">
+                <h3>Protecting Your Construction Assets</h3>
+                <p>Construction equipment and materials represent significant investments that require specialized protection. Our security solutions are designed to safeguard your valuable assets from theft and damage.</p>
+                
+                <ul class="protection-list">
+                    <li>Excavators, bulldozers, and heavy machinery security</li>
+                    <li>Tool storage and lock-up protection</li>
+                    <li>Material storage area security (lumber, steel, etc.)</li>
+                    <li>Generator and fuel tank protection</li>
+                    <li>Trailer and container security</li>
+                    <li>Equipment immobilization systems</li>
+                    <li>GPS tracking for high-value machinery</li>
+                    <li>Inventory management and audit services</li>
+                </ul>
+            </div>
+            
+            <div class="protection-image">
+                <img src="/images/equipment-material-protection-security.jpg" alt="Construction Equipment Protection">
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="service-process">
+        <div class="section-title">
+            <h2>Our Construction Security Process</h2>
+            <p>How we implement effective security for construction sites</p>
+        </div>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Site Assessment</h3>
+                <p>Comprehensive security assessment of the construction site, identifying vulnerabilities and risks.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Security Planning</h3>
+                <p>Development of customized security plan with personnel requirements, patrol schedules, and access controls.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Security Implementation</h3>
+                <p>Deployment of security personnel, installation of temporary security measures, and implementation of protocols.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Ongoing Monitoring</h3>
+                <p>Continuous security monitoring, regular patrols, incident reporting, and security plan adjustments as needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faqs">
+        <div class="section-title">
+            <h2>Frequently Asked Questions About Construction Site Security</h2>
+            <p>Common questions about our construction site security services</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is construction site security?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Construction site security involves specialized security measures to protect construction sites from theft, vandalism, unauthorized access, and safety violations across Australia.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How much does construction site security cost?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Costs vary based on site size, location, duration, and security requirements. Contact us for a customized quote for your construction site security needs in Australia.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you provide 24/7 construction site security?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer 24/7 construction site security with on-site personnel, mobile patrols, and surveillance systems to protect your site around the clock.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What types of construction sites do you secure?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We secure residential, commercial, industrial, and infrastructure construction sites across Australia, from small renovations to large-scale projects.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do you prevent theft on construction sites?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We use multiple layers of security including 24/7 guarding, access control, equipment tracking, and perimeter security to prevent theft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <h2>Secure Your Construction Site Today</h2>
+        <p>Don't risk theft, vandalism, or safety violations on your construction site. Our specialized construction security services provide comprehensive protection for your assets, materials, and workers. Contact us today for a site security assessment.</p>
+        <div class="cta-buttons">
+            <a href="tel:0370648292" class="cta-button">Call Now: 03 7064 8292</a>
+            <a href="#contact" class="secondary-button">Request Site Assessment</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Request Construction Site Security Quote</h2>
+            <p>Get in touch for specialized construction site security solutions</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <a href="tel:0370648292">03 7064 8292</a>
+                        <p>24/7 National Helpline</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Location</h3>
+                        <p>Nationwide coverage</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <a href="mailto:operations@broadsafeservices.com.au">operations@broadsafeservices.com.au</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Get Your Construction Security Quote</h3>
+                <form id="web3form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="a94b5603-998e-4792-bddd-322d1817a026">
+                    <input type="hidden" name="subject" value="Construction Site Security Service Inquiry">
+                    <input type="hidden" name="service" value="Construction Site Security">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(03) 7064 8292" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Construction Company *</label>
+                        <input type="text" id="company" name="company" placeholder="Your construction company name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="site-type">Construction Site Type *</label>
+                        <select id="site-type" name="site_type" required>
+                            <option value="" disabled selected>Select site type</option>
+                            <option value="Residential">Residential Construction</option>
+                            <option value="Commercial">Commercial Construction</option>
+                            <option value="Industrial">Industrial Construction</option>
+                            <option value="Infrastructure">Infrastructure Project</option>
+                            <option value="Renovation">Building Renovation</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-duration">Project Duration</label>
+                        <select id="project-duration" name="project_duration">
+                            <option value="" selected>Select project duration</option>
+                            <option value="Under 3 months">Under 3 months</option>
+                            <option value="3-6 months">3-6 months</option>
+                            <option value="6-12 months">6-12 months</option>
+                            <option value="12+ months">12+ months</option>
+                            <option value="Ongoing">Ongoing/Multiple Sites</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="site-size">Approximate Site Size</label>
+                        <select id="site-size" name="site_size">
+                            <option value="" selected>Select site size</option>
+                            <option value="Small">Small (Under 1,000mÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²)</option>
+                            <option value="Medium">Medium (1,000-5,000mÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²)</option>
+                            <option value="Large">Large (5,000-10,000mÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²)</option>
+                            <option value="Very Large">Very Large (10,000mÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²+)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="equipment-value">Value of Equipment/Materials</label>
+                        <select id="equipment-value" name="equipment_value">
+                            <option value="" selected>Select approximate value</option>
+                            <option value="Under $50k">Under $50,000</option>
+                            <option value="$50k-$200k">$50,000 - $200,000</option>
+                            <option value="$200k-$500k">$200,000 - $500,000</option>
+                            <option value="$500k-$1M">$500,000 - $1,000,000</option>
+                            <option value="$1M+">$1,000,000+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Security Requirements *</label>
+                        <textarea id="message" name="message" placeholder="Describe your construction site, location, specific security concerns, and any previous security incidents..." required></textarea>
+                    </div>
+                    
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div class="submit-btn-wrapper">
+                        <button type="submit" class="cta-button" id="submit-btn">Request Site Security Quote</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <a href="/" class="footer-logo">
+                    <img src="/images/Black-removebg-preview.png" alt="Company Logo">
+                    <div class="tagline">Keeping You Safe, 24/7</div>
+                </a>
+                <p>Providing professional construction site security solutions across Australia with 24/7 monitoring and rapid response teams. Trusted by construction companies nationwide.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services" class="active">Services</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/apply-online">Work with us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Our Security Services</h3>
+                <ul>
+                    <li><a href="/services/staticguarding">Static Guarding</a></li>
+                    <li><a href="/services/mobilepatrols">Mobile Patrols</a></li>
+                    <li><a href="/services/corporatesecurity">Corporate Security</a></li>
+                    <li><a href="/services/cashintransit">Cash In Transit</a></li>
+                    <li><a href="/services/alarmresponses">Alarm Responses</a></li>
+                    <li><a href="/services/eventsecurity">Event Security</a></li>
+                    <li><a href="/services/constructionsitesecurity">Construction Sites</a></li>
+                    <li><a href="/services/commercialsitesecurity">Commercial Site</a></li>
+                    <li><a href="/services/manufacturingwarehousingsecurity">Manufacturing & Warehousing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <a href="tel:0370648292">03 7064 8292</a>
+                            <p>24/7 National Helpline</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <a href="mailto:operations@broadsafeservices.com.au">operations@broadsafeservices.com.au</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>Nationwide coverage</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Broadsafe Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ====== COOKIE FUNCTIONS ======
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = `${name}=${value};${expires};path=/`;
+        }
+        
+        function getCookie(name) {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [cookieName, cookieValue] = cookie.trim().split('=');
+                if (cookieName === name) return cookieValue;
+            }
+            return null;
+        }
+        
+        // ====== THEME TOGGLE ======
+        const themeToggle = document.createElement('button');
+        themeToggle.id = 'themeToggle';
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        themeToggle.classList.add('theme-button');
+        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        document.body.appendChild(themeToggle);
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                setCookie('theme', 'dark', 30);
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            } else {
+                setCookie('theme', 'light', 30);
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+            }
+        });
+        
+        // Apply theme on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const theme = getCookie('theme') || 'light';
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            }
+        });
+        
+        // ====== MOBILE MENU FUNCTIONALITY ======
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
+
+        function toggleMobileMenu() {
+            const isOpen = mobileNav.classList.toggle('is-open');
+            document.body.classList.toggle('nav-open', isOpen);
+            if (mobileMenuBtn) {
+                mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+        }
+
+        if (!window.__mobileNavInitialized) {
+            window.__mobileNavInitialized = true;
+
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+            if (mobileNavClose && mobileNav) {
+                mobileNavClose.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.mobile-nav a').forEach(link => {
+                link.addEventListener('click', toggleMobileMenu);
+            });
+        }
+        
+        // ====== FAQ ACCORDION ======
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                answer.classList.toggle('active');
+            });
+        });
+        
+        // ====== HEADER SCROLL EFFECT ======
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 5%';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '15px 5%';
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // ====== SMOOTH SCROLLING ======
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // ====== FORM SUBMISSION ======
+        const contactForm = document.getElementById('web3form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const submitBtn = document.getElementById('submit-btn');
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Form will be submitted via Web3Forms
+                setTimeout(() => {
+                    submitBtn.innerHTML = 'Request Site Security Quote';
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
+        }
+        
+        // ====== TOUCH DEVICE DETECTION ======
+        function isTouchDevice() {
+            return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        }
+        
+        if (isTouchDevice()) {
+            document.body.classList.add('touch-device');
+        }
+        
+        // ====== WINDOW RESIZE HANDLER ======
+        window.addEventListener('resize', function() {
+            // Close mobile menu on resize to desktop
+            if (window.innerWidth > 768 && mobileNav && mobileNav.classList.contains('is-open')) {
+                toggleMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>

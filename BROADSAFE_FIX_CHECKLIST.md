@@ -1,0 +1,34 @@
+# BROADSAFE FIX CHECKLIST
+
+- [x] Browser compatibility audit
+- [x] Footer copyright standardized to © 2026 Broadsafe Services. All rights reserved.
+- [x] Remove Serving all of Australia from footer/page-level instances
+- [x] Traditional Custodians section unified across pages
+- [x] Remove all incorrect commas before and
+- [x] Replace American English with Australian English where requested and clearly equivalent
+- [x] Fix heading visibility on background images
+- [x] Unify Request a Quote section across pages
+- [x] Remove Location box from every page
+- [x] Remove Nationwide Coverage boxes where instructed
+- [x] Remove Business Hours from Contact page
+- [x] Remove Map from Contact page
+- [x] Home page: remove comma after Asset Security
+- [x] Home page: add Aviation & Transport
+- [x] Home page: capitalize Integrated Security Solutions
+- [x] Home page: capitalize Rapid Escalation Response
+- [x] Home page: replace bottom line with Dynamic and swift risk reaction and mitigation
+- [x] Home page: replace Get in Touch tagline
+- [x] Home page: remove Within 24 Hours from Request a Quote section
+- [x] Static Guarding page: remove commas before and
+- [x] Static Guarding page: authorization -> authorisation
+- [x] Static Guarding page: Commercial Offices / centers / Retail & Shopping Centers / Industrial Sites / Security Assessment / Customized Plan / FAQ copy fixed
+- [x] Static Guarding page: Secure Your Premises Today heading made readable
+- [x] Final site-wide scan completed on active sources and dist
+- [x] Dist rebuilt from updated sources
+- [x] Audit report generated
+- [x] Fix checklist generated
+- [ ] Manual browser pass in Chrome
+- [ ] Manual browser pass in Firefox
+- [ ] Manual browser pass in Edge
+- [ ] Manual browser pass in Safari/iPhone
+- [ ] Manual browser pass in Android Chrome

@@ -1,0 +1,67 @@
+<!-- USAGE: Include this in the <head> section of each page
+This provides structured data for search engines -->
+<!-- Organization Schema -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Broadsafe Services",
+    "image": "https://www.broadsafeservices.com.au/images/og-image.png",
+    "@id": "https://www.broadsafeservices.com.au",
+    "url": "https://www.broadsafeservices.com.au",
+    "telephone": "+61370648292",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AU",
+      "addressRegion": ""
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -37.8136,
+      "longitude": 144.9631
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/broadsafeservices",
+      "https://www.linkedin.com/company/broadsafe-services"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    },
+    "areaServed": { "@type": "Country", "name": "" },
+    "description": "Professional security services provider offering 24/7 security solutions including static guarding, mobile patrols, alarm response and event security."
+  }
+</script>
+<!-- Breadcrumb Schema (will be customised per page) -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.broadsafeservices.com.au/"
+      }
+    ]
+  }
+</script>

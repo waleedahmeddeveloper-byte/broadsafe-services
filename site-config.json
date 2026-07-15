@@ -1,0 +1,179 @@
+﻿{
+  "siteName": "Broadsafe Services",
+  "baseUrl": "https://www.broadsafeservices.com.au",
+  "templateEngine": "html",
+  "directories": {
+    "templates": "templates",
+    "components": "components",
+    "pages": "pages",
+    "assets": "assets",
+    "output": "dist"
+  },
+  "globalAssets": {
+    "css": [
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    ],
+    "js": []
+  },
+  "components": {
+    "meta": "components/meta.html",
+    "trackingNoscript": "components/tracking-noscript.html",
+    "header": "components/header.html",
+    "mobileNav": "components/mobile-nav.html",
+    "footer": "components/footer.html",
+    "sharedScripts": "components/shared-scripts.html"
+  },
+  "pages": [
+    {
+      "source": "pages/index-content.html",
+      "output": "index.html",
+      "title": "Home - Professional Security Services in Australia",
+ "description": "Broadsafe Services provides professional security solutions including static guarding, mobile patrols, alarm response and event security.",
+      "canonical": "https://www.broadsafeservices.com.au/",
+      "template": "base",
+      "schemaType": "WebSite",
+      "activeNav": "home"
+    },
+    {
+      "source": "pages/about-content.html",
+      "output": "about.html",
+      "title": "About Us - Broadsafe Services | Professional Security Solutions",
+ "description": "Learn about Broadsafe Services, a trusted security solutions provider with experienced professionals.",
+      "canonical": "https://www.broadsafeservices.com.au/about",
+      "template": "base",
+      "schemaType": "AboutPage",
+      "activeNav": "about"
+    },
+    {
+      "source": "pages/contact-content.html",
+      "output": "contact.html",
+      "title": "Contact Us - Broadsafe Security Services",
+      "description": "Get in touch with Broadsafe Services for professional security solutions. Available 24/7 for all your security needs.",
+      "canonical": "https://www.broadsafeservices.com.au/contact",
+      "template": "base",
+      "schemaType": "ContactPage",
+      "activeNav": "contact"
+    },
+    {
+      "source": "pages/apply-online-content.html",
+      "output": "apply-online.html",
+      "title": "Apply Online - Join Broadsafe Security Team",
+      "description": "Apply to join the Broadsafe Services team. We're always looking for professional security personnel.",
+      "canonical": "https://www.broadsafeservices.com.au/apply-online",
+      "template": "base",
+      "schemaType": "WebPage",
+      "activeNav": ""
+    },
+    {
+      "source": "pages/services/index-content.html",
+      "output": "services/index.html",
+      "title": "Security Services - Broadsafe Australia",
+      "description": "Comprehensive security services including static guarding, mobile patrols, alarm response, event security and more.",
+      "canonical": "https://www.broadsafeservices.com.au/services",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/alarmresponses-content.html",
+      "output": "services/alarmresponses.html",
+      "title": "Alarm Response Services - Broadsafe Security",
+ "description": "24/7 alarm response services. Fast, professional response to all alarm activations.",
+      "canonical": "https://www.broadsafeservices.com.au/services/alarmresponses",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/cashintransit-content.html",
+      "output": "services/cashintransit.html",
+      "title": "Cash in Transit Services - Secure Money Transport",
+      "description": "Professional cash in transit services. Secure, reliable transportation of cash and valuables.",
+      "canonical": "https://www.broadsafeservices.com.au/services/cashintransit",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/commercialsitesecurity-content.html",
+      "output": "services/commercialsitesecurity.html",
+      "title": "Commercial Site Security - Business Protection",
+      "description": "Comprehensive security solutions for commercial properties including offices, retail and business complexes.",
+      "canonical": "https://www.broadsafeservices.com.au/services/commercialsitesecurity",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/constructionsitesecurity-content.html",
+      "output": "services/constructionsitesecurity.html",
+      "title": "Construction Site Security - 24/7 Protection",
+      "description": "Specialised security for construction sites. Prevent theft, vandalism and unauthorized access.",
+      "canonical": "https://www.broadsafeservices.com.au/services/constructionsitesecurity",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/corporatesecurity-content.html",
+      "output": "services/corporatesecurity.html",
+      "title": "Corporate Security Services - Executive Protection",
+      "description": "Professional corporate security including executive protection, access control and threat assessment.",
+      "canonical": "https://www.broadsafeservices.com.au/services/corporatesecurity",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/eventsecurity-content.html",
+      "output": "services/eventsecurity.html",
+      "title": "Event Security Services - Professional Event Safety",
+      "description": "Expert event security for concerts, festivals, corporate events and private functions.",
+      "canonical": "https://www.broadsafeservices.com.au/services/eventsecurity",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/manufacturingwarehousingsecurity-content.html",
+      "output": "services/manufacturingwarehousingsecurity.html",
+      "title": "Manufacturing & Warehousing Security - Industrial Protection",
+      "description": "Specialised security for manufacturing facilities and warehouses. Protect inventory, equipment and personnel.",
+      "canonical": "https://www.broadsafeservices.com.au/services/manufacturingwarehousingsecurity",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/mobilepatrols-content.html",
+      "output": "services/mobilepatrols.html",
+      "title": "Mobile Patrol Services - Regular Security Patrols",
+      "description": "Professional mobile patrol services. Regular scheduled patrols and random checks for your property.",
+      "canonical": "https://www.broadsafeservices.com.au/services/mobilepatrols",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    },
+    {
+      "source": "pages/services/staticguarding-content.html",
+      "output": "services/staticguarding.html",
+      "title": "Static Guarding Services - On-Site Security Guards",
+      "description": "Professional static guarding services. Trained security guards providing on-site protection 24/7.",
+      "canonical": "https://www.broadsafeservices.com.au/services/staticguarding",
+      "template": "base",
+      "schemaType": "Service",
+      "activeNav": "services"
+    }
+  ],
+  "colorVariables": {
+    "primary": "#3871C1",
+    "secondary": "#E63F23",
+    "dark": "#1a1a1a",
+    "light": "#ffffff",
+    "gray": "#f5f7fa",
+    "darkBg": "#121212",
+    "darkCard": "#1e1e1e",
+    "darkText": "#e0e0e0",
+    "darkGray": "#2d2d2d"
+  }
+}

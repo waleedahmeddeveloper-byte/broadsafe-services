@@ -1,0 +1,2507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KNQRM38F');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- CookieYes Consent Script -->
+    <script>
+    const injectScript = require("injectScript");
+    const queryPermission = require("queryPermission");
+    const setDefaultConsentState = require("setDefaultConsentState");
+    const encodeUri = require("encodeUri");
+    const gtagSet = require("gtagSet");
+    const getCookieValues = require("getCookieValues");
+    const updateConsentState = require("updateConsentState");
+    
+    let setDefaultSetting = true;
+    const regionSettings = data.regionSettings || [];
+    const waitForTime = data.waitForTime;
+    
+    function getConsentStateForCategory(categoryConsent) {
+      return categoryConsent === "yes" ? "granted" : "denied";
+    }
+    
+    function setConsentInitStates(consentData) {
+      if (waitForTime > 0) consentData.wait_for_update = waitForTime;
+      setDefaultConsentState(consentData);
+    }
+    
+    gtagSet({
+      ads_data_redaction: !!data.adsRedaction,
+      url_passthrough: !!data.urlPassThrough,
+      "developer_id.dY2Q2ZW": true,
+    });
+    
+    for (let index = 0; index < regionSettings.length; index++) {
+      const regionSetting = regionSettings[index];
+      const consentRegionData = {
+        ad_storage: regionSetting.advertisement,
+        analytics_storage: regionSetting.analytics,
+        functionality_storage: regionSetting.functional,
+        personalization_storage: regionSetting.functional,
+        security_storage: regionSetting.security,
+        ad_user_data: regionSetting.adUserData,
+        ad_personalization: regionSetting.adPersonal
+      };
+      const regionsToSetFor = regionSetting.regions
+        .split(",")
+        .map((region) => region.trim())
+        .filter((region) => region);
+      if (regionsToSetFor.length > 0 && regionsToSetFor[0].toLowerCase() !== "all")
+        consentRegionData.region = regionsToSetFor;
+      else setDefaultSetting = false;
+      setConsentInitStates(consentRegionData);
+    }
+    
+    if (setDefaultSetting) {
+      setConsentInitStates({
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
+    }
+    
+    const consentString = getCookieValues("cookieyes-consent", false)[0];
+    if (consentString && typeof consentString === "string") {
+      const cookieObj = consentString.split(",").reduce(function (acc, curr) {
+        const cookieValue = curr.trim().split(":");
+        acc[cookieValue[0]] = getConsentStateForCategory(cookieValue[1]);
+        return acc;
+      }, {});
+    
+      updateConsentState({
+        ad_storage: cookieObj.advertisement,
+        analytics_storage: cookieObj.analytics,
+        functionality_storage: cookieObj.functional,
+        personalization_storage: cookieObj.functional,
+        security_storage: cookieObj.necessary,
+        ad_user_data: cookieObj.advertisement,
+        ad_personalization: cookieObj.advertisement,
+      });
+    }
+    
+    let scriptURL =
+      "https://cdn-cookieyes.com/client_data/" +
+      encodeURIComponent("5cfe4f28d3b2e213a2c75d46") + "/script.js";
+    
+    if (!queryPermission("inject_script", scriptURL)) return data.gtmOnFailure();
+    
+    injectScript(scriptURL, data.gtmOnSuccess, data.gtmOnFailure);
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V0WJ4TDNZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6V0WJ4TDNZ');
+    </script>
+    
+    <!-- CookieYes Consent Banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/5cfe4f28d3b2e213a2c75d46/script.js"></script>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="wk4JdqHFf7Q8c4nmlfscBK_X4NG250WqphMqfhvZp2o" />
+    
+    <!-- Schema Markup for Commercial Security Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Service", "LocalBusiness"],
+      "name": "Broadsafe Services - Commercial Site Security",
+      "url": "https://broadsafeservices.com.au/commercial-site-security",
+      "description": "Professional commercial site security services for retail stores, offices, shopping centers and commercial properties across Australia.",
+      "serviceType": "Commercial Security Services",
+      "areaServed": "AU",
+      "provider": {
+        "@type": "Organization",
+        "name": "Broadsafe Services"
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is commercial site security?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Commercial site security involves professional security services designed specifically for retail stores, office buildings, shopping centers, and other commercial properties to protect assets, employees, and customers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of commercial properties do you secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We secure retail stores, office buildings, shopping centers, restaurants, medical facilities, educational institutions, hotels, and various other commercial properties across Australia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can you respond to security incidents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our rapid response teams can typically respond within minutes to security incidents at commercial sites, depending on location and the nature of the emergency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide 24/7 security coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer 24/7 security coverage for commercial properties including after-hours monitoring, overnight patrols, and weekend protection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your security officers trained for commercial environments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All our security personnel receive specialized training for commercial environments including customer service, conflict resolution, and emergency response procedures specific to commercial properties."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Site Security | Retail & Office Protection | Broadsafe Services</title>
+    <meta name="description" content="Professional commercial site security services for retail stores, offices, shopping centers and commercial properties. 24/7 protection across Australia.">
+    <link rel="canonical" href="https://broadsafeservices.com.au/commercial-site-security" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Commercial Site Security Services | Broadsafe Security">
+    <meta property="og:description" content="Professional security for retail stores, offices, and shopping centers across Australia">
+    <meta property="og:url" content="https://broadsafeservices.com.au/commercial-site-security">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="/assets/css/site.css?v=20260709">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+    /* ====== RESPONSIVE STANDARD (INLINE) ====== */
+    :root { --container-max: 1200px; --gutter: clamp(1rem, 3vw, 2rem); --section-padding: clamp(2.5rem, 6vw, 6rem); --radius: 16px; }
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    body { font-size: clamp(1rem, 0.96rem + 0.3vw, 1.125rem); line-height: 1.6; overflow-x: hidden; }
+    img, video, svg, iframe, embed, object { max-width: 100%; height: auto; }
+    video, iframe { width: 100%; }
+    figure { margin: 0; }
+    table { width: 100%; max-width: 100%; display: block; overflow-x: auto; }
+    a, button, input, select, textarea { touch-action: manipulation; }
+    button, .cta-button, .secondary-button, .header-call-btn { min-height: 44px; min-width: 44px; }
+    input, select, textarea { width: 100%; max-width: 100%; }
+    section, .section { padding-inline: var(--gutter); }
+    .container, .content-wrapper, .section-container, .inner-container { width: min(var(--container-max), calc(100% - (var(--gutter) * 2))); margin-inline: auto; }
+    h1 { font-size: clamp(1.8rem, 4vw, 3rem); } h2 { font-size: clamp(1.5rem, 3vw, 2.5rem); } h3 { font-size: clamp(1.25rem, 2.4vw, 2rem); }
+    p, li { font-size: clamp(1rem, 1.1vw, 1.125rem); }
+    .responsive-media { position: relative; width: 100%; padding-top: 56.25%; border-radius: var(--radius); overflow: hidden; }
+    .responsive-media > iframe, .responsive-media > video, .responsive-media > embed, .responsive-media > object { position: absolute; inset: 0; width: 100%; height: 100%; }
+    @media (max-width: 1024px) { nav ul { flex-wrap: wrap; gap: 1rem; } }
+    @media (max-width: 767px) {
+        header { padding: 12px var(--gutter); }
+        nav { position: static; transform: none; }
+        nav ul { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+        .mobile-menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+        .desktop-nav { display: none !important; }
+        .mobile-nav { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100vw; max-width: 100vw; height: 100dvh; transform: translateX(100%); transition: transform 0.3s ease; }
+        .mobile-nav.is-open { transform: translateX(0); }
+        body.nav-open { overflow: hidden; }
+        body.nav-open .theme-button { display: none; }
+    }
+    </style>
+    <style>
+        /* ====== CSS RESET & BASE STYLES ====== */
+        :root {
+            --primary: #3871C1;
+            --secondary: #E63F23;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray: #f5f7fa;
+            --dark-bg: #121212;
+            --dark-card: #1e1e1e;
+            --dark-text: #e0e0e0;
+            --dark-gray: #2d2d2d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        body.dark-theme {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        
+        /* ====== TYPOGRAPHY ====== */
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* ====== BUTTON STYLES ====== */
+        .cta-button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-height: 48px;
+            min-width: 140px;
+            touch-action: manipulation;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(241, 70, 36, 0.3);
+        }
+        
+        .secondary-button {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-height: 48px;
+            min-width: 140px;
+            touch-action: manipulation;
+        }
+        
+        .secondary-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+        
+        .theme-button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            font-size: 0.9rem;
+            min-height: 44px;
+        }
+        
+        /* ====== HEADER & NAVIGATION - FIXED ====== */
+        /* Desktop: 80px fixed height (grows to 110px with padding) */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%; /* Grows to 110px total (80px + 40px padding) */
+            transition: all 0.3s ease;
+            height: 80px; /* Fixed 80px height */
+            backdrop-filter: blur(10px);
+        }
+        
+        body.dark-theme header {
+            background-color: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 60px; /* Adjusted to fit within 80px header */
+            z-index: 1001;
+        }
+        
+        .logo img {
+            height: 100%;
+            width: auto;
+            max-height: 80px; /* Reduced for 80px header */
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+        }
+        
+        body.dark-theme .mobile-menu-btn {
+            color: var(--dark-text);
+        }
+        
+        /* NAVIGATION FIX - Changed layout to properly center the menu */
+        nav.desktop-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            margin: 0 20px;
+        }
+        
+        nav.desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.desktop-nav ul li {
+            position: relative;
+        }
+        
+        nav.desktop-nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 0;
+            transition: color 0.3s;
+            position: relative;
+            white-space: nowrap;
+        }
+        
+        body.dark-theme nav.desktop-nav ul li a {
+            color: var(--dark-text);
+        }
+        
+        nav.desktop-nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        nav.desktop-nav ul li a:hover,
+        nav.desktop-nav ul li a.active {
+            color: var(--primary);
+        }
+        
+        nav.desktop-nav ul li a:hover:after,
+        nav.desktop-nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        /* Header Call Button */
+        .header-call-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-height: 40px;
+            min-width: 100px;
+            touch-action: manipulation;
+            white-space: nowrap;
+        }
+        
+        .header-call-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(241, 70, 36, 0.3);
+        }
+        
+        /* ====== CONTACT PAGE HERO - MATCHING PAGE A ====== */
+        .contact-hero {
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 0 5%;
+            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(0 0 0 / 50%) 0%, rgba(0 0 0 / 50%) 100%), url('/images/customer-and-staff-safety.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .contact-hero-content {
+            max-width: 600px;
+            z-index: 3;
+            position: relative;
+            color: white;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .contact-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 20px;
+            color: var(--light);
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .contact-hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 30px;
+            color: #f0f0f0;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            opacity: 0.95;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            list-style: none;
+            padding: 10px 0;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb li {
+            margin: 0 10px 10px 0;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb li a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .breadcrumb li a:hover {
+            color: white;
+        }
+        
+        .breadcrumb li:after {
+            content: '>';
+            margin-left: 15px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .breadcrumb li:last-child:after {
+            content: '';
+            margin: 0;
+        }
+        
+        .breadcrumb li:last-child a {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* ====== MOBILE MENU STYLES ====== */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100dvh;
+            background: var(--light);
+            z-index: 1002;
+            padding: 100px 5% 50px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        body.dark-theme .mobile-nav {
+            background: var(--dark-bg);
+        }
+        
+        .mobile-nav.is-open {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 320px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .mobile-nav ul li a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            padding: 15px 0;
+            display: block;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        body.dark-theme .mobile-nav ul li a {
+            color: var(--dark-text);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .mobile-nav .cta-button {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        body.nav-open .theme-button {
+            display: none;
+        }
+        
+        .mobile-nav-close {
+            position: absolute;
+            top: 25px;
+            right: 5%;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        body.dark-theme .mobile-nav-close {
+            color: var(--dark-text);
+        }
+        
+        /* ====== SERVICE DETAILS SECTION ====== */
+        .service-details {
+            padding: 80px 5%;
+            background: var(--gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body.dark-theme .service-details {
+            background: var(--dark-bg);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+        }
+        
+        body.dark-theme .section-title p {
+            color: #aaa;
+        }
+        
+        .details-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .service-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .details-content h2,
+        .details-content h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .details-content p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        body.dark-theme .details-content p {
+            color: #aaa;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .benefits-list li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .benefits-list li {
+            color: #ccc;
+        }
+        
+        .benefits-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--secondary);
+            font-size: 1rem;
+            background: rgba(241, 70, 36, 0.1);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* ====== SERVICE FEATURES SECTION ====== */
+        .service-features {
+            padding: 80px 5%;
+            background: white;
+        }
+        
+        body.dark-theme .service-features {
+            background: var(--dark-bg);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: var(--gray);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+            width: 100%;
+        }
+        
+        body.dark-theme .feature-card {
+            background: var(--dark-card);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), #2a5ca0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        body.dark-theme .feature-card h3 {
+            color: var(--dark-text);
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .feature-card p {
+            color: #aaa;
+        }
+        
+        /* ====== SECURITY MEASURES SECTION ====== */
+        .security-measures {
+            padding: 80px 5%;
+            background: var(--gray);
+        }
+        
+        body.dark-theme .security-measures {
+            background: var(--dark-bg);
+        }
+        
+        .security-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .security-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .security-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .measures-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .measures-list li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.5;
+            border-bottom: 1px solid #eee;
+        }
+        
+        body.dark-theme .measures-list li {
+            color: #ccc;
+            border-bottom: 1px solid #444;
+        }
+        
+        .measures-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .measures-list li:before {
+            content: '\f023';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+        
+        /* ====== SERVICE TYPES SECTION ====== */
+        .service-types {
+            padding: 80px 5%;
+            background: white;
+        }
+        
+        body.dark-theme .service-types {
+            background: var(--dark-bg);
+        }
+        
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .type-card {
+            background: var(--gray);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        body.dark-theme .type-card {
+            background: var(--dark-card);
+        }
+        
+        .type-image {
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .type-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .type-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .type-content h3 {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        body.dark-theme .type-content h3 {
+            color: var(--dark-text);
+        }
+        
+        .type-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .type-content p {
+            color: #aaa;
+        }
+        
+        /* ====== PROCESS SECTION ====== */
+        .service-process {
+            padding: 80px 5%;
+            background: var(--gray);
+        }
+        
+        body.dark-theme .service-process {
+            background: var(--dark-bg);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(56, 113, 193, 0.3);
+        }
+        
+        .process-step h3 {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        body.dark-theme .process-step h3 {
+            color: var(--dark-text);
+        }
+        
+        .process-step p {
+            color: #666;
+            padding: 0 10px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .process-step p {
+            color: #aaa;
+        }
+        
+        /* ====== FAQ SECTION ====== */
+        .faq-section {
+            padding: 80px 5%;
+            background: white;
+        }
+        
+        body.dark-theme .faq-section {
+            background: var(--dark-bg);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        body.dark-theme .faq-item {
+            border-color: #444;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 60px;
+        }
+        
+        body.dark-theme .faq-question {
+            background: var(--dark-card);
+        }
+        
+        .faq-question h3 {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--primary);
+            margin: 0;
+            flex: 1;
+            text-align: left;
+            padding-right: 10px;
+        }
+        
+        body.dark-theme .faq-question h3 {
+            color: var(--dark-text);
+        }
+        
+        .faq-question i {
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 1000px;
+            background: white;
+        }
+        
+        body.dark-theme .faq-answer.active {
+            background: var(--dark-card);
+        }
+        
+        .faq-answer p {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        body.dark-theme .faq-answer p {
+            color: #aaa;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* ====== SERVICE CTA SECTION ====== */
+        .service-cta {
+            padding: 100px 5%;
+            background: linear-gradient(135deg, var(--primary), #1a3b74);
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-cta {
+            position: relative;
+            background: url("/images/customer-and-staff-safety.jpg") center / cover no-repeat;
+            overflow: hidden;
+        }
+        
+        /* Dark overlay */
+        .service-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        /* Ensure text & buttons stay visible */
+        .service-cta * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-cta h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .service-cta p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .white-button {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            min-height: 48px;
+            min-width: 140px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            touch-action: manipulation;
+        }
+        
+        .white-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        .transparent-button {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            min-height: 48px;
+            min-width: 140px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            touch-action: manipulation;
+        }
+        
+        .transparent-button:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Behavior for CTA Section */
+        @media (max-width: 768px) {
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .white-button,
+            .transparent-button {
+                width: 100%;
+            }
+        }
+        
+        /* ====== CONTACT SECTION ====== */
+        .contact {
+            padding: 80px 5%;
+            background: var(--gray);
+            position: relative;
+        }
+        
+        body.dark-theme .contact {
+            background: var(--dark-bg);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .contact-details a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1rem;
+            display: block;
+            word-break: break-word;
+        }
+        
+        body.dark-theme .contact-details a {
+            color: var(--dark-text);
+        }
+        
+        .contact-details a:hover,
+        .contact-details a:active {
+            color: var(--secondary);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            width: 100%;
+        }
+        
+        body.dark-theme .contact-form {
+            background: var(--dark-card);
+        }
+        
+        .contact-form h3 {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+            font-size: 0.95rem;
+        }
+        
+        body.dark-theme .form-group label {
+            color: var(--dark-text);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px; /* Prevents zoom on iOS */
+            transition: all 0.3s;
+            background: white;
+            color: var(--dark);
+            min-height: 48px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        body.dark-theme .form-group input,
+        body.dark-theme .form-group textarea,
+        body.dark-theme .form-group select {
+            background: var(--dark-gray);
+            border-color: #444;
+            color: var(--dark-text);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(56, 113, 193, 0.2);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* ====== FOOTER ====== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 5% 30px;
+        }
+        
+        body.dark-theme footer {
+            background: #0a0a0a;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-about p {
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 150px;
+            width: auto;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 5px 0 15px 0;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact ul {
+            list-style: none;
+        }
+        
+        .footer-contact ul li {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+        
+        .footer-contact ul li i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .footer-contact a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .footer-contact a:hover {
+            color: #ff5733;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* ====== ANIMATIONS ====== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ====== RESPONSIVE DESIGN ====== */
+        @media (max-width: 992px) {
+            .contact-hero {
+                height: 60vh;
+                min-height: 400px;
+                background-attachment: scroll;
+            }
+            
+            header {
+                padding: 20px 5%;
+                height: 80px;
+            }
+            
+            .logo {
+                height: 60px;
+            }
+            
+            .footer-logo img {
+                height: 120px;
+            }
+            
+            .features-grid,
+            .types-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 15px;
+                height: 80px;
+            }
+            
+            .logo {
+                height: 50px;
+                flex: none;
+            }
+            
+            .logo img {
+                max-height: 70px;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                order: 3;
+            }
+            
+            nav.desktop-nav {
+                display: none;
+            }
+            
+            .header-call-btn {
+                order: 2;
+                padding: 8px 16px;
+                font-size: 0.8rem;
+                min-height: 36px;
+                min-width: 90px;
+                margin-left: auto;
+            }
+            
+            .contact-hero {
+                margin-top: 70px;
+                padding: 0 20px;
+                min-height: 350px;
+                height: 50vh;
+                text-align: center;
+                background-position: 70% center;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .breadcrumb {
+                justify-content: center;
+            }
+            
+            .breadcrumb li {
+                font-size: 0.9rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .details-container,
+            .security-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .service-image img,
+            .security-image img {
+                height: 300px;
+            }
+            
+            .features-grid,
+            .types-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .white-button,
+            .transparent-button {
+                width: 100%;
+            }
+            
+            .footer-logo img {
+                height: 100px;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .mobile-nav {
+                display: block;
+            }
+            
+            .service-details,
+            .service-features,
+            .security-measures,
+            .service-types,
+            .service-process,
+            .faq-section,
+            .service-cta,
+            .contact {
+                padding: 60px 5%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 10px;
+                height: 80px;
+            }
+            
+            .logo {
+                height: 45px;
+            }
+            
+            .logo img {
+                max-height: 65px;
+            }
+            
+            .header-call-btn {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+                min-height: 34px;
+                min-width: 80px;
+                margin-right: 5px;
+            }
+            
+            .mobile-menu-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+                margin-left: 5px;
+            }
+            
+            .contact-hero {
+                margin-top: 65px;
+                min-height: 300px;
+                height: 40vh;
+            }
+            
+            .contact-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1rem;
+            }
+            
+            .breadcrumb {
+                justify-content: flex-start;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 5px;
+            }
+            
+            .breadcrumb li {
+                margin: 0 5px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons .cta-button,
+            .hero-buttons .secondary-button {
+                width: 100%;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+            }
+            
+            .service-image img,
+            .security-image img {
+                height: 250px;
+            }
+            
+            .feature-card,
+            .type-card {
+                padding: 20px 15px;
+            }
+            
+            .theme-button {
+                bottom: 10px;
+                right: 10px;
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+            
+            .footer-container {
+                gap: 30px;
+            }
+            
+            .footer-logo img {
+                height: 80px;
+            }
+            
+            .service-details,
+            .service-features,
+            .security-measures,
+            .service-types,
+            .service-process,
+            .faq-section,
+            .service-cta,
+            .contact {
+                padding: 40px 20px;
+            }
+        }
+        
+        /* Large screens */
+        @media (min-width: 1400px) {
+            .contact-hero-content {
+                max-width: 900px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 4rem;
+            }
+            
+            .features-grid,
+            .types-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .theme-button,
+            .mobile-menu-btn,
+            .header-call-btn {
+                display: none !important;
+            }
+            
+            .contact-hero {
+                background: #f5f5f5 !important;
+                color: #000 !important;
+                height: auto;
+                margin-top: 0;
+            }
+            
+            .contact-hero h1 {
+                color: #000 !important;
+            }
+            
+            .service-cta {
+                background: #f5f5f5 !important;
+                color: #000 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNQRM38F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/White__1_-removebg-preview.png" alt="BroadSafe services">
+            </a>
+        </div>
+        
+        <button class="mobile-menu-btn" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services" class="active">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a href="tel:0370648292" class="header-call-btn">Call Now</a>
+    </header>
+
+    <!-- Mobile Navigation -->
+<div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close mobile menu">
+        <i class="fas fa-times"></i>
+    </button>
+    
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services/index.html">Services</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../apply-online.html">Apply Online</a></li>
+    </ul>
+    
+    <a href="tel:0370648292" class="cta-button" style="margin-top: 30px; width: 100%;">
+        <i class="fas fa-phone"></i> Call: 037 064 8292
+    </a>
+</div>
+
+
+    <!-- Service Hero Section - FIXED TO MATCH PAGE A -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="#" class="active">Commercial Site Security</a></li>
+            </ul>
+            <h1>Commercial Site Security Solutions</h1>
+            <p>Protecting retail stores, offices, shopping centers, and commercial properties across Australia with 24/7 professional security services.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">Get Free Quote</a>
+                <a href="tel:0370648292" class="secondary-button">Call Now: 03 7064 8292</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="service-details">
+        <div class="section-title">
+            <h2>Commercial Site Security Solutions</h2>
+            <p>Comprehensive security services tailored for retail stores, office buildings, shopping centers, and commercial properties</p>
+        </div>
+        
+        <div class="details-container">
+            <div class="service-image">
+                <img src="/images/commercial-site-security-services-australia.jpg" alt="Commercial Site Security Services">
+            </div>
+            <div class="details-content">
+                <h3>Professional Commercial Security</h3>
+                <p>Commercial site security involves professional security services designed specifically for retail stores, office buildings, shopping centers, and other commercial properties to protect assets, employees, and customers across Australia.</p>
+                <p>At Broadsafe Services, our commercial security operations follow strict security protocols and utilize advanced technology including surveillance systems, access control, and trained security personnel. We ensure comprehensive protection through reliable commercial security standards.</p>
+                
+                <h3>Key Benefits</h3>
+                <ul class="benefits-list">
+                    <li>24/7 security monitoring and response</li>
+                    <li>Customer and staff safety management</li>
+                    <li>Property and asset protection</li>
+                    <li>Access control and visitor management</li>
+                    <li>Emergency response coordination</li>
+                    <li>Professional security personnel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Features Section -->
+    <section class="service-features">
+        <div class="section-title">
+            <h2>Our Commercial Security Features</h2>
+            <p>Advanced security solutions for safe commercial environments</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>Retail Security</h3>
+                <p>Specialized security for retail environments including shopping centers, department stores, and boutique shops.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Office Security</h3>
+                <p>Comprehensive security services for corporate offices and business centers ensuring safe working environments.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>Shopping Center Security</h3>
+                <p>Complete security solutions for shopping malls and retail complexes with crowd control and management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Measures Section -->
+    <section class="security-measures">
+        <div class="section-title">
+            <h2>Security Protocols & Measures</h2>
+            <p>Comprehensive security procedures for commercial properties</p>
+        </div>
+        
+        <div class="security-container">
+            <div class="security-content">
+                <h3>Advanced Security Protocols</h3>
+                <p>Our professional commercial security service follows stringent security protocols designed to minimize risk and ensure safety. Each stage is planned and carried out with multiple layers of protection.</p>
+                
+                <ul class="measures-list">
+                    <li>24/7 static guarding and mobile patrols</li>
+                    <li>Monitoring systems</li>
+                    <li>Access control and visitor management</li>
+                    <li>Emergency response planning</li>
+                    <li>Incident reporting and documentation</li>
+                    <li>Regular security audits and assessments</li>
+                    <li>Coordination with emergency services</li>
+                    <li>Staff training and security awareness</li>
+                </ul>
+            </div>
+            
+            <div class="security-image">
+                <img src="/images/professional-static-guarding-security-service.jpg" alt="Commercial Security Protocols">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Types Section -->
+    <section class="service-types">
+        <div class="section-title">
+            <h2>Types of Commercial Security Services</h2>
+            <p>Customized security solutions for different commercial requirements</p>
+        </div>
+        
+        <div class="types-grid">
+            <div class="type-card">
+                <div class="type-content">
+                    <div class="feature-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Retail Store Security</h3>
+                    <p>Specialized security for retail environments including shopping centers, department stores, and boutique shops with loss prevention and customer safety.</p>
+                </div>
+            </div>
+            
+            <div class="type-card">
+                <div class="type-content">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Office Building Security</h3>
+                    <p>Comprehensive security services for corporate offices and business centers ensuring safe working environments with access control and monitoring.</p>
+                </div>
+            </div>
+            
+            <div class="type-card">
+                <div class="type-content">
+                    <div class="feature-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Shopping Center Security</h3>
+                    <p>Complete security solutions for shopping malls and retail complexes with crowd control, parking security, and tenant coordination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="service-process">
+        <div class="section-title">
+            <h2>Our Commercial Security Process</h2>
+            <p>How we ensure reliable commercial security services across Australia</p>
+        </div>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Security Assessment</h3>
+                <p>Comprehensive assessment of security requirements, risk factors, and specific needs for customized commercial security solutions.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Solution Planning</h3>
+                <p>Strategic security planning with customized solutions including surveillance, access control, and personnel deployment.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Implementation</h3>
+                <p>Professional implementation of security measures with trained personnel and advanced technology systems.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Monitoring & Support</h3>
+                <p>Continuous monitoring and support with regular reviews and adjustments to ensure optimal security performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faqs">
+        <div class="section-title">
+            <h2>Frequently Asked Questions About Commercial Site Security</h2>
+            <p>Common questions about our commercial security services</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is commercial site security?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Commercial site security involves professional security services designed specifically for retail stores, office buildings, shopping centers, and other commercial properties to protect assets, employees, and customers.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What types of commercial properties do you secure?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We secure retail stores, office buildings, shopping centers, restaurants, medical facilities, educational institutions, hotels, and various other commercial properties across Australia.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How quickly can you respond to security incidents?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our rapid response teams can typically respond within minutes to security incidents at commercial sites, depending on location and the nature of the emergency.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you provide 24/7 security coverage?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer 24/7 security coverage for commercial properties including after-hours monitoring, overnight patrols, and weekend protection.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Are your security officers trained for commercial environments?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>All our security personnel receive specialized training for commercial environments including customer service, conflict resolution, and emergency response procedures specific to commercial properties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <h2>Secure Your Commercial Property Today</h2>
+        <p>Don't wait for an incident to happen. Contact Broadsafe Services now for a comprehensive security assessment and custom solution for your business. Our professional team is ready to protect your commercial property with reliable security services.</p>
+        <div class="cta-buttons">
+            <a href="tel:0370648292" class="white-button">Call Now: 03 7064 8292</a>
+            <a href="#contact" class="transparent-button">Request Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Request a Commercial Security Quote</h2>
+            <p>Get in touch for a security solution tailored to your commercial property needs</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <a href="tel:0370648292">03 7064 8292</a>
+                        <p>24/7 National Helpline</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Location</h3>
+                        <p>Nation Wide Coverage</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <a href="mailto:operations@broadsafeservices.com.au">operations@broadsafeservices.com.au</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Get Your Security Quote</h3>
+                <form id="web3form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="a94b5603-998e-4792-bddd-322d1817a026">
+                    <input type="hidden" name="subject" value="Commercial Site Security Service Inquiry">
+                    <input type="hidden" name="service" value="Commercial Site Security">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(03) 7064 8292" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business">Business Type *</label>
+                        <select id="business" name="business_type" required>
+                            <option value="" disabled selected>Select your business type</option>
+                            <option value="Retail Store">Retail Store</option>
+                            <option value="Office Building">Office Building</option>
+                            <option value="Shopping Center">Shopping Center/Mall</option>
+                            <option value="Restaurant">Restaurant/Cafe</option>
+                            <option value="Medical">Medical Facility</option>
+                            <option value="Educational">Educational Institution</option>
+                            <option value="Hotel">Hotel/Hospitality</option>
+                            <option value="Other">Other Commercial Property</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="security-type">Type of Security Needed *</label>
+                        <select id="security-type" name="security_type" required>
+                            <option value="" disabled selected>Select security type</option>
+                            <option value="Static Guarding">Static Guarding</option>
+                            <option value="Mobile Patrols">Mobile Patrols</option>
+                            <option value="CCTV Monitoring">CCTV Monitoring</option>
+                            <option value="Access Control">Access Control</option>
+                            <option value="Full Security">Full Security Package</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="coverage">Security Coverage Required *</label>
+                        <select id="coverage" name="coverage" required>
+                            <option value="" disabled selected>Select coverage</option>
+                            <option value="24/7">24/7 Coverage</option>
+                            <option value="Business Hours">Business Hours Only</option>
+                            <option value="After Hours">After Hours Only</option>
+                            <option value="Weekends">Weekends Only</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="property-size">Approximate Property Size</label>
+                        <select id="property-size" name="property_size">
+                            <option value="" selected>Select size range</option>
+                            <option value="Under 500 sqm">Under 500 sqm</option>
+                            <option value="500-2000 sqm">500-2,000 sqm</option>
+                            <option value="2000-5000 sqm">2,000-5,000 sqm</option>
+                            <option value="5000+ sqm">5,000+ sqm</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information *</label>
+                        <textarea id="message" name="message" placeholder="Describe your security needs, concerns, and any current security measures..." required></textarea>
+                    </div>
+                    
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div class="submit-btn-wrapper">
+                        <button type="submit" class="cta-button" id="submit-btn">Request Security Quote</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <a href="/" class="footer-logo">
+                    <img src="/images/Black-removebg-preview.png" alt="Company Logo">
+                    <div class="tagline">Keeping You Safe, 24/7</div>
+                </a>
+                <p>Professional commercial site security services protecting businesses across Australia with 24/7 availability and rapid response.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services" class="active">Services</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/apply-online">Work with us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Commercial Services</h3>
+                <ul>
+                    <li><a href="/services/staticguarding">Static Guarding</a></li>
+                    <li><a href="/services/mobilepatrols">Mobile Patrols</a></li>
+                    <li><a href="/services/corporatesecurity">Corporate Security</a></li>
+                    <li><a href="/services/cashintransit">Cash In Transit</a></li>
+                    <li><a href="/services/alarmresponses">Alarm Responses</a></li>
+                    <li><a href="/services/eventsecurity">Event Security</a></li>
+                    <li><a href="/services/constructionsitesecurity">Construction Sites</a></li>
+                    <li><a href="/services/commercialsitesecurity">Commercial Site</a></li>
+                    <li><a href="/services/manufacturingwarehousingsecurity">Manufacturing & Warehousing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <a href="tel:0370648292">03 7064 8292</a>
+                            <p>24/7 National Helpline</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <a href="mailto:operations@broadsafeservices.com.au">operations@broadsafeservices.com.au</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>Nation Wide Coverage</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Broadsafe Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ====== COOKIE FUNCTIONS ======
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = `${name}=${value};${expires};path=/`;
+        }
+        
+        function getCookie(name) {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [cookieName, cookieValue] = cookie.trim().split('=');
+                if (cookieName === name) return cookieValue;
+            }
+            return null;
+        }
+        
+        // ====== THEME TOGGLE ======
+        const themeToggle = document.createElement('button');
+        themeToggle.id = 'themeToggle';
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        themeToggle.classList.add('theme-button');
+        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        document.body.appendChild(themeToggle);
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                setCookie('theme', 'dark', 30);
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            } else {
+                setCookie('theme', 'light', 30);
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+            }
+        });
+        
+        // Apply theme on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const theme = getCookie('theme') || 'light';
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            }
+        });
+        
+        // ====== MOBILE MENU FUNCTIONALITY ======
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
+
+        function toggleMobileMenu() {
+            const isOpen = mobileNav.classList.toggle('is-open');
+            document.body.classList.toggle('nav-open', isOpen);
+            if (mobileMenuBtn) {
+                mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+        }
+
+        if (!window.__mobileNavInitialized) {
+            window.__mobileNavInitialized = true;
+
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+            if (mobileNavClose && mobileNav) {
+                mobileNavClose.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.mobile-nav a').forEach(link => {
+                link.addEventListener('click', toggleMobileMenu);
+            });
+        }
+        
+        // ====== FAQ ACCORDION ======
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                answer.classList.toggle('active');
+            });
+        });
+        
+        // ====== HEADER SCROLL EFFECT ======
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '25px 5%'; // Grows to 110px total (80px + 50px padding)
+                header.style.height = '80px'; // Maintain fixed height
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '20px 5%'; // Default: 80px total (80px + 40px padding)
+                header.style.height = '80px';
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // ====== SMOOTH SCROLLING ======
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // ====== FORM SUBMISSION ======
+        const contactForm = document.getElementById('web3form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const submitBtn = document.getElementById('submit-btn');
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Form will be submitted via Web3Forms
+                setTimeout(() => {
+                    submitBtn.innerHTML = 'Request Security Quote';
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
+        }
+        
+        // ====== TOUCH DEVICE DETECTION ======
+        function isTouchDevice() {
+            return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        }
+        
+        if (isTouchDevice()) {
+            document.body.classList.add('touch-device');
+        }
+        
+        // ====== WINDOW RESIZE HANDLER ======
+        window.addEventListener('resize', function() {
+            // Close mobile menu on resize to desktop
+            if (window.innerWidth > 768 && mobileNav && mobileNav.classList.contains('is-open')) {
+                toggleMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>

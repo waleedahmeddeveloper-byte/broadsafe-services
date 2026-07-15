@@ -1,0 +1,62 @@
+# Global crawler policy
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+Disallow: /mysql-data/
+Disallow: /backup_2026-02-04T11-57-02-845Z/
+Disallow: /backup_2026-02-04T11-59-01-811Z/
+Disallow: /backup_2026-02-04T11-59-45-277Z/
+
+# Search engines (SEO)
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+
+# AI and answer engines (AEO/GEO)
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+
+User-agent: CCBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cron/
+
+Sitemap: https://www.broadsafeservices.com.au/sitemap-index.xml

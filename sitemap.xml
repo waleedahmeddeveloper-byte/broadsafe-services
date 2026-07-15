@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Core Pages -->
+    <url>
+        <loc>https://www.broadsafeservices.com.au/</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/about</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/contact</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/apply-online</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Blog -->
+    <url>
+        <loc>https://www.broadsafeservices.com.au/blog</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+
+    <!-- Services Main Page -->
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+
+    <!-- Services Subpages -->
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/staticguarding</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/mobilepatrols</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/corporatesecurity</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/cashintransit</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/cleaningservices</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/alarmresponses</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/eventsecurity</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/constructionsitesecurity</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/commercialsitesecurity</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/facilitymanagementservices</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/maintenanceservices</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/manufacturingwarehousingsecurity</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.broadsafeservices.com.au/services/carparkmanagementservices</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+
+</urlset>

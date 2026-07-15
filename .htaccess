@@ -1,0 +1,154 @@
+# =====================================================
+# ENABLE REWRITE ENGINE
+# =====================================================
+RewriteEngine On
+RewriteBase /
+
+# =====================================================
+# CANONICAL HOST + PROTOCOL (single redirect, no double-hop)
+# Forces: http(s)://broadsafeservices.com.au  ->  https://www.broadsafeservices.com.au
+#         http://www.broadsafeservices.com.au ->  https://www.broadsafeservices.com.au
+# =====================================================
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^broadsafeservices\.com\.au$ [NC]
+RewriteRule ^(.*)$ https://www.broadsafeservices.com.au/$1 [L,R=301]
+
+# =====================================================
+# CANONICAL APP/PHP ROUTES (pretty URL <-> real file)
+# =====================================================
+RewriteCond %{THE_REQUEST} \s/+blog\.php(?:\?|\s) [NC]
+RewriteRule ^blog\.php$ /blog [L,R=301]
+
+RewriteCond %{THE_REQUEST} \s/+apply-online\.php(?:\?|\s) [NC]
+RewriteRule ^apply-online\.php$ /apply-online [L,R=301]
+
+RewriteRule ^blog/?$ blog.php [L,QSA]
+RewriteRule ^blog-post/?$ blog-post.php [L,QSA]
+
+# =====================================================
+# REMOVE /index.html FROM ANY URL (root AND subfolders)
+# Handles BOTH:
+#   /index.html            -> /
+#   /services/index.html   -> /services/
+# Each folder's own index.html is resolved automatically by
+# DirectoryIndex below — this block only cleans the visible URL.
+# =====================================================
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:\?|\s) [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [L,R=301]
+
+# =====================================================
+# REMOVE .html FROM EVERY OTHER SLUG
+# e.g. /corporatesecurity.html -> /corporatesecurity
+# =====================================================
+RewriteCond %{THE_REQUEST} \s/+([^.\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# =====================================================
+# ENFORCE TRAILING SLASH ON REAL DIRECTORIES
+# e.g. /services -> /services/  (prevents /services and /services/
+# from being treated as two different URLs — avoids duplicate-
+# content confusion between the two index.html files)
+# =====================================================
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+# =====================================================
+# SERVE CLEAN URLS INTERNALLY FROM REAL .html FILES
+# /corporatesecurity -> serves corporatesecurity.html (no visible change)
+# =====================================================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# =====================================================
+# DIRECTORY INDEX (resolves each folder's own index.html)
+# public/index.html          -> served at /
+# public/services/index.html -> served at /services/
+# =====================================================
+DirectoryIndex index.html index.php all_services.html
+
+# =====================================================
+# SECURITY / HARDENING
+# =====================================================
+Options -Indexes
+ServerSignature Off
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# =====================================================
+# CUSTOM ERROR PAGES (optional — point these at real files you have)
+# =====================================================
+# ErrorDocument 404 /404.html
+
+# =====================================================
+# CACHING
+# =====================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour"
+
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+
+    # CSS & JS
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+
+    # HTML
+    ExpiresByType text/html "access plus 2 hours"
+    ExpiresByType application/xhtml+xml "access plus 2 hours"
+</IfModule>
+
+# =====================================================
+# CACHE CONTROL HEADERS
+# =====================================================
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|jpe?g|png|gif|webp|svg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.(x?html?)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# =====================================================
+# COMPRESSION
+# =====================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
