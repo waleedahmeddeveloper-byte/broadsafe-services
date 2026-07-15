@@ -1,6 +1,11 @@
 (function () {
   "use strict";
 
+  if (window.__siteUnifiedInitialized) {
+    return;
+  }
+  window.__siteUnifiedInitialized = true;
+
   function readCookie(name) {
     var match = document.cookie.match(
       new RegExp("(?:^|; )" + name + "=([^;]+)"),
@@ -271,11 +276,35 @@
     }
   }
 
+  function optimizeImages() {
+    try {
+      var imgs = document.querySelectorAll("img");
+      for (var i = 0; i < imgs.length; i += 1) {
+        var img = imgs[i];
+        if (
+          img.classList.contains("logo-light") ||
+          img.classList.contains("logo-dark")
+        ) {
+          continue;
+        }
+        if (!img.getAttribute("loading")) {
+          img.setAttribute("loading", "lazy");
+        }
+        if (!img.getAttribute("decoding")) {
+          img.setAttribute("decoding", "async");
+        }
+      }
+    } catch (e) {
+      // non-fatal
+    }
+  }
+
   function boot() {
     var preferred = getPreferredTheme();
     applyTheme(preferred);
     initMobileNavWithRetry();
     initFaqAccordions();
+    optimizeImages();
 
     var toggle = ensureToggleButton();
     updateToggleUI(preferred === "dark");
