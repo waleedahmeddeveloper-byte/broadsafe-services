@@ -1,150 +1,116 @@
 <!doctype html>
 <html lang="en-AU">
-  <head>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <script id="dm-preload">
-      (function () {
-        try {
-          var m = document.cookie.match(/(?:^|; )theme=([^;]+)/);
-          var t =
-            (m && decodeURIComponent(m[1])) ||
-            localStorage.getItem("theme") ||
-            "light";
-          if (t === "dark") {
-            document.documentElement.classList.add("dark-theme-preload");
-          }
-        } catch (e) {}
-      })();
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script>
-      (function () {
-        try {
-          var match = document.cookie.match(/(?:^|; )theme=([^;]+)/);
-          if (match && decodeURIComponent(match[1]) === "dark") {
-            var timer = setInterval(function () {
-              if (document.body) {
-                document.body.classList.add("dark-theme");
-                clearInterval(timer);
-              }
-            }, 1);
-          }
-        } catch (e) {}
-      });
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KNQRM38F");
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-6V0WJ4TDNZ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-6V0WJ4TDNZ");
-    </script>
-    <!-- CookieYes Consent Banner -->
-    <script>
-      if (
-        location.hostname === "www.broadsafeservices.com.au" ||
-        location.hostname === "broadsafeservices.com.au"
-      ) {
-        var cys = document.createElement("script");
-        cys.id = "cookieyes";
-        cys.type = "text/javascript";
-        cys.src =
-          "https://cdn-cookieyes.com/client_data/5cfe4f28d3b2e213a2c75d46/script.js";
-        document.head.appendChild(cys);
-      }
-    </script>
-    <!-- Google Search Console Verification -->
-    <meta
-      name="google-site-verification"
-      content="wk4JdqHFf7Q8c4nmlfscBK_X4NG250WqphMqfhvZp2o"
-    />
-    <!-- Base Meta Tags -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- SEO Meta Tags (UPDATE FOR EACH PAGE) -->
-    <title>
-      About Us - Broadsafe Services | Professional Security Solutions
-    </title>
-    <meta
-      name="description"
-      content="Learn about Broadsafe Services, a trusted security solutions provider offering comprehensive 24/7 security solutions."
-    />
-    <meta
-      name="keywords"
-      content="security services, about broadsafe, professional security"
-    />
-    <meta name="author" content="Broadsafe Security Services" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.broadsafeservices.com.au/about" />
-    <!-- Open Graph Meta Tags (UPDATE FOR EACH PAGE) -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="About Us - Broadsafe Services | Professional Security Solutions"
-    />
-    <meta
-      property="og:description"
-      content="Learn about Broadsafe Services, a trusted security solutions provider."
-    />
-    <meta
-      property="og:url"
-      content="https://www.broadsafeservices.com.au/about"
-    />
-    <meta
-      property="og:image"
-      content="https://www.broadsafeservices.com.au/images/og-image.png"
-    />
-    <meta property="og:site_name" content="Broadsafe Security Services" />
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="About Us - Broadsafe Services | Professional Security Solutions"
-    />
-    <meta
-      name="twitter:description"
-      content="Learn about Broadsafe Services, a trusted security solutions provider."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.broadsafeservices.com.au/images/og-image.png"
-    />
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="apple-touch-icon" href="images/Black-removebg-preview.png" />
-    <!-- External CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <!-- Organization Schema -->
-    <script type="application/ld+json">
+
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script id="dm-preload">
+    (function () {
+      try {
+        var m = document.cookie.match(/(?:^|; )theme=([^;]+)/);
+        var t =
+          (m && decodeURIComponent(m[1])) ||
+          localStorage.getItem("theme") ||
+          "light";
+        if (t === "dark") {
+          document.documentElement.classList.add("dark-theme-preload");
+        }
+      } catch (e) { }
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function () {
+      try {
+        var match = document.cookie.match(/(?:^|; )theme=([^;]+)/);
+        if (match && decodeURIComponent(match[1]) === "dark") {
+          var timer = setInterval(function () {
+            if (document.body) {
+              document.body.classList.add("dark-theme");
+              clearInterval(timer);
+            }
+          }, 1);
+        }
+      } catch (e) { }
+    });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-KNQRM38F");
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V0WJ4TDNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-6V0WJ4TDNZ");
+  </script>
+  <!-- CookieYes Consent Banner -->
+  <script>
+    if (
+      location.hostname === "www.broadsafeservices.com.au" ||
+      location.hostname === "broadsafeservices.com.au"
+    ) {
+      var cys = document.createElement("script");
+      cys.id = "cookieyes";
+      cys.type = "text/javascript";
+      cys.src =
+        "https://cdn-cookieyes.com/client_data/5cfe4f28d3b2e213a2c75d46/script.js";
+      document.head.appendChild(cys);
+    }
+  </script>
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="wk4JdqHFf7Q8c4nmlfscBK_X4NG250WqphMqfhvZp2o" />
+  <!-- Base Meta Tags -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- SEO Meta Tags (UPDATE FOR EACH PAGE) -->
+  <title>
+    About Us - Broadsafe Services | Professional Security Solutions
+  </title>
+  <meta name="description"
+    content="Learn about Broadsafe Services, a trusted security solutions provider offering comprehensive 24/7 security solutions." />
+  <meta name="keywords" content="security services, about broadsafe, professional security" />
+  <meta name="author" content="Broadsafe Security Services" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.broadsafeservices.com.au/about" />
+  <!-- Open Graph Meta Tags (UPDATE FOR EACH PAGE) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Us - Broadsafe Services | Professional Security Solutions" />
+  <meta property="og:description" content="Learn about Broadsafe Services, a trusted security solutions provider." />
+  <meta property="og:url" content="https://www.broadsafeservices.com.au/about" />
+  <meta property="og:image" content="https://www.broadsafeservices.com.au/images/og-image.png" />
+  <meta property="og:site_name" content="Broadsafe Security Services" />
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us - Broadsafe Services | Professional Security Solutions" />
+  <meta name="twitter:description" content="Learn about Broadsafe Services, a trusted security solutions provider." />
+  <meta name="twitter:image" content="https://www.broadsafeservices.com.au/images/og-image.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/Black-removebg-preview.png" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -179,8 +145,8 @@
         "description": "Professional security services provider offering 24/7 security solutions including static guarding, mobile patrols, alarm response and event security."
       }
     </script>
-    <!-- Schema Markup for About Page -->
-    <script type="application/ld+json">
+  <!-- Schema Markup for About Page -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AboutPage",
@@ -194,960 +160,1021 @@
         }
       }
     </script>
-    <link rel="stylesheet" href="assets/css/site.css?v=20260709" />
-    <link rel="stylesheet" href="assets/css/responsive.css?v=20260709" />
-    <style>
-      /* ====== ABOUT PAGE SPECIFIC STYLES ====== */ /* About Hero Section */
+  <link rel="stylesheet" href="assets/css/site.css?v=20260709" />
+  <link rel="stylesheet" href="assets/css/responsive.css?v=20260709" />
+  <link rel="stylesheet" href="assets/css/home.css?v=20260715" />
+  <style>
+    /* ====== ABOUT PAGE SPECIFIC STYLES ====== */
+    /* About Hero Section */
+    .about-hero {
+      height: 60vh;
+      min-height: 450px;
+      margin-top: 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0 5%;
+      background:
+        linear-gradient(135deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.5) 100%),
+        url("images/security-solutions-provider.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .about-hero-content {
+      max-width: 600px;
+      z-index: 3;
+      position: relative;
+      color: white;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 20px;
+      color: var(--light);
+      line-height: 1.2;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-hero p {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      margin-bottom: 30px;
+      color: #f0f0f0;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      opacity: 0.95;
+    }
+
+    .breadcrumb {
+      display: flex;
+      list-style: none;
+      padding: 10px 0;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb li {
+      margin: 0 10px 10px 0;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .breadcrumb li a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .breadcrumb li a:hover {
+      color: white;
+    }
+
+    .breadcrumb li:after {
+      content: ">";
+      margin-left: 15px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .breadcrumb li:last-child:after {
+      content: "";
+      margin: 0;
+    }
+
+    .breadcrumb li:last-child a,
+    .breadcrumb li.active {
+      color: white;
+      font-weight: 600;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* About Content Sections */
+    .about-section {
+      padding: 80px 5%;
+      background: var(--light);
+      position: relative;
+    }
+
+    body.dark-theme.about-section {
+      background: var(--dark-bg);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      width: 100%;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: var(--primary);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2:after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: #666;
+      max-width: 700px;
+      margin: 20px auto 0;
+      font-size: 1.1rem;
+    }
+
+    body.dark-theme.section-title p {
+      color: #aaa;
+    }
+
+    /* History Section */
+    .history-container {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    .history-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .history-content h3 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--primary);
+      margin-bottom: 25px;
+    }
+
+    .history-content p {
+      color: #555;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    body.dark-theme.history-content p {
+      color: #aaa;
+    }
+
+    .history-image {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      height: 400px;
+      background: linear-gradient(45deg, #1a3b74, #3871c1);
+      position: relative;
+    }
+
+    .history-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Values Section */
+    .values-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    .value-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      border-top: 4px solid var(--primary);
+      padding: 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    body.dark-theme.value-card {
+      background: var(--dark-card);
+    }
+
+    .value-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .value-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      margin: 0 auto 20px;
+      line-height: 1;
+      transition: all 0.3s ease;
+    }
+
+    .value-icon i {
+      display: block;
+      line-height: 1;
+    }
+
+    .value-card:hover.value-icon {
+      background: var(--secondary);
+      transform: scale(1.1);
+    }
+
+    .value-card h3 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    body.dark-theme.value-card h3 {
+      color: var(--dark-text);
+    }
+
+    .value-card p {
+      color: #666;
+    }
+
+    body.dark-theme.value-card p {
+      color: #aaa;
+    }
+
+    /* Stats Section */
+    .stats-section {
+      padding: 80px 5%;
+      background: var(--light);
+      text-align: center;
+    }
+
+    body.dark-theme.stats-section {
+      background: var(--dark-bg);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .stat-item {
+      background: var(--gray);
+      padding: 40px 30px;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      min-width: 0;
+    }
+
+    body.dark-theme.stat-item {
+      background: var(--dark-card);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-number {
+      font-size: clamp(1.9rem, 3vw, 2.2rem);
+      color: var(--secondary);
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: block;
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+
+    .stat-label {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1rem;
+      white-space: normal;
+      overflow-wrap: normal;
+      line-height: 1.4;
+    }
+
+    body.dark-theme.stat-label {
+      color: var(--dark-text);
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-us {
+      padding: clamp(56px, 8vw, 80px) 5%;
+      background: var(--gray);
+      position: relative;
+      margin-top: clamp(32px, 5vw, 50px);
+    }
+
+    body.dark-theme.why-choose-us {
+      background: var(--dark-bg);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: clamp(18px, 2.8vw, 30px);
+      margin-top: 50px;
+      align-items: stretch;
+    }
+
+    .feature-box {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      text-align: center;
+      border-left: 4px solid var(--primary);
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body.dark-theme.feature-box {
+      background: var(--dark-card);
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      border-left-color: var(--secondary);
+    }
+
+    .feature-box i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      display: block;
+      width: fit-content;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-box:hover i {
+      color: var(--secondary);
+      transform: rotate(10deg);
+    }
+
+    .feature-box h3 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    body.dark-theme.feature-box h3 {
+      color: var(--dark-text);
+    }
+
+    .feature-box p {
+      color: #666;
+      margin-bottom: 0;
+    }
+
+    body.dark-theme.feature-box p {
+      color: #aaa;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 100px 5%;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      background: url("images/security-solutions-provider.jpg") center / cover no-repeat;
+      background-attachment: fixed;
+    }
+
+    .cta-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .cta-section>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-content h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta-content p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .white-button {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      min-height: 48px;
+      min-width: 140px;
+      touch-action: manipulation;
+    }
+
+    .white-button:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(230, 63, 35, 0.35);
+    }
+
+    .transparent-button {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      min-height: 48px;
+      min-width: 140px;
+      touch-action: manipulation;
+    }
+
+    .transparent-button:hover {
+      background: white;
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Design for About Page */
+    @media (max-width: 992px) {
+      .about-hero {
+        height: 50vh;
+        min-height: 350px;
+        background-attachment: scroll;
+      }
+
+      .history-container {
+        flex-direction: column;
+      }
+
+      .history-image {
+        width: 100%;
+        height: 350px;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-hero {
+        height: 65vh;
+        min-height: 500px;
+        padding: 0 20px;
+        text-align: center;
+        background-position: 70% center;
+        background-attachment: scroll;
+      }
+
+      .about-hero h1 {
+        font-size: 2rem;
+      }
+
+      .about-hero-content {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .breadcrumb {
+        justify-content: center;
+      }
+
+      .breadcrumb li {
+        font-size: 0.9rem;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+
+      .history-content,
+      .history-image {
+        min-width: 100%;
+      }
+
+      .values-container,
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .feature-box {
+        padding: 30px 20px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .stat-item {
+        padding: 30px 15px;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        white-space: normal;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .white-button,
+      .transparent-button {
+        width: 100%;
+      }
+
+      .cta-section {
+        background-attachment: scroll;
+      }
+    }
+
+    @media (max-width: 480px) {
       .about-hero {
         height: 60vh;
         min-height: 450px;
-        margin-top: 80px;
-        display: flex;
-        align-items: centre;
-        position: relative;
-        overflow: hidden;
-        padding: 0 5%;
-        background:
-          linear-gradient(
-            135deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.5) 100%
-          ),
-          url("images/security-solutions-provider.jpg");
-        background-size: cover;
-        background-position: centre;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
       }
-      .about-hero-content {
-        max-width: 600px;
-        z-index: 3;
-        position: relative;
-        color: white;
-        animation: fadeInUp 1s ease-out;
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+
       .about-hero h1 {
-        font-size: clamp(2.5rem, 6vw, 4rem);
-        margin-bottom: 20px;
-        color: var(--light);
-        line-height: 1.2;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        font-size: 1.8rem;
       }
+
       .about-hero p {
-        font-size: clamp(1.1rem, 2vw, 1.3rem);
-        margin-bottom: 30px;
-        color: #f0f0f0;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        opacity: 0.95;
-      }
-      .breadcrumb {
-        display: flex;
-        list-style: none;
-        padding: 10px 0;
-        margin-bottom: 30px;
-        flex-wrap: wrap;
-      }
-      .breadcrumb li {
-        margin: 0 10px 10px 0;
         font-size: 1rem;
-        display: flex;
-        align-items: centre;
       }
-      .breadcrumb li a {
-        color: rgba(255, 255, 255, 0.9);
-        text-decoration: none;
-        transition: all 0.3s;
-      }
-      .breadcrumb li a:hover {
-        color: white;
-      }
-      .breadcrumb li:after {
-        content: ">";
-        margin-left: 15px;
-        color: rgba(255, 255, 255, 0.6);
-      }
-      .breadcrumb li:last-child:after {
-        content: "";
-        margin: 0;
-      }
-      .breadcrumb li:last-child a,
-      .breadcrumb li.active {
-        color: white;
-        font-weight: 600;
-      }
-      .hero-buttons {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-      } /* About Content Sections */
-      .about-section {
-        padding: 80px 5%;
-        background: var(--light);
-        position: relative;
-      }
-      body.dark-theme.about-section {
-        background: var(--dark-bg);
-      }
-      .section-title {
-        text-align: centre;
-        margin-bottom: 60px;
-        width: 100%;
-      }
-      .section-title h2 {
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
-        color: var(--primary);
-        margin-bottom: 15px;
-        position: relative;
-        display: inline-block;
-      }
-      .section-title h2:after {
-        content: "";
-        position: absolute;
-        width: 80px;
-        height: 4px;
-        background: var(--secondary);
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-      .section-title p {
-        color: #666;
-        max-width: 700px;
-        margin: 20px auto 0;
-        font-size: 1.1rem;
-      }
-      body.dark-theme.section-title p {
-        color: #aaa;
-      } /* History Section */
-      .history-container {
-        display: flex;
-        align-items: centre;
-        gap: 50px;
-        margin-bottom: 80px;
-        flex-wrap: wrap;
-      }
-      .history-content {
-        flex: 1;
-        min-width: 300px;
-      }
-      .history-content h3 {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        color: var(--primary);
-        margin-bottom: 25px;
-      }
-      .history-content p {
-        color: #555;
-        margin-bottom: 20px;
-        font-size: 1.1rem;
-      }
-      body.dark-theme.history-content p {
-        color: #aaa;
-      }
+
       .history-image {
-        flex: 1;
-        min-width: 300px;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        height: 400px;
-        background: linear-gradient(45deg, #1a3b74, #3871c1);
-        position: relative;
+        height: 250px;
       }
-      .history-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      } /* Values Section */
-      .values-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 50px;
-        width: 100%;
-      }
-      .value-card {
-        background: white;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        transition: all 0.4s ease;
-        border-top: 4px solid var(--primary);
-        padding: 30px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: 350px;
-      }
-      body.dark-theme.value-card {
-        background: var(--dark-card);
-      }
-      .value-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-      }
-      .value-icon {
-        width: 80px;
-        height: 80px;
-        background: var(--primary);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 2rem;
-        margin: 0 auto 20px;
-        line-height: 1;
-        transition: all 0.3s ease;
-      }
-      .value-icon i {
-        display: block;
-        line-height: 1;
-      }
-      .value-card:hover.value-icon {
-        background: var(--secondary);
-        transform: scale(1.1);
-      }
-      .value-card h3 {
-        font-size: 1.5rem;
-        color: var(--primary);
-        margin-bottom: 15px;
-      }
-      body.dark-theme.value-card h3 {
-        color: var(--dark-text);
-      }
-      .value-card p {
-        color: #666;
-      }
-      body.dark-theme.value-card p {
-        color: #aaa;
-      } /* Stats Section */
-      .stats-section {
-        padding: 80px 5%;
-        background: var(--light);
-        text-align: centre;
-      }
-      body.dark-theme.stats-section {
-        background: var(--dark-bg);
-      }
+
       .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 30px;
-        margin-top: 50px;
+        grid-template-columns: 1fr;
+        gap: 15px;
       }
-      .stat-item {
-        background: var(--gray);
-        padding: 40px 30px;
-        border-radius: 15px;
-        text-align: centre;
-        transition: all 0.3s ease;
-        min-width: 0;
-      }
-      body.dark-theme.stat-item {
-        background: var(--dark-card);
-      }
-      .stat-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
+
       .stat-number {
-        font-size: clamp(1.9rem, 3vw, 2.2rem);
-        color: var(--secondary);
-        font-weight: 700;
-        margin-bottom: 10px;
-        display: block;
-        white-space: nowrap;
-        word-break: keep-all;
-      }
-      .stat-label {
-        color: var(--primary);
-        font-weight: 600;
-        font-size: 1rem;
-        white-space: normal;
-        overflow-wrap: normal;
-        line-height: 1.4;
-      }
-      body.dark-theme.stat-label {
-        color: var(--dark-text);
-      } /* Why Choose Us Section */
-      .why-choose-us {
-        padding: clamp(56px, 8vw, 80px) 5%;
-        background: var(--gray);
-        position: relative;
-        margin-top: clamp(32px, 5vw, 50px);
-      }
-      body.dark-theme.why-choose-us {
-        background: var(--dark-bg);
-      }
-      .features-grid {
-        display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: clamp(18px, 2.8vw, 30px);
-        margin-top: 50px;
-        align-items: stretch;
-      }
-      .feature-box {
-        background: white;
-        padding: 32px 24px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        text-align: centre;
-        border-left: 4px solid var(--primary);
-        min-width: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-      body.dark-theme.feature-box {
-        background: var(--dark-card);
-      }
-      .feature-box:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        border-left-color: var(--secondary);
-      }
-      .feature-box i {
         font-size: 2.5rem;
-        color: var(--primary);
-        display: block;
-        width: fit-content;
-        margin: 0 auto 20px;
-        transition: all 0.3s ease;
       }
-      .feature-box:hover i {
-        color: var(--secondary);
-        transform: rotate(10deg);
-      }
-      .feature-box h3 {
-        font-size: 1.4rem;
-        color: var(--primary);
-        margin-bottom: 15px;
-      }
-      body.dark-theme.feature-box h3 {
-        color: var(--dark-text);
-      }
-      .feature-box p {
-        color: #666;
-        margin-bottom: 0;
-      }
-      body.dark-theme.feature-box p {
-        color: #aaa;
-      } /* CTA Section */
-      .cta-section {
-        padding: 100px 5%;
-        text-align: center;
-        color: white;
-        position: relative;
-        overflow: hidden;
-        background: url("images/security-solutions-provider.jpg") center / cover
-          no-repeat;
-        background-attachment: fixed;
-      }
-      .cta-section::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-      }
-      .cta-section > * {
-        position: relative;
-        z-index: 2;
-      }
-      .cta-content {
-        max-width: 800px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 2;
-      }
-      .cta-content h2 {
-        font-size: clamp(1.8rem, 4vw, 2.8rem);
-        margin-bottom: 20px;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      }
-      .cta-content p {
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        margin-bottom: 40px;
-        opacity: 0.9;
-      }
-      .cta-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-      .white-button {
-        background: var(--secondary);
-        color: white;
-        border: none;
-        padding: 14px 28px;
-        border-radius: 30px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
+
+      .stat-label {
         font-size: 1rem;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-        min-height: 48px;
-        min-width: 140px;
-        touch-action: manipulation;
       }
-      .white-button:hover {
-        background: var(--primary);
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(230, 63, 35, 0.35);
-      }
-      .transparent-button {
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-        padding: 14px 28px;
-        border-radius: 30px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 1rem;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-        min-height: 48px;
-        min-width: 140px;
-        touch-action: manipulation;
-      }
-      .transparent-button:hover {
-        background: white;
-        color: var(--primary);
-        transform: translateY(-3px);
-      } /* Responsive Design for About Page */
-      @media (max-width: 992px) {
-        .about-hero {
-          height: 50vh;
-          min-height: 350px;
-          background-attachment: scroll;
-        }
-        .history-container {
-          flex-direction: column;
-        }
-        .history-image {
-          width: 100%;
-          height: 350px;
-        }
-        .features-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-      @media (max-width: 768px) {
-        .about-hero {
-          height: 65vh;
-          min-height: 500px;
-          padding: 0 20px;
-          text-align: center;
-          background-position: 70% center;
-          background-attachment: scroll;
-        }
-        .about-hero h1 {
-          font-size: 2rem;
-        }
-        .about-hero-content {
-          max-width: 100%;
-          text-align: center;
-        }
-        .breadcrumb {
-          justify-content: center;
-        }
-        .breadcrumb li {
-          font-size: 0.9rem;
-        }
-        .hero-buttons {
-          justify-content: center;
-        }
-        .section-title h2 {
-          font-size: 1.8rem;
-        }
-        .history-content,
-        .history-image {
-          min-width: 100%;
-        }
-        .values-container,
-        .features-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-        .feature-box {
-          padding: 30px 20px;
-        }
-        .stats-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-        }
-        .stat-item {
-          padding: 30px 15px;
-        }
-        .stat-number {
-          font-size: 2rem;
-        }
-        .stat-label {
-          font-size: 0.9rem;
-          white-space: normal;
-        }
-        .cta-buttons {
-          flex-direction: column;
-          gap: 15px;
-        }
-        .white-button,
-        .transparent-button {
-          width: 100%;
-        }
-        .cta-section {
-          background-attachment: scroll;
-        }
-      }
-      @media (max-width: 480px) {
-        .about-hero {
-          height: 60vh;
-          min-height: 450px;
-        }
-        .about-hero h1 {
-          font-size: 1.8rem;
-        }
-        .about-hero p {
-          font-size: 1rem;
-        }
-        .history-image {
-          height: 250px;
-        }
-        .stats-grid {
-          grid-template-columns: 1fr;
-          gap: 15px;
-        }
-        .stat-number {
-          font-size: 2.5rem;
-        }
-        .stat-label {
-          font-size: 1rem;
-        }
-      }
-    </style>
-    <script src="/assets/js/darkmode-unified.js?v=20260709" defer></script>
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KNQRM38F"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      >
-      </iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="images/White__1_-removebg-preview.png"
-            alt="Broadsafe Security Logo"
-            class="logo-light"
-          />
-          <img
-            src="images/White__1_-removebg-preview.png"
-            alt="Broadsafe Security Logo"
-            class="logo-dark"
-            style="display: none"
-          />
-        </a>
-      </div>
-      <button class="mobile-menu-btn" aria-label="Open mobile menu">
-        <i class="fas fa-bars"> </i>
-      </button>
-      <nav class="desktop-nav">
-        <a href="index.html">Home</a> <a href="services/index.html">Services</a>
-        <a href="about.html" class="active" aria-current="page">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="tel:0370648292" class="cta-button header-call-btn">
-        <i class="fas fa-phone"> </i> Call Us
-      </a>
-    </header>
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-      <button class="mobile-nav-close" aria-label="Close mobile menu">
-        <i class="fas fa-times"> </i>
-      </button>
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="services/index.html">Services</a>
-        </li>
-        <li>
-          <a href="about.html" class="active" aria-current="page">About</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-        <li>
-          <a href="apply-online.html">Work with us</a>
-        </li>
-      </ul>
-      <a href="tel:0370648292" class="cta-button mobile-nav-call">
-        <i class="fas fa-phone"> </i> Call: 03 7064 8292
+    }
+  </style>
+  <script src="/assets/js/darkmode-unified.js?v=20260709" defer></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNQRM38F" height="0" width="0"
+      style="display: none; visibility: hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/White__1_-removebg-preview.png" alt="Broadsafe Security Logo" class="logo-light" / loading="lazy" decoding="async">
+        <img src="images/White__1_-removebg-preview.png" alt="Broadsafe Security Logo" class="logo-dark"
+          style="display: none" / loading="lazy" decoding="async">
       </a>
     </div>
-    <main id="main-content" role="main">
-      <!-- Page Hero -->
-      <section class="about-hero">
-        <div class="about-hero-content">
-          <ul class="breadcrumb">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="about.html" class="active">About Us</a>
-            </li>
-          </ul>
-          <h1>About Broadsafe Services</h1>
-          <p>
-            Trusted security solutions provider with a commitment to excellence,
-            integrity and reliability.
-          </p>
-          <div class="hero-buttons">
-            <a href="#history" class="cta-button">Our Story</a>
-            <a href="tel:0370648292" class="secondary-button"
-              >Contact Our Team</a
-            >
-          </div>
-        </div>
-      </section>
-      <!-- About Content -->
-      <section class="about-section">
-        <div class="section-title">
-          <h2>Our Story</h2>
-          <p>Learn about our journey and values</p>
-        </div>
-        <!-- History Section -->
-        <div class="history-container" id="history">
-          <div class="history-content">
-            <h3>Company History</h3>
-            <p>
-              Broadsafe Services Pty Ltd is a trusted provider of comprehensive
-              security solutions, delivering reliable protection to clients.
-              What began as a small team with a strong vision has grown into a
-              leading name in the security industry, recognised for tailored
-              services and a commitment to quality.
-            </p>
-            <p>
-              For years, Broadsafe has been safeguarding businesses and
-              communities. We combine advanced security technology with a highly
-              trained workforce to ensure dependable, responsive and effective
-              service in every region we operate.
-            </p>
-            <p>
-              Our reputation is built on core values that guide everything we do
-              integrity, professionalism and reliability. As client needs
-              continue to evolve, Broadsafe remains committed to innovation and
-              excellence, ensuring we remain the preferred security partner for
-              organisations.
-            </p>
-          </div>
-          <div class="history-image">
-            <img
-              src="images/company-history.jpeg"
-              alt="Broadsafe Services Pty Ltd"
-            />
-          </div>
-        </div>
-        <!--...existing sections... -->
-        <!-- Mission and Values -->
-        <div class="section-title">
-          <h2>Our Mission & Values</h2>
-          <p>
-            The principles that guide everything we do at Broadsafe Services
-          </p>
-        </div>
-        <div class="values-container">
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-shield-alt"> </i></div>
-            <h3>Integrity</h3>
-            <p>
-              We conduct all business with honesty and transparency, building
-              trust with every client interaction.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-users"> </i></div>
-            <h3>Commitment</h3>
-            <p>
-              We are dedicated to the safety and security of our clients, going
-              above and beyond to deliver excellence.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="fas fa-lightbulb"> </i></div>
-            <h3>Innovation</h3>
-            <p>
-              We embrace new technologies and strategies to stay ahead of
-              emerging security challenges.
-            </p>
-          </div>
-        </div>
-        <!-- Stats Section -->
-        <section class="stats-section">
-          <div class="section-title">
-            <h2>Our Impact</h2>
-            <p>Numbers that showcase our commitment and reach</p>
-          </div>
-          <div class="stats-grid">
-            <div class="stat-item">
-              <span class="stat-number">100+</span>
-              <span class="stat-label">Security Professionals</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">1200+</span>
-              <span class="stat-label">Satisfied Clients</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">24/7</span>
-              <span class="stat-label">Service Availability</span>
-            </div>
-          </div>
-        </section>
-        <!-- Why Choose Us Section -->
-        <div class="why-choose-us">
-          <div class="section-title">
-            <h2>Why Choose Broadsafe?</h2>
-            <p>What sets us apart in the security industry</p>
-          </div>
-          <div class="features-grid">
-            <div class="feature-box">
-              <i class="fas fa-certificate"> </i>
-              <h3>Certified Professionals</h3>
-              <p>
-                All our security personnel are fully licenced, trained and
-                certified to the highest industry standards.
-              </p>
-            </div>
-            <div class="feature-box">
-              <i class="fas fa-clock"> </i>
-              <h3>24/7 Availability</h3>
-              <p>
-                Round-the-clock service with rapid response teams ready to
-                deploy.
-              </p>
-            </div>
-            <div class="feature-box">
-              <i class="fas fa-tools"> </i>
-              <h3>Advanced Technology</h3>
-              <p>
-                State-of-the-art security systems integrated with expert human
-                oversight for maximum protection.
-              </p>
-            </div>
-            <div class="feature-box">
-              <i class="fas fa-user-shield"> </i>
-              <h3>Custom Solutions</h3>
-              <p>
-                Tailored security strategies designed specifically for your
-                unique requirements and challenges.
-              </p>
-            </div>
-            <div class="feature-box">
-              <i class="fas fa-medal"> </i>
-              <h3>Proven Track Record</h3>
-              <p>
-                Years of excellence with hundreds of satisfied clients and
-                industry recognition.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- CTA Section -->
-      <section class="cta-section">
-        <div class="cta-content">
-          <h2>Ready to Experience the Broadsafe Difference?</h2>
-          <p>
-            Contact us today for a free security assessment and customised
-            solution
-          </p>
-          <div class="cta-buttons">
-            <a href="tel:0370648292" class="white-button">
-              <i class="fas fa-phone"> </i> Call Now: 03 7064 8292</a
-            >
-            <a href="contact.html" class="transparent-button"
-              >Request a Quote</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- Footer component will be extracted from existing pages -->
-    <section
-      class="country-acknowledgement"
-      aria-label="Acknowledgement of Country"
-    >
-      <div class="country-acknowledgement-inner">
-        <img
-          src="images/flags.webp"
-          alt="Aboriginal and Torres Strait Islander flags"
-          loading="lazy"
-          decoding="async"
-        />
+    <button class="mobile-menu-btn" aria-label="Open mobile menu">
+      <i class="fas fa-bars"> </i>
+    </button>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a> <a href="services/index.html">Services</a>
+      <a href="about.html" class="active" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="tel:0370648292" class="cta-button header-call-btn">
+      <i class="fas fa-phone"> </i> Call Us
+    </a>
+  </header>
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close mobile menu">
+      <i class="fas fa-times"> </i>
+    </button>
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="services/index.html">Services</a>
+      </li>
+      <li>
+        <a href="about.html" class="active" aria-current="page">About</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="apply-online.html">Work with us</a>
+      </li>
+    </ul>
+    <a href="tel:0370648292" class="cta-button mobile-nav-call">
+      <i class="fas fa-phone"> </i> Call: 03 7064 8292
+    </a>
+  </div>
+  <main id="main-content" role="main">
+    <!-- Page Hero -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+        <ul class="breadcrumb">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="active">About Us</a>
+          </li>
+        </ul>
+        <h1>About Broadsafe Services</h1>
         <p>
-          Broadsafe Services acknowledges the Traditional Custodians of the land
-          on which we work and live and recognise their continuing connection to
-          land, sea and culture. We pay respect to Elders past, present,
-          emerging and extend that respect to all Aboriginal and Torres Strait
-          Islander people around the country.
+          Trusted security solutions provider with a commitment to excellence,
+          integrity and reliability.
         </p>
+        <div class="hero-buttons">
+          <a href="#history" class="cta-button">Our Story</a>
+          <a href="tel:0370648292" class="secondary-button">Contact Our Team</a>
+        </div>
       </div>
     </section>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-about">
-          <a href="index.html" class="footer-logo">
-            <img
-              src="images/Black-removebg-preview.png"
-              alt="Broadsafe Services Logo"
-            />
-            <div class="tagline">Keeping You Safe, 24/7</div>
-          </a>
+    <!-- About Content -->
+    <section class="about-section">
+      <div class="section-title">
+        <h2>Our Story</h2>
+        <p>Learn about our journey and values</p>
+      </div>
+      <!-- History Section -->
+      <div class="history-container" id="history">
+        <div class="history-content">
+          <h3>Company History</h3>
           <p>
-            Providing professional security solutions with 24/7 availability and
-            rapid response.
+            Broadsafe Services Pty Ltd is a trusted provider of comprehensive
+            security solutions, delivering reliable protection to clients.
+            What began as a small team with a strong vision has grown into a
+            leading name in the security industry, recognised for tailored
+            services and a commitment to quality.
+          </p>
+          <p>
+            For years, Broadsafe has been safeguarding businesses and
+            communities. We combine advanced security technology with a highly
+            trained workforce to ensure dependable, responsive and effective
+            service in every region we operate.
+          </p>
+          <p>
+            Our reputation is built on core values that guide everything we do
+            integrity, professionalism and reliability. As client needs
+            continue to evolve, Broadsafe remains committed to innovation and
+            excellence, ensuring we remain the preferred security partner for
+            organisations.
           </p>
         </div>
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="services/index.html">Services</a>
-            </li>
-            <li>
-              <a href="about.html">About us</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a href="apply-online.html">Work with us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h3>Our Services</h3>
-          <ul>
-            <li>
-              <a href="services/staticguarding.html">Static Guarding</a>
-            </li>
-            <li>
-              <a href="services/mobilepatrols.html">Mobile Patrols</a>
-            </li>
-            <li>
-              <a href="services/corporatesecurity.html">Corporate Security</a>
-            </li>
-            <li>
-              <a href="services/cashintransit.html">Cash In Transit Security</a>
-            </li>
-            <li>
-              <a href="services/alarmresponses.html">Alarm Response</a>
-            </li>
-            <li>
-              <a href="services/eventsecurity.html">Event Security</a>
-            </li>
-            <li>
-              <a href="services/constructionsitesecurity.html"
-                >Construction Site Security</a
-              >
-            </li>
-            <li>
-              <a href="services/commercialsitesecurity.html"
-                >Commercial Site Security</a
-              >
-            </li>
-            <li>
-              <a href="services/manufacturingwarehousingsecurity.html"
-                >Manufacturing & Warehouse Security</a
-              >
-            </li>
-            <li>
-              <a href="services/facilitymanagementservices.html"
-                >Facilities Management Services</a
-              >
-            </li>
-            <li>
-              <a href="services/cleaningservices.html">Cleaning Services</a>
-            </li>
-            <li>
-              <a href="/services/carparkmanagementservices"
-                >Car Park Management</a
-              >
-            </li>
-            <li>
-              <a href="services/maintenanceservices.html"
-                >Maintenance Services</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h3>Contact Info</h3>
-          <ul>
-            <li>
-              <i class="fas fa-phone"> </i>
-              <div><a href="tel:0370648292">03 7064 8292</a></div>
-            </li>
-            <li>
-              <i class="fas fa-clock"> </i>
-              <div><a href="tel:0370648292">24/7 National Helpline</a></div>
-            </li>
-            <li>
-              <i class="fas fa-envelope"> </i>
-              <div>
-                <a href="mailto:info@broadsafeservices.com.au"
-                  >info@broadsafeservices.com.au</a
-                >
-              </div>
-            </li>
-          </ul>
+        <div class="history-image">
+          <img src="images/company-history.jpeg" alt="Broadsafe Services Pty Ltd" / loading="lazy" decoding="async">
         </div>
       </div>
-      <div class="copyright">
-        <p>&copy; 2026 Broadsafe Services. All rights reserved.</p>
+      <!--...existing sections... -->
+      <!-- Mission and Values -->
+      <div class="section-title">
+        <h2>Our Mission & Values</h2>
+        <p>
+          The principles that guide everything we do at Broadsafe Services
+        </p>
       </div>
-    </footer>
-    <script>
+      <div class="values-container">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-shield-alt"> </i></div>
+          <h3>Integrity</h3>
+          <p>
+            We conduct all business with honesty and transparency, building
+            trust with every client interaction.
+          </p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-users"> </i></div>
+          <h3>Commitment</h3>
+          <p>
+            We are dedicated to the safety and security of our clients, going
+            above and beyond to deliver excellence.
+          </p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-lightbulb"> </i></div>
+          <h3>Innovation</h3>
+          <p>
+            We embrace new technologies and strategies to stay ahead of
+            emerging security challenges.
+          </p>
+        </div>
+      </div>
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="section-title">
+          <h2>Our Impact</h2>
+          <p>Numbers that showcase our commitment and reach</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Security Professionals</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1200+</span>
+            <span class="stat-label">Satisfied Clients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Service Availability</span>
+          </div>
+        </div>
+      </section>
+      <!-- Why Choose Us Section -->
+      <div class="why-choose-us">
+        <div class="section-title">
+          <h2>Why Choose Broadsafe?</h2>
+          <p>What sets us apart in the security industry</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-box">
+            <i class="fas fa-certificate"> </i>
+            <h3>Certified Professionals</h3>
+            <p>
+              All our security personnel are fully licenced, trained and
+              certified to the highest industry standards.
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-clock"> </i>
+            <h3>24/7 Availability</h3>
+            <p>
+              Round-the-clock service with rapid response teams ready to
+              deploy.
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-tools"> </i>
+            <h3>Advanced Technology</h3>
+            <p>
+              State-of-the-art security systems integrated with expert human
+              oversight for maximum protection.
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-user-shield"> </i>
+            <h3>Custom Solutions</h3>
+            <p>
+              Tailored security strategies designed specifically for your
+              unique requirements and challenges.
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-medal"> </i>
+            <h3>Proven Track Record</h3>
+            <p>
+              Years of excellence with hundreds of satisfied clients and
+              industry recognition.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to Experience the Broadsafe Difference?</h2>
+        <p>
+          Contact us today for a free security assessment and customised
+          solution
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:0370648292" class="white-button">
+            <i class="fas fa-phone"> </i> Call Now: 03 7064 8292</a>
+          <a href="contact.html" class="transparent-button">Request a Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer component will be extracted from existing pages -->
+  <section class="country-acknowledgement" aria-label="Acknowledgement of Country">
+    <div class="country-acknowledgement-inner">
+      <img src="images/flags.webp" alt="Aboriginal and Torres Strait Islander flags" loading="lazy" decoding="async" />
+      <p>
+        Broadsafe Services acknowledges the Traditional Custodians of the land
+        on which we work and live and recognise their continuing connection to
+        land, sea and culture. We pay respect to Elders past, present,
+        emerging and extend that respect to all Aboriginal and Torres Strait
+        Islander people around the country.
+      </p>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">
+          <img src="images/Black-removebg-preview.png" alt="Broadsafe Services Logo" / loading="lazy" decoding="async">
+          <div class="tagline">Keeping You Safe, 24/7</div>
+        </a>
+        <p>
+          Providing professional security solutions with 24/7 availability and
+          rapid response.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="services/index.html">Services</a>
+          </li>
+          <li>
+            <a href="about.html">About us</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="apply-online.html">Work with us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Our Services</h3>
+        <ul>
+          <li>
+            <a href="services/staticguarding.html">Static Guarding</a>
+          </li>
+          <li>
+            <a href="services/mobilepatrols.html">Mobile Patrols</a>
+          </li>
+          <li>
+            <a href="services/corporatesecurity.html">Corporate Security</a>
+          </li>
+          <li>
+            <a href="services/cashintransit.html">Cash In Transit Security</a>
+          </li>
+          <li>
+            <a href="services/alarmresponses.html">Alarm Response</a>
+          </li>
+          <li>
+            <a href="services/eventsecurity.html">Event Security</a>
+          </li>
+          <li>
+            <a href="services/constructionsitesecurity.html">Construction Site Security</a>
+          </li>
+          <li>
+            <a href="services/commercialsitesecurity.html">Commercial Site Security</a>
+          </li>
+          <li>
+            <a href="services/manufacturingwarehousingsecurity.html">Manufacturing & Warehouse Security</a>
+          </li>
+          <li>
+            <a href="services/facilitymanagementservices.html">Facilities Management Services</a>
+          </li>
+          <li>
+            <a href="services/cleaningservices.html">Cleaning Services</a>
+          </li>
+          <li>
+            <a href="/services/carparkmanagementservices">Car Park Management</a>
+          </li>
+          <li>
+            <a href="services/maintenanceservices.html">Maintenance Services</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Info</h3>
+        <ul>
+          <li>
+            <i class="fas fa-phone"> </i>
+            <div><a href="tel:0370648292">03 7064 8292</a></div>
+          </li>
+          <li>
+            <i class="fas fa-clock"> </i>
+            <div><a href="tel:0370648292">24/7 National Helpline</a></div>
+          </li>
+          <li>
+            <i class="fas fa-envelope"> </i>
+            <div>
+              <a href="mailto:info@broadsafeservices.com.au">info@broadsafeservices.com.au</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Broadsafe Services. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
        // ====== COOKIE FUNCTIONS ====== function setCookie(name, value, days) { const date = new Date(); date.setTime(date.getTime + (days * 24 * 60 * 60 * 1000)); const expires = "expires=" + date.toUTCString; document.cookie = `${name}=${value};${expires};path=/`; } function getCookie(name) { const cookies = document.cookie.split(';'); for (let cookie of cookies) { const [cookieName, cookieValue] = cookie.trim.split('='); if (cookieName === name) return cookieValue; } return null; } // ====== THEME TOGGLE ====== const themeToggle = document.createElement('button'); themeToggle.id = 'themeToggle'; themeToggle.innerHTML = '<i class="fas fa-moon">
-      </i> Dark Mode'; themeToggle.classList.add('theme-button'); themeToggle.setAttribute('aria-label', 'Toggle dark mode'); document.body.appendChild(themeToggle); themeToggle.addEventListener('click', function { document.body.classList.toggle('dark-theme'); if (document.body.classList.contains('dark-theme')) { setCookie('theme', 'dark', 30); themeToggle.innerHTML = '<i class="fas fa-sun">
-      </i> Light Mode'; } else { setCookie('theme', 'light', 30); themeToggle.innerHTML = '<i class="fas fa-moon">
-      </i> Dark Mode'; } }); // Apply theme on load window.addEventListener('DOMContentLoaded',  => { const theme = getCookie('theme') || 'light'; if (theme === 'dark') { document.body.classList.add('dark-theme'); themeToggle.innerHTML = '<i class="fas fa-sun">
-      </i> Light Mode'; } }); // ====== MOBILE MENU FUNCTIONALITY ====== var mobileMenuBtn = document.querySelector('.mobile-menu-btn'); var mobileNav = document.querySelector('.mobile-nav'); var mobileNavClose = document.querySelector('.mobile-nav-close'); function toggleMobileMenu { const isOpen = mobileNav.classList.toggle('is-open'); document.body.classList.toggle('nav-open', isOpen); if (mobileMenuBtn) { mobileMenuBtn.setAttribute('aria-expanded', isOpen? 'true': 'false'); } } if (!window.__mobileNavInitialized) { window.__mobileNavInitialized = true; if (mobileMenuBtn && mobileNav) { mobileMenuBtn.addEventListener('click', toggleMobileMenu); } if (mobileNavClose && mobileNav) { mobileNavClose.addEventListener('click', toggleMobileMenu); } // Close mobile menu when clicking on a link document.querySelectorAll('.mobile-nav a').forEach(link => { link.addEventListener('click', toggleMobileMenu); }); } // ====== HEADER SCROLL EFFECT ====== window.addEventListener('scroll', function { const header = document.querySelector('header'); if (window.scrollY > 50) { header.style.padding = '25px 5%'; header.style.height = '80px'; header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)'; } else { header.style.padding = '20px 5%'; header.style.height = '80px'; header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)'; } }); // ====== SMOOTH SCROLLING ====== document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault; const target = document.querySelector(this.getAttribute('href')); if (target) { window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' }); } }); }); // ====== TOUCH DEVICE DETECTION ====== function isTouchDevice { return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0); } if (isTouchDevice) { document.body.classList.add('touch-device'); } // ====== WINDOW RESIZE HANDLER ====== window.addEventListener('resize', function { if (window.innerWidth > 768 && mobileNav && mobileNav.classList.contains('is-open')) { toggleMobileMenu; } });
-    </script>
-    <script src="assets/js/responsive.js?v=20260709"></script>
-    <script>
-      // ====== Shared Responsive JavaScript ====== function initThemeToggle { const savedTheme = localStorage.getItem('theme') || 'light'; document.documentElement.setAttribute('data-theme', savedTheme); const themeToggle = document.getElementById('theme-toggle'); if (themeToggle) { themeToggle.addEventListener('click', function { const currentTheme = document.documentElement.getAttribute('data-theme'); const newTheme = currentTheme === 'light'? 'dark': 'light'; document.documentElement.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); }); } } function initMobileMenu { var mobileMenuBtn = document.querySelector('.mobile-menu-btn'); var mobileNav = document.querySelector('.mobile-nav'); var mobileNavClose = document.querySelector('.mobile-nav-close'); const mobileNavLinks = document.querySelectorAll('.mobile-nav a'); if (mobileMenuBtn && mobileNav) { mobileMenuBtn.addEventListener('click', function { mobileNav.classList.add('active'); document.body.style.overflow = 'hidden'; }); } if (mobileNavClose && mobileNav) { mobileNavClose.addEventListener('click', function { mobileNav.classList.remove('active'); document.body.style.overflow = ''; }); } mobileNavLinks.forEach(link => { link.addEventListener('click', function { if (mobileNav) { mobileNav.classList.remove('active'); document.body.style.overflow = ''; } }); }); document.addEventListener('click', function(e) { if (mobileNav && mobileNav.classList.contains('active')) { if (!mobileNav.contains(e.target) &&!mobileMenuBtn.contains(e.target)) { mobileNav.classList.remove('active'); document.body.style.overflow = ''; } } }); } function initHeaderScroll { let lastScrollTop = 0; let ticking = false; function updateHeader(scrollTop) { const header = document.querySelector('header'); if (!header) return; if (scrollTop > lastScrollTop && scrollTop > 100) { header.style.transform = 'translateY(-100%)'; } else { header.style.transform = 'translateY(0)'; } if (scrollTop > 50) { header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)'; } else { header.style.boxShadow = 'none'; } lastScrollTop = scrollTop; ticking = false; } window.addEventListener('scroll', function { const scrollTop = window.pageYOffset || document.documentElement.scrollTop; if (!ticking) { window.requestAnimationFrame(function () { updateHeader(scrollTop); }); ticking = true; } }, { passive: true }); } function initResponsiveEnhancements { let resizeTimer; function handleResize { document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`); } window.addEventListener('resize', function { clearTimeout(resizeTimer); resizeTimer = setTimeout(handleResize, 250); }); handleResize; } function initTouchOptimizations { if ('ontouchstart' in window || navigator.maxTouchPoints > 0) { document.body.classList.add('touch-device'); } } function preventIOSZoom { const inputs = document.querySelectorAll('input, textarea, select'); inputs.forEach(input => { if (parseFloat(window.getComputedStyle(input).fontSize) < 16) { input.style.fontSize = '16px'; } }); } // ====== INITIALIZE ALL ====== document.addEventListener('DOMContentLoaded', function { initThemeToggle; initMobileMenu; initHeaderScroll; initResponsiveEnhancements; initTouchOptimizations; preventIOSZoom; });
-    </script>
-  </body>
+      </i > Dark Mode'; themeToggle.classList.add('theme - button'); themeToggle.setAttribute('aria - label', 'Toggle dark mode'); document.body.appendChild(themeToggle); themeToggle.addEventListener('click', function { document.body.classList.toggle('dark - theme'); if (document.body.classList.contains('dark - theme')) { setCookie('theme', 'dark', 30); themeToggle.innerHTML = ' < i class="fas fa-sun" >
+      </i > Light Mode'; } else { setCookie('theme', 'light', 30); themeToggle.innerHTML = ' < i class="fas fa-moon" >
+      </i > Dark Mode'; } }); // Apply theme on load window.addEventListener('DOMContentLoaded',  => { const theme = getCookie('theme') || 'light'; if (theme === 'dark') { document.body.classList.add('dark - theme'); themeToggle.innerHTML = ' < i class="fas fa-sun" >
+      </i > Light Mode'; } }); // ====== MOBILE MENU FUNCTIONALITY ====== var mobileMenuBtn = document.querySelector('.mobile - menu - btn'); var mobileNav = document.querySelector('.mobile - nav'); var mobileNavClose = document.querySelector('.mobile - nav - close'); function toggleMobileMenu { const isOpen = mobileNav.classList.toggle('is - open'); document.body.classList.toggle('nav - open', isOpen); if (mobileMenuBtn) { mobileMenuBtn.setAttribute('aria - expanded', isOpen? 'true': 'false'); } } if (!window.__mobileNavInitialized) { window.__mobileNavInitialized = true; if (mobileMenuBtn && mobileNav) { mobileMenuBtn.addEventListener('click', toggleMobileMenu); } if (mobileNavClose && mobileNav) { mobileNavClose.addEventListener('click', toggleMobileMenu); } // Close mobile menu when clicking on a link document.querySelectorAll('.mobile - nav a').forEach(link => { link.addEventListener('click', toggleMobileMenu); }); } // ====== HEADER SCROLL EFFECT ====== window.addEventListener('scroll', function { const header = document.querySelector('header'); if (window.scrollY > 50) { header.style.padding = '25px 5 % '; header.style.height = '80px'; header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)'; } else { header.style.padding = '20px 5 % '; header.style.height = '80px'; header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)'; } }); // ====== SMOOTH SCROLLING ====== document.querySelectorAll('a[href ^= "#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault; const target = document.querySelector(this.getAttribute('href')); if (target) { window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' }); } }); }); // ====== TOUCH DEVICE DETECTION ====== function isTouchDevice { return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0); } if (isTouchDevice) { document.body.classList.add('touch - device'); } // ====== WINDOW RESIZE HANDLER ====== window.addEventListener('resize', function { if (window.innerWidth > 768 && mobileNav && mobileNav.classList.contains('is - open')) { toggleMobileMenu; } });
+  </script>
+  <script src="assets/js/responsive.js?v=20260709"></script>
+  <script>
+    // ====== Shared Responsive JavaScript ====== function initThemeToggle { const savedTheme = localStorage.getItem('theme') || 'light'; document.documentElement.setAttribute('data-theme', savedTheme); const themeToggle = document.getElementById('theme-toggle'); if (themeToggle) { themeToggle.addEventListener('click', function { const currentTheme = document.documentElement.getAttribute('data-theme'); const newTheme = currentTheme === 'light'? 'dark': 'light'; document.documentElement.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); }); } } function initMobileMenu { var mobileMenuBtn = document.querySelector('.mobile-menu-btn'); var mobileNav = document.querySelector('.mobile-nav'); var mobileNavClose = document.querySelector('.mobile-nav-close'); const mobileNavLinks = document.querySelectorAll('.mobile-nav a'); if (mobileMenuBtn && mobileNav) { mobileMenuBtn.addEventListener('click', function { mobileNav.classList.add('active'); document.body.style.overflow = 'hidden'; }); } if (mobileNavClose && mobileNav) { mobileNavClose.addEventListener('click', function { mobileNav.classList.remove('active'); document.body.style.overflow = ''; }); } mobileNavLinks.forEach(link => { link.addEventListener('click', function { if (mobileNav) { mobileNav.classList.remove('active'); document.body.style.overflow = ''; } }); }); document.addEventListener('click', function(e) { if (mobileNav && mobileNav.classList.contains('active')) { if (!mobileNav.contains(e.target) &&!mobileMenuBtn.contains(e.target)) { mobileNav.classList.remove('active'); document.body.style.overflow = ''; } } }); } function initHeaderScroll { let lastScrollTop = 0; let ticking = false; function updateHeader(scrollTop) { const header = document.querySelector('header'); if (!header) return; if (scrollTop > lastScrollTop && scrollTop > 100) { header.style.transform = 'translateY(-100%)'; } else { header.style.transform = 'translateY(0)'; } if (scrollTop > 50) { header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)'; } else { header.style.boxShadow = 'none'; } lastScrollTop = scrollTop; ticking = false; } window.addEventListener('scroll', function { const scrollTop = window.pageYOffset || document.documentElement.scrollTop; if (!ticking) { window.requestAnimationFrame(function () { updateHeader(scrollTop); }); ticking = true; } }, { passive: true }); } function initResponsiveEnhancements { let resizeTimer; function handleResize { document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`); } window.addEventListener('resize', function { clearTimeout(resizeTimer); resizeTimer = setTimeout(handleResize, 250); }); handleResize; } function initTouchOptimizations { if ('ontouchstart' in window || navigator.maxTouchPoints > 0) { document.body.classList.add('touch-device'); } } function preventIOSZoom { const inputs = document.querySelectorAll('input, textarea, select'); inputs.forEach(input => { if (parseFloat(window.getComputedStyle(input).fontSize) < 16) { input.style.fontSize = '16px'; } }); } // ====== INITIALIZE ALL ====== document.addEventListener('DOMContentLoaded', function { initThemeToggle; initMobileMenu; initHeaderScroll; initResponsiveEnhancements; initTouchOptimizations; preventIOSZoom; });
+  </script>
+</body>
+
 </html>
