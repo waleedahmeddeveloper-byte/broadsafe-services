@@ -1,9 +1,623 @@
-<!DOCTYPE html>
-<html lang="en-AU"> <head>
+<!doctype html>
+<html lang="en-AU">
+  <head>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0"> <!-- Lightweight image loading optimization --> <script>(function () {var imgs=document.querySelectorAll('img');for(var i=0;i<imgs.length;i++){var img=imgs[i];if(!img.hasAttribute('decoding'))img.setAttribute('decoding','async');if(!img.hasAttribute('loading')&&i>0)img.setAttribute('loading','lazy');}});</script> </body> </html> 
-
-
-
-
+    <meta http-equiv="Expires" content="0">
+    <script id="dm-preload">
+      (function () {
+        try {
+          var m = document.cookie.match(/(?:^|; )theme=([^;]+)/);
+          var t =
+            (m && decodeURIComponent(m[1])) ||
+            localStorage.getItem("theme") ||
+            "light";
+          if (t === "dark") {
+            document.documentElement.classList.add("dark-theme-preload");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        try {
+          var match = document.cookie.match(/(?:^|; )theme=([^;]+)/);
+          if (match && decodeURIComponent(match[1]) === "dark") {
+            var timer = setInterval(function () {
+              if (document.body) {
+                document.body.classList.add("dark-theme");
+                clearInterval(timer);
+              }
+            }, 1);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KNQRM38F");
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6V0WJ4TDNZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-6V0WJ4TDNZ");
+    </script>
+    <!-- CookieYes Consent Banner -->
+    <script>
+      if (
+        location.hostname === "www.broadsafeservices.com.au" ||
+        location.hostname === "broadsafeservices.com.au"
+      ) {
+        var cys = document.createElement("script");
+        cys.id = "cookieyes";
+        cys.type = "text/javascript";
+        cys.src =
+          "https://cdn-cookieyes.com/client_data/5cfe4f28d3b2e213a2c75d46/script.js";
+        document.head.appendChild(cys);
+      }
+    </script>
+    <!-- Google Search Console Verification -->
+    <meta
+      name="google-site-verification"
+      content="wk4JdqHFf7Q8c4nmlfscBK_X4NG250WqphMqfhvZp2o"
+    />
+    <!-- Base Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      Maintenance Services | Broadsafe Security Services
+    </title>
+    <meta
+      name="description"
+      content="Scheduled and reactive maintenance support to keep your site infrastructure, equipment and operations running without disruption from Broadsafe Services."
+    />
+    <link
+      rel="canonical"
+      href="https://www.broadsafeservices.com.au/services/maintenanceservices.html"
+    />
+    <meta
+      property="og:title"
+      content="Maintenance Services | Broadsafe Security Services"
+    />
+    <meta
+      property="og:description"
+      content="Scheduled and reactive maintenance support to keep your site infrastructure, equipment and operations running without disruption from Broadsafe Services."
+    />
+    <meta
+      property="og:url"
+      content="https://www.broadsafeservices.com.au/services/maintenanceservices.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.broadsafeservices.com.au/images/og-image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Maintenance Services | Broadsafe Security Services"
+    />
+    <meta
+      name="twitter:description"
+      content="Scheduled and reactive maintenance support to keep your site infrastructure, equipment and operations running without disruption from Broadsafe Services."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.broadsafeservices.com.au/images/og-image.png"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.ico" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Broadsafe Services",
+        "image": "https://www.broadsafeservices.com.au/images/og-image.png",
+        "@id": "https://www.broadsafeservices.com.au",
+        "url": "https://www.broadsafeservices.com.au",
+        "telephone": "+61370648292",
+        "priceRange": "$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "AU",
+          "addressRegion": ""
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        ],
+        "areaServed": { "@type": "Country", "name": "" },
+        "description": "Professional security services provider offering 24/7 security solutions including static guarding, mobile patrols, alarm response and event security."
+      }
+    </script>
+    <link rel="stylesheet" href="../assets/css/site.css?v=20260709" />
+    <link rel="stylesheet" href="../assets/css/responsive.css?v=20260709" />
+    <link rel="stylesheet" href="../assets/css/home.css?v=20260715" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KNQRM38F"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+      <div class="logo">
+        <a href="../index.html">
+          <img
+            src="../images/White__1_-removebg-preview.png"
+            alt="Broadsafe Security Logo"
+            class="logo-light"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="../images/White__1_-removebg-preview.png"
+            alt="Broadsafe Security Logo"
+            class="logo-dark"
+            style="display: none"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open mobile menu">
+        <i class="fas fa-bars"> </i>
+      </button>
+      <nav class="desktop-nav">
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active" aria-current="page">Services</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <a href="tel:0370648292" class="cta-button header-call-btn">
+        <i class="fas fa-phone"> </i> Call Us
+      </a>
+    </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <button class="mobile-nav-close" aria-label="Close mobile menu">
+        <i class="fas fa-times"> </i>
+      </button>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">Services</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../apply-online.html">Work with us</a></li>
+      </ul>
+      <a
+        href="tel:0370648292"
+        class="cta-button"
+        style="margin-top: 30px; width: 100%"
+      >
+        <i class="fas fa-phone"> </i> Call: 03 7064 8292
+      </a>
+    </div>
+    <main id="main-content" role="main">
+      <!-- Service Hero Section -->
+      <section
+        class="service-hero service-hero-media"
+        style="--service-hero-image: url('/images/Maintenance%20Services.png'); --service-hero-overlay-start: rgba(0, 0, 0, 0.5); --service-hero-overlay-end: rgba(0, 0, 0, 0.45);"
+        aria-label="Page introduction"
+      >
+        <div class="service-hero-content">
+          <div class="breadcrumb">
+            <a href="/">Home</a> <span>/</span>
+            <a href="/services">Services</a> <span>/</span>
+            <span>Maintenance Services</span>
+          </div>
+          <h1>Professional Maintenance Services</h1>
+          <p>
+            Scheduled and reactive maintenance support to keep your site
+            infrastructure, equipment and operations running smoothly without
+            disruption.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="cta-button">
+              <span class="button-text">Get Free Quote</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"> </i>
+            </a>
+            <a href="tel:0370648292" class="secondary-button">
+              <span class="button-text">Talk to Our Team</span>
+              <i class="fas fa-phone" aria-hidden="true"> </i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Service Details Section -->
+      <section class="service-details">
+        <div class="section-title">
+          <h2>Asset Maintenance Solutions</h2>
+          <p>
+            Reliable, professional maintenance services to protect and extend
+            the life of your assets and infrastructure
+          </p>
+        </div>
+        <div class="details-container">
+          <div class="service-image">
+            <img
+              src="/images/Maintenance%20Services.png"
+              alt="Maintenance Services"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="details-content">
+            <h3>What Are Our Maintenance Services?</h3>
+            <p>
+              Broadsafe Services offers comprehensive maintenance programs
+              covering both scheduled preventive maintenance and rapid reactive
+              support. Our experienced maintenance teams work to minimise
+              downtime, extend asset life and ensure your site remains
+              compliant with safety standards.
+            </p>
+            <p>
+              From routine inspections and servicing to emergency repairs, our
+              maintenance services provide a complete solution for commercial,
+              industrial and residential facilities across Australia.
+            </p>
+            <h3>Key Benefits</h3>
+            <ul class="benefits-list">
+              <li>Preventive and reactive maintenance programs</li>
+              <li>Regular scheduled inspections and servicing</li>
+              <li>Emergency breakdown response</li>
+              <li>Asset life extension and protection</li>
+              <li>Safety compliance and regulatory adherence</li>
+              <li>Detailed maintenance records and reporting</li>
+              <li>Experienced, qualified maintenance technicians</li>
+              <li>Cost-effective planned maintenance schedules</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Service Features Section -->
+      <section class="service-features">
+        <div class="section-title">
+          <h2>Our Maintenance Service Features</h2>
+          <p>
+            Professional maintenance solutions that reduce costs and keep your
+            operations running efficiently
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-calendar-check"> </i>
+            </div>
+            <h3>Preventive Maintenance</h3>
+            <p>
+              Scheduled inspections and proactive servicing to identify and
+              resolve issues before they cause costly downtime.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-wrench"> </i>
+            </div>
+            <h3>Reactive Repairs</h3>
+            <p>
+              Fast, responsive repair services for unexpected equipment failures
+              or infrastructure issues to minimise operational disruption.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-clipboard-list"> </i>
+            </div>
+            <h3>Compliance Reporting</h3>
+            <p>
+              Comprehensive maintenance records, compliance reports and asset
+              management documentation to meet regulatory requirements.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="service-cta">
+        <h2>Keep Your Site Running Efficiently</h2>
+        <p>
+          Don't wait for breakdowns to disrupt your operations. Our proactive
+          maintenance teams keep your infrastructure performing at its best.
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:0370648292" class="cta-button"
+            >Call Now: 03 7064 8292</a
+          >
+          <a href="#contact" class="secondary-button"
+            >Request Free Consultation</a
+          >
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="section-title">
+          <h2>Request a Quote</h2>
+          <p>Complete the form below and our team will contact you.</p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"> </i>
+              </div>
+              <div class="contact-details">
+                <h3>Phone</h3>
+                <a href="tel:0370648292">03 7064 8292</a>
+                <p>24/7 National Helpline</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"> </i>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <a href="mailto:info@broadsafeservices.com.au"
+                  >info@broadsafeservices.com.au</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Request a Quote</h3>
+            <form
+              id="web3form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="a94b5603-998e-4792-bddd-322d1817a026"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="Maintenance Service Inquiry"
+              />
+              <input type="hidden" name="service" value="Maintenance Services" />
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your.email@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(03) 7064 8292"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Additional Information *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Describe your maintenance needs, site details and any specific requirements..."
+                  required
+                ></textarea>
+              </div>
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
+              />
+              <div class="submit-btn-wrapper">
+                <button type="submit" class="submit-btn" id="submit-btn">
+                  Submit Enquiry
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Acknowledgement of Country -->
+      <section
+        class="country-acknowledgement"
+        aria-label="Acknowledgement of Country"
+      >
+        <div class="country-acknowledgement-inner">
+          <img
+            src="/images/flags.webp"
+            alt="Aboriginal and Torres Strait Islander flags"
+            loading="lazy"
+            decoding="async"
+          />
+          <p>
+            Broadsafe Services acknowledges the Traditional Custodians of the
+            land on which we work and live and recognise their continuing
+            connection to land, sea and culture. We pay respect to Elders past,
+            present, emerging and extend that respect to all Aboriginal and
+            Torres Strait Islander people around the country.
+          </p>
+        </div>
+      </section>
+      <!-- Footer -->
+    </main>
+    <!-- Footer component will be extracted from existing pages -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <a href="/index.html" class="footer-logo">
+            <img
+              src="/images/Black-removebg-preview.png"
+              alt="Company Logo"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="tagline">Keeping You Safe, 24/7</div>
+          </a>
+          <p>
+            Providing professional security solutions with 24/7 availability and
+            rapid response.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="/services">Services</a>
+            </li>
+            <li>
+              <a href="/about">About us</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/apply-online">Work with us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Our Services</h3>
+          <ul>
+            <li>
+              <a href="staticguarding.html">Static Guarding</a>
+            </li>
+            <li>
+              <a href="mobilepatrols.html">Mobile Patrols</a>
+            </li>
+            <li>
+              <a href="corporatesecurity.html">Corporate Security</a>
+            </li>
+            <li>
+              <a href="cashintransit.html">Cash In Transit Security</a>
+            </li>
+            <li>
+              <a href="alarmresponses.html">Alarm Response</a>
+            </li>
+            <li>
+              <a href="eventsecurity.html">Event Security</a>
+            </li>
+            <li>
+              <a href="constructionsitesecurity.html"
+                >Construction Site Security</a
+              >
+            </li>
+            <li>
+              <a href="commercialsitesecurity.html">Commercial Site Security</a>
+            </li>
+            <li>
+              <a href="manufacturingwarehousingsecurity.html"
+                >Manufacturing &amp; Warehouse Security</a
+              >
+            </li>
+            <li>
+              <a href="facilitymanagementservices.html"
+                >Facilities Management Services</a
+              >
+            </li>
+            <li>
+              <a href="cleaningservices.html">Cleaning Services</a>
+            </li>
+            <li>
+              <a href="carparkmanagementservices.html">Car Park Management</a>
+            </li>
+            <li>
+              <a href="maintenanceservices.html">Maintenance Services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Info</h3>
+          <ul>
+            <li>
+              <i class="fas fa-phone"> </i>
+              <div><a href="tel:0370648292">03 7064 8292</a></div>
+            </li>
+            <li>
+              <i class="fas fa-clock"> </i>
+              <div><a href="tel:0370648292">24/7 National Helpline</a></div>
+            </li>
+            <li>
+              <i class="fas fa-envelope"> </i>
+              <div>
+                <a href="mailto:info@broadsafeservices.com.au"
+                  >info@broadsafeservices.com.au</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Broadsafe Services. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
