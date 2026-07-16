@@ -347,6 +347,28 @@ textarea,
   }
 }
 
+/* Mobile-friendly rhythm tweaks */
+@media (max-width: 768px) {
+  :root {
+    --container-pad-inline: 18px;
+    --section-pad-block: 28px;
+  }
+  html {
+    font-size: 15px;
+  }
+  header {
+    padding-inline: 16px;
+  }
+  .hero {
+    padding-block: 28px;
+  }
+  .home-highlights-grid,
+  .home-insights-grid,
+  .home-response-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* About page component hardening */
 .about-hero {
   padding-inline: var(--container-pad-inline);
